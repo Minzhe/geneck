@@ -42,7 +42,7 @@
 							<header>
 								<h2>Methods</h2>
 							</header>
-							<ul class="style1">
+							<ul class="style1 text-bg">
 								<li><a href="#">GeneNet</a></li>
 								<li><a href="#">Neighborhood selection</a></li>
 								<li><a href="#">GLASSO</a></li>

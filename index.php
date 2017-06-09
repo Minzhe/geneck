@@ -45,13 +45,15 @@
 								<h2>Welcome to GeNeck!</h2>
 								<span class="byline">An online tool kit to construct gene regulatory network</span>
 							</header>
-							<p><strong>Gene Regulatory Network (GRN)</strong></p>
-							<p>A gene regulatory network (GRN) describes interactions and regulatory relationship among genes. It provides a systematic understanding of molecular mechanism underlying biological process.</p>
-							<p><strong>Hub Gene</strong></p>
-							<p>A typical GRN approximate a scale free network topology with a few highly connected nodes (hub genes) and many poorly connected nodes. These hub genes are master regulator in gene network, and control network stability. They usually have essential function in biological system.</p>
-							<p><strong>Network Construction with GENECK</strong></p>
-							<p>GENECK (Gene Network Construction Kit) is a comprehensive online tool kit that integrate multiple existing algorithms currently used for network constructions from <strong>gene co-expression data</strong> along with newly proposed enhanced methods that can incorporate our prior knowledge about <strong>hub genes</strong> for network rectification. </p>
-							<a href="#" class="button">More Details</a>
+                            <div class="text-bg">
+                                <p><strong>Gene Regulatory Network (GRN)</strong></p>
+                                <p>A gene regulatory network (GRN) describes interactions and regulatory relationship among genes. It provides a systematic understanding of molecular mechanism underlying biological process.</p>
+                                <p><strong>Hub Gene</strong></p>
+                                <p>A typical GRN approximate a scale free network topology with a few highly connected nodes (hub genes) and many poorly connected nodes. These hub genes are master regulator in gene network, and control network stability. They usually have essential function in biological system.</p>
+                                <p><strong>Network Construction with GENECK</strong></p>
+                                <p>GeNeck (Gene Network Construction Kit) is a comprehensive online tool kit that integrate multiple existing algorithms currently used for network constructions from <strong>gene co-expression data</strong> along with newly proposed enhanced methods that can incorporate our prior knowledge about <strong>hub genes</strong> for network rectification. </p>
+                                <a href="#" class="button">More Details</a>
+                            </div>
 						</section>
 					</div>
 
