@@ -42,7 +42,7 @@ if (empty($page_name)|| $page_name == 'index.php') {
     <div class="container">
         <?php
         if ($page_index == 'index') {
-            echo "<h1 class=\"tagline\">Gene Network Construction Kit</h1>";
+            echo "<h1 class=\"tagline\">Gene Network Construction Kit @ QBRC</h1>";
         }
         ?>
     </div>

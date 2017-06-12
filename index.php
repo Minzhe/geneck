@@ -16,6 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+        <script type="text/javascript" src="js/echarts.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -50,62 +51,48 @@
                                 <p>A gene regulatory network (GRN) describes interactions and regulatory relationship among genes. It provides a systematic understanding of molecular mechanism underlying biological process.</p>
                                 <p><strong>Hub Gene</strong></p>
                                 <p>A typical GRN approximate a scale free network topology with a few highly connected nodes (hub genes) and many poorly connected nodes. These hub genes are master regulator in gene network, and control network stability. They usually have essential function in biological system.</p>
-                                <p><strong>Network Construction with GENECK</strong></p>
+                                <p><strong>Network Construction with GeNeck</strong></p>
                                 <p>GeNeck (Gene Network Construction Kit) is a comprehensive online tool kit that integrate multiple existing algorithms currently used for network constructions from <strong>gene co-expression data</strong> along with newly proposed enhanced methods that can incorporate our prior knowledge about <strong>hub genes</strong> for network rectification. </p>
-                                <a href="#" class="button">More Details</a>
+                                <label for="modal-1"><a class="button">View DEMO</a></label>
+                                <input class="modal-state" id="modal-1" type="checkbox">
+                                <!-- Modal -->
+                                <div class="modal">
+                                    <label class="modal-bg" for="modal-1"></label>
+                                    <div class="modal-content">
+                                        <p>xxxxxxxxxxxxxxxxxxxxxx</p>
+                                        <script type="text/javascript" src="js/network.js"></script>
+                                    </div>
+                                </div>
                             </div>
 						</section>
 					</div>
 
 					<div class="4u" id="featured">
-						<section>
-							<div class="box">
-								<a href="#" class="image left"><img src="images/microarray.png" alt=""></a>
-								<h3>Step 1</h3>
-								<p>Upload gene co-expression data.</p>
-								<label for="modal-1"><a class="button">More</a></label>
-							</div>
-							<input class="modal-state" id="modal-1" type="checkbox">
-							<!-- Modal -->
-							<div class="modal">
-								<label class="modal-bg" for="modal-1"></label>
-								<div class="modal-content">
-									<p>xxxxxxxxxxxxxxxxxxxxxx</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="box">
-								<a href="#" class="image left"><img src="images/math.jpg" alt=""></a>
-								<h3>Step 2</h3>
-								<p>Select mathematical model to construct gene network.</p>
-								<label for="modal-2"><a class="button">More</a></label>
-							</div>
-							<input class="modal-state" id="modal-2" type="checkbox">
-							<!-- Modal -->
-							<div class="modal">
-								<label class="modal-bg" for="modal-2"></label>
-								<div class="modal-content">
-									<p>xxxxxxxxxxxxxxxxxxxxxx</p>
-								</div>
-							</div>
-						</section>
-						<section>
-							<div class="box">
-								<a href="#" class="image left"><img src="images/network.jpeg" width="160" height="160" alt=""></a>
-								<h3>Step 3</h3>
-								<p>Download and visualize network.</p>
-								<label for="modal-3" ><a class="button">More</a></label>
-							</div>
-						</section>
-						<input class="modal-state" id="modal-3" type="checkbox">
-						<!-- Modal -->
-						<div class="modal">
-							<label class="modal-bg" for="modal-3"></label>
-							<div class="modal-content">
-								<p>xxxxxxxxxxxxxxxxxxxxxx</p>
-							</div>
-						</div>
+                        <div class="index-right">
+                            <h3>News</h3>
+                            <ul><li><p>07/01/17 GeNeck 1.0 release!.</p></li></ul>
+                        </div>
+                        <hr/>
+                        <div class="index-right">
+                            <h3>Citations</h3>
+                            <ul><li><p>Donghyeon Yu, Johan Lim, Xinlei Wang, Faming Liang, Guanghua Xiao. Enhanced Construction of Gene Regulatory Networks using Hub Gene Information.</p></li></ul>
+                        </div>
+                        <hr/>
+                        <div class="index-right">
+                            <h3>Getting Started</h3>
+                            <p>GeNeck is very simple to use. It takes three steps to construct gene network with GeNeck:</p>
+                            <ol>
+                                <li>Upload data</li>
+                                <li>Select algorithm</li>
+                                <li>Download and visualize</li>
+                            </ol>
+                            <p><a>>> Get started</a></p>
+                        </div>
+                        <hr/>
+                        <div class="index-right">
+                            <h3>More Details</h3>
+                            <p>To use GeNeck, you don't need sophisticated knowledge about gene network and algorithms. If you are interested in the detail theory, you can refer to our papers listed above. You can also go to the <a>download</a> page for other algorithms we incorporated in GeNeck.</p>
+                        </div>
 					</div>
 
 				</div>

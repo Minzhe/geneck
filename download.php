@@ -40,7 +40,7 @@
 						<section>
 							<header>
 								<h2>Algorithms for gene network construction</h2>
-								<span class="byline">Augue praesent a lacus at urna congue rutrum</span>
+                                <!--<span class="byline">Augue praesent a lacus at urna congue rutrum</span>-->
 							</header>
 							<!-- entry 1 -->
 							<div class="item-entry">
