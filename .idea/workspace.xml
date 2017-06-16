@@ -2,13 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba3bdc2-8e5c-4857-bd2b-bcbdafa9675c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._images" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._left-sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._no-sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/._right-sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._ie" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._images" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._skel-noscript.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._style-1000px.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._style-desktop.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._style-mobile.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/._style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/ie/._PIE.htc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/ie/._html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/ie/._v8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/ie/._v9.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img06.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img07.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img09.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._img13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._mobileUI-site-nav-opener-bg.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._spacer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/css/images/._toggle.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._banner.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._pics16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/images/._spacer.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/js/._html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/js/._init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/js/._skel-panels.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/__MACOSX/js/._skel.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/analysis.php" afterPath="$PROJECT_DIR$/analysis.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneNet.php" afterPath="$PROJECT_DIR$/GeneNet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmi2ni.php" afterPath="$PROJECT_DIR$/cmi2ni.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/download.php" afterPath="$PROJECT_DIR$/download.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eglasso.php" afterPath="$PROJECT_DIR$/eglasso.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/espace.php" afterPath="$PROJECT_DIR$/espace.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glasso.php" afterPath="$PROJECT_DIR$/glasso.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassosf.php" afterPath="$PROJECT_DIR$/glassosf.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/echarts.js" afterPath="$PROJECT_DIR$/js/echarts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ns.php" afterPath="$PROJECT_DIR$/ns.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcacmi.php" afterPath="$PROJECT_DIR$/pcacmi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/space.php" afterPath="$PROJECT_DIR$/space.php" />
     </list>
     <ignored path="exmachina.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,47 +84,78 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="exmachina" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="2376" column="16" lean-forward="false" selection-start-line="2376" selection-start-column="16" selection-end-line="2376" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GeneNet.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GeneNet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="87" column="41" lean-forward="true" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+            <state relative-caret-position="187">
+              <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="space.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/space.php">
+      <file leaf-file-name="methods.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/methods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1027">
-              <caret line="91" column="84" lean-forward="false" selection-start-line="91" selection-start-column="84" selection-end-line="91" selection-end-column="84" />
+            <state relative-caret-position="4">
+              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="glasso.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/glasso.php">
+      <file leaf-file-name="result.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/result.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="76" column="36" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="118" selection-end-column="30" />
+            <state relative-caret-position="191">
+              <caret line="82" column="59" lean-forward="false" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webkit-dep.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/webkit-dep.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="2397" column="1" lean-forward="false" selection-start-line="2397" selection-start-column="1" selection-end-line="2397" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -81,6 +173,18 @@
       <find>p</find>
       <find>button</find>
       <find>data</find>
+      <find>a</find>
+      <find>li</find>
+      <find>333</find>
+      <find>sidebar</find>
+      <find>impo</find>
+      <find>active</find>
+      <find>methods</find>
+      <find>nav</find>
+      <find>style1</find>
+      <find>deco</find>
+      <find>decoration</find>
+      <find>metho</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,20 +196,23 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/css/style-desktop.css" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/download.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/analysis.php" />
-        <option value="$PROJECT_DIR$/eglasso.php" />
-        <option value="$PROJECT_DIR$/espace.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/GeneNet.php" />
-        <option value="$PROJECT_DIR$/glasso.php" />
         <option value="$PROJECT_DIR$/ns.php" />
+        <option value="$PROJECT_DIR$/glasso.php" />
         <option value="$PROJECT_DIR$/glassosf.php" />
         <option value="$PROJECT_DIR$/pcacmi.php" />
         <option value="$PROJECT_DIR$/cmi2ni.php" />
         <option value="$PROJECT_DIR$/space.php" />
+        <option value="$PROJECT_DIR$/eglasso.php" />
+        <option value="$PROJECT_DIR$/methods.php" />
+        <option value="$PROJECT_DIR$/espace.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/result.php" />
+        <option value="$PROJECT_DIR$/test.php" />
       </list>
     </option>
   </component>
@@ -120,10 +227,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -140,6 +247,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -162,19 +271,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geneck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geneck" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drugcombination" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -291,26 +413,38 @@
       <workItem from="1490566181248" duration="5139000" />
       <workItem from="1490972970046" duration="222000" />
       <workItem from="1497280969901" duration="17073000" />
+      <workItem from="1497399616607" duration="89000" />
+      <workItem from="1497467498547" duration="6074000" />
+      <workItem from="1497477384656" duration="2198000" />
+      <workItem from="1497538937117" duration="12797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64126000" />
+    <option name="totallyTimeSpent" value="85284000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28516525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2083013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -358,35 +492,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/right-sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2052">
-          <caret line="114" column="40" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="121" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="117" column="38" lean-forward="false" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="119" column="1" lean-forward="false" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style-desktop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -570,13 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/right-sidebar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -591,106 +689,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/eglasso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espace.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analysis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="63" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style-desktop.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="578">
           <caret line="55" column="84" lean-forward="false" selection-start-line="55" selection-start-column="53" selection-end-line="55" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="2376" column="16" lean-forward="false" selection-start-line="2376" selection-start-column="16" selection-end-line="2376" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glassosf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="65" column="21" lean-forward="false" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ns.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="68" column="58" lean-forward="false" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmi2ni.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="69" column="117" lean-forward="false" selection-start-line="69" selection-start-column="117" selection-end-line="69" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcacmi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="69" column="119" lean-forward="false" selection-start-line="69" selection-start-column="119" selection-end-line="69" selection-end-column="119" />
+        <state relative-caret-position="208">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/glasso.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="76" column="36" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="118" selection-end-column="30" />
+        <state relative-caret-position="106">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GeneNet.php">
+    <entry file="file://$PROJECT_DIR$/pcacmi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="87" column="41" lean-forward="true" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+        <state relative-caret-position="153">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmi2ni.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/space.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1027">
-          <caret line="91" column="84" lean-forward="false" selection-start-line="91" selection-start-column="84" selection-end-line="91" selection-end-column="84" />
+        <state relative-caret-position="680">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glassosf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/espace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eglasso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneNet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="2397" column="1" lean-forward="false" selection-start-line="2397" selection-start-column="1" selection-end-line="2397" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/webkit-dep.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/methods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="82" column="59" lean-forward="false" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>

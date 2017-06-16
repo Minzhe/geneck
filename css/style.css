@@ -55,7 +55,8 @@ em, i {
 /* Don't forget to set this to something that matches the design */
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 a {
-    color: #ff0000;
+    /*color: #ff0000;*/
+    color: #333;
     font-weight: bold;
 }
 
@@ -214,7 +215,6 @@ ul.style1 li {
 }
 
 ul.style1 li:first-child {
-    padding-top: 0;
     border-top: 0;
 }
 
@@ -2336,20 +2336,23 @@ blockquote {
 /*********************************************************************************/
 /* Analysis                                                                      */
 /*********************************************************************************/
-.methods {
 
-}
+/**************** methods bar ******************/
 
 .methods a {
-    text-decoration: none;
-}
-
-.methods li {
     list-style-type: disc;
     margin-left: 15px;
     margin-right: 30px;
+    text-decoration: none;
 }
 
+.method-active {
+    background: #f5f5f5;
+    border-left: #014b7c solid 6px !important;
+}
+
+
+/**************** table ******************/
 .para-table {
     width: 100%;
 }
@@ -2390,3 +2393,6 @@ blockquote {
     background: #b1b5ba;
     color: #FFF !important;
 }
+
+/**************** result ******************/
+.

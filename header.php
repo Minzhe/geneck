@@ -3,11 +3,11 @@ $directoryURI = $_SERVER['REQUEST_URI'];
 $path = parse_url($directoryURI, PHP_URL_PATH);
 $page_name = explode('/', $path)[2];
 
-if (empty($page_name)|| $page_name == 'index.php') {
+if (empty($page_name) || $page_name == 'index.php') {
     $page_index = 'index';
-} else if ($page_name == 'download.php') {
+} elseif ($page_name == 'download.php') {
     $page_index = 'download';
-} else if ($page_name == 'contact.php') {
+} elseif ($page_name == 'contact.php') {
     $page_index = 'contact';
 } else {
     $page_index = 'analysis';
