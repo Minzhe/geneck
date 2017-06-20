@@ -16,7 +16,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
-        <script type="text/javascript" src="js/echarts.js"></script>
+        <script type="text/javascript" src="js/echarts.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -78,57 +78,53 @@
                                     <td><strong>Visualization</strong></td>
                                 </tr>
                                 <tr><td colspan="3"><hr/></td></tr>
+                                <tr>
+                                    <td colspan="3">
+
+                                    </td>
+                                </tr>
                             </table>
-                            <div id="chart" style="width=100%; height=100%"></div>
+                            <iframe src="resultnetwork.php" width="100%" height="600px">Does not work.</iframe>
                             <script type="text/javascript">
-                                require([
-                                    'echarts',
-                                    'echarts/chart/graph',
-                                    'echarts/component/title',
-                                    'echarts/component/legend',
-                                    'echarts/component/geo',
-                                    'echarts/component/tooltip',
-                                    'echarts/component/visualMap'
-                                ], function (echarts) {
-                                    $.get('data/webkit-dep.json', function (webkitDep) {
-                                        var dom = document.getElementById('chart');
-                                        var myChart = echarts.init(dom);
+                                var dom = document.getElementById("chart");
+                                var myChart = echarts.init(dom);
+                                myChart.showLoading();
+                                $.get('data/webkit-dep.json', function (webkitDep) {
+                                    myChart.hideLoading();
 
-                                        option = {
-                                            legend: {
-                                                data: ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other']
+                                    option = {
+                                        legend: {
+                                            data: ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other']
+                                        },
+                                        series: [{
+                                            type: 'graph',
+                                            layout: 'force',
+                                            animation: false,
+                                            label: {
+                                                normal: {
+                                                    position: 'right',
+                                                    formatter: '{b}'
+                                                }
                                             },
-                                            series: [{
-                                                type: 'graph',
-                                                layout: 'force',
-                                                animation: false,
-                                                label: {
-                                                    normal: {
-                                                        position: 'right',
-                                                        formatter: '{b}'
-                                                    }
-                                                },
-                                                draggable: true,
-                                                data: webkitDep.nodes.map(function (node, idx) {
-                                                    node.id = idx;
-                                                    return node;
-                                                }),
-                                                categories: webkitDep.categories,
-                                                force: {
-                                                    // initLayout: 'circular'
-                                                    // repulsion: 20,
-                                                    edgeLength: 5,
-                                                    repulsion: 20,
-                                                    gravity: 0.2
-                                                },
-                                                edges: webkitDep.links
-                                            }]
-                                        };
+                                            draggable: true,
+                                            data: webkitDep.nodes.map(function (node, idx) {
+                                                node.id = idx;
+                                                return node;
+                                            }),
+                                            categories: webkitDep.categories,
+                                            force: {
+                                                // initLayout: 'circular'
+                                                // repulsion: 20,
+                                                edgeLength: 5,
+                                                repulsion: 20,
+                                                gravity: 0.2
+                                            },
+                                            edges: webkitDep.links
+                                        }]
+                                    };
 
-                                        myChart.setOption(option);
-                                    });
-                                }
-
+                                    myChart.setOption(option);
+                                });
                             </script>
                         </div>
 					</div>
@@ -136,7 +132,6 @@
 				</div>
 			</div>
 			<!-- Main -->
-
 		</div>
 	<!-- /Main -->
 	<!-- Featured -->
@@ -147,7 +142,5 @@
 
 	<!-- Copyright -->
 	<?php include "footer.php"; ?>
-
-
 	</body>
 </html>
