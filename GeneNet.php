@@ -38,7 +38,7 @@
 				<div class="row">
 
                     <div class="3u">
-                        <?php include "methods.php"?>
+                        <?php include "methods-bar.php"?>
                     </div>
 				
 					<div class="9u skel-cell-important">
@@ -50,58 +50,8 @@
                                 <p>Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo.</p>
                             </div>
                         </section>
-                        <form action="submitjob.php" enctype="multipart/form-data" method="POST">
-                            <div class="text-bg">
-                                <table class="para-table">
-                                    <!-- parameters -->
-                                    <tr>
-                                        <td><strong>Data & parameters</strong></td>
-                                    </tr>
-                                    <tr><td colspan="3"><hr/></td></tr>
-                                    <tr>
-                                        <td class="table-right-align"><p>Gene co-expression data:</p></td>
-                                        <td>
-                                            <input name="expression_data" type="file">
-                                        </td>
-                                        <td><label class="demo-button"><a>example</a></label></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-right-align"><p>False discover rate (FDR):</p></td>
-                                        <td><input type="text" placeholder="Default: 0.2" class="inputbox" name="fdr"></td>
-                                    </tr>
-                                    <tr><td><br/></td></tr>
-
-                                    <!-- user information -->
-                                    <tr>
-                                        <td><strong>User information (optional)</strong></td>
-                                    </tr>
-                                    <tr><td colspan="3"><hr/></td></tr>
-                                    <tr>
-                                        <td class="table-right-align"><p>Name:</p></td>
-                                        <td colspan="2"><input type="text" placeholder="E.g. QBRC" class="inputbox fullwidth" name="username"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-right-align"><p>Organization:</p></td>
-                                        <td colspan="2"><input type="text" placeholder="E.g. UT Southwestern" class="inputbox fullwidth" name="organization"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="table-right-align"><p>Email:</p></td>
-                                        <td colspan="2"><input type="text" placeholder="E.g. QBRC@UTSouthwestern.edu" class="inputbox fullwidth" name="email"></td>
-                                    </tr>
-                                    <tr><td><br/></td></tr>
-
-                                    <tr>
-                                        <!-- pass method -->
-                                        <td><input name="method" value="GeneNet" style="display: none"></td>
-                                        <td><label for="submitjob"><a class="button" id="submit">submit</a></label></td>
-                                        <td><input type="submit" id="submitjob" style="display: none"></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </form>
-
+                        <?php include "methods-form.php"?>
 					</div>
-					
 				</div>
 			</div>
 			<!-- Main -->

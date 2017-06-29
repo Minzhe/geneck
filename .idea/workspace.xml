@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba3bdc2-8e5c-4857-bd2b-bcbdafa9675c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/echarts-3-all.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/echarts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/network.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/dat.gui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/esl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/methods.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.php" afterPath="$PROJECT_DIR$/result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneNet.php" afterPath="$PROJECT_DIR$/GeneNet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmi2ni.php" afterPath="$PROJECT_DIR$/cmi2ni.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eglasso.php" afterPath="$PROJECT_DIR$/eglasso.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/espace.php" afterPath="$PROJECT_DIR$/espace.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glasso.php" afterPath="$PROJECT_DIR$/glasso.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glassosf.php" afterPath="$PROJECT_DIR$/glassosf.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ns.php" afterPath="$PROJECT_DIR$/ns.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pcacmi.php" afterPath="$PROJECT_DIR$/pcacmi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/space.php" afterPath="$PROJECT_DIR$/space.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submitjob.php" afterPath="$PROJECT_DIR$/submitjob.php" />
     </list>
     <ignored path="exmachina.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,21 +43,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="result.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/result.php">
+      <file leaf-file-name="methods-form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/methods-form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+            <state relative-caret-position="565">
+              <caret line="85" column="119" lean-forward="false" selection-start-line="85" selection-start-column="119" selection-end-line="85" selection-end-column="119" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#td#2;n#tr#11;n#table#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <marker date="1498751436297" expanded="true" signature="1366:1586" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="1610:1832" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="2950:2999" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="3055:3143" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="3160:3189" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="3276:3303" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="3516:3543" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="3801:3828" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="4080:4129" ph="..." />
+                <marker date="1498751436297" expanded="true" signature="4147:4217" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="methods-bar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/methods-bar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/style.css">
+      <file leaf-file-name="submitjob.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/submitjob.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40749">
-              <caret line="2397" column="1" lean-forward="false" selection-start-line="2397" selection-start-column="1" selection-end-line="2397" selection-end-column="1" />
+            <state relative-caret-position="493">
+              <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+              <folding>
+                <marker date="1498745838139" expanded="true" signature="2292:2455" ph="INSERT INTO Jobs... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eglasso.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eglasso.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="espace.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/espace.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeneNet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GeneNet.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -85,6 +141,7 @@
       <find>deco</find>
       <find>decoration</find>
       <find>metho</find>
+      <find>right-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,22 +157,24 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/analysis.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/GeneNet.php" />
-        <option value="$PROJECT_DIR$/ns.php" />
-        <option value="$PROJECT_DIR$/glasso.php" />
-        <option value="$PROJECT_DIR$/glassosf.php" />
-        <option value="$PROJECT_DIR$/pcacmi.php" />
-        <option value="$PROJECT_DIR$/cmi2ni.php" />
-        <option value="$PROJECT_DIR$/space.php" />
-        <option value="$PROJECT_DIR$/eglasso.php" />
         <option value="$PROJECT_DIR$/methods.php" />
-        <option value="$PROJECT_DIR$/espace.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/echartnetwork0.php" />
         <option value="$PROJECT_DIR$/echartnetwork.php" />
         <option value="$PROJECT_DIR$/echartnetwork1.php" />
         <option value="$PROJECT_DIR$/result.php" />
+        <option value="$PROJECT_DIR$/submitjob.php" />
+        <option value="$PROJECT_DIR$/GeneNet.php" />
+        <option value="$PROJECT_DIR$/eglasso.php" />
+        <option value="$PROJECT_DIR$/espace.php" />
+        <option value="$PROJECT_DIR$/ns.php" />
+        <option value="$PROJECT_DIR$/glasso.php" />
+        <option value="$PROJECT_DIR$/glassosf.php" />
+        <option value="$PROJECT_DIR$/pcacmi.php" />
+        <option value="$PROJECT_DIR$/cmi2ni.php" />
+        <option value="$PROJECT_DIR$/space.php" />
+        <option value="$PROJECT_DIR$/methods-form.php" />
       </list>
     </option>
   </component>
@@ -172,20 +231,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geneck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geneck" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="data" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -204,6 +249,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geneck" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geneck" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ie" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -211,7 +274,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drugcombination" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
@@ -337,11 +400,16 @@
       <workItem from="1497649658103" duration="1620000" />
       <workItem from="1497887430423" duration="9689000" />
       <workItem from="1497917965038" duration="1174000" />
+      <workItem from="1497970357735" duration="13798000" />
+      <workItem from="1498234332230" duration="1255000" />
+      <workItem from="1498661443317" duration="6118000" />
+      <workItem from="1498682769470" duration="6188000" />
+      <workItem from="1498745726020" duration="5824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97767000" />
+    <option name="totallyTimeSpent" value="130950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -354,6 +422,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2083013" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -412,49 +481,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analysis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="90" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/download.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="42" column="38" lean-forward="false" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22230">
-          <caret line="1235" column="9" lean-forward="false" selection-start-line="1235" selection-start-column="4" selection-end-line="1235" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style-desktop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="80" lean-forward="false" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -580,90 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ns.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glasso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcacmi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmi2ni.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/space.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glassosf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espace.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eglasso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="40" column="53" lean-forward="false" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GeneNet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/analysis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="51" column="70" lean-forward="false" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40749">
-          <caret line="2397" column="1" lean-forward="false" selection-start-line="2397" selection-start-column="1" selection-end-line="2397" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -673,9 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -688,23 +631,162 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/echarts-3-all.js" />
     <entry file="file://$PROJECT_DIR$/js/echarts.js" />
-    <entry file="file://$PROJECT_DIR$/methods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/echartnetwork0.php" />
     <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/echartnetwork1.php" />
     <entry file="file://$PROJECT_DIR$/echartnetwork.php" />
+    <entry file="file://$PROJECT_DIR$/css/ie/html5shiv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ie/v9.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ie/v8.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="44" column="39" lean-forward="true" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <marker date="1498745838139" expanded="true" signature="2292:2455" ph="INSERT INTO Jobs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/result.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="36" selection-end-line="80" selection-end-column="36" />
+        <state relative-caret-position="17">
+          <caret line="92" column="13" lean-forward="false" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/methods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="2351" column="1" lean-forward="true" selection-start-line="2351" selection-start-column="1" selection-end-line="2351" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/methods-bar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GeneNet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/espace.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="53" column="22" lean-forward="true" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eglasso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ns.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glasso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glassosf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="55" column="61" lean-forward="true" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pcacmi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmi2ni.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="48" column="37" lean-forward="true" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/space.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/methods-form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="85" column="119" lean-forward="false" selection-start-line="85" selection-start-column="119" selection-end-line="85" selection-end-column="119" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#2;n#tr#11;n#table#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <marker date="1498751436297" expanded="true" signature="1366:1586" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="1610:1832" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="2950:2999" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="3055:3143" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="3160:3189" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="3276:3303" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="3516:3543" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="3801:3828" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="4080:4129" ph="..." />
+            <marker date="1498751436297" expanded="true" signature="4147:4217" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

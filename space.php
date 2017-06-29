@@ -38,9 +38,9 @@
 				<div class="row">
 
                     <div class="3u">
-                        <?php include "methods.php"?>
+                        <?php include "methods-bar.php"?>
                     </div>
-				
+
 					<div class="9u skel-cell-important">
 						<section>
 							<header>
@@ -49,54 +49,8 @@
 							</header>
 							<p>Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl.</p>
 						</section>
-                        <div class="text-bg">
-                            <table class="para-table">
-                                <!-- parameters -->
-                                <tr>
-                                    <td><strong>Data & parameters</strong></td>
-                                </tr>
-                                <tr><td colspan="3"><hr/></td></tr>
-                                <tr>
-                                    <td class="table-right-align"><p>Gene co-expression data:</p></td>
-                                    <td>
-                                        <label>
-                                            <input name="expression_data" type="file">
-                                        </label>
-                                    </td>
-                                    <td><label class="demo-button"><a>example</a></label></td>
-                                </tr>
-                                <tr>
-                                    <td class="table-right-align"><p>Lamda (non-negative):</p></td>
-                                    <td><input type="text" placeholder="Default: 1.0" class="inputbox" name="fdr"></td>
-                                </tr>
-                                <tr><td><br/></td></tr>
-
-                                <!-- user information -->
-                                <tr>
-                                    <td><strong>User information (optional)</strong></td>
-                                </tr>
-                                <tr><td colspan="3"><hr/></td></tr>
-                                <tr>
-                                    <td class="table-right-align"><p>Name:</p></td>
-                                    <td colspan="2"><input type="text" placeholder="E.g. QBRC" class="inputbox fullwidth" name="name"></td>
-                                </tr>
-                                <tr>
-                                    <td class="table-right-align"><p>Organization:</p></td>
-                                    <td colspan="2"><input type="text" placeholder="E.g. UT Southwestern" class="inputbox fullwidth" name="organization"></td>
-                                </tr>
-                                <tr>
-                                    <td class="table-right-align"><p>Email:</p></td>
-                                    <td colspan="2"><input type="text" placeholder="E.g. QBRC@UTSouthwestern.edu" class="inputbox fullwidth" name="email"></td>
-                                </tr>
-                                <tr><td><br/></td></tr>
-                                <tr>
-                                    <td></td>
-                                    <td><a class="button">submit</a></td>
-                                </tr>
-                            </table>
-                        </div>
+                        <?php include "methods-form.php"?>
 					</div>
-					
 				</div>
 			</div>
 			<!-- Main -->
