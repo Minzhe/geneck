@@ -33,32 +33,6 @@ def parseDBconfig(config_file):
         raise IOError('Database configuration file does not exist.\n', sys.exc_info())
     return db_config_dict
 
-def parseMethod(method):
-    '''
-    Parse integer method code to real methods.
-    :param method: integer
-    :return: method name
-    '''
-    if method == 1:
-        return 'GeneNet'
-    elif method == 2:
-        return 'ns'
-    elif method == 3:
-        return 'glasso'
-    elif method == 4:
-        return 'glassosf'
-    elif method == 5:
-        return 'pcacmi'
-    elif method == 6:
-        return 'cmi2ni'
-    elif method == 7:
-        return 'space'
-    elif method == 8:
-        return 'eglasso'
-    elif method == 9:
-        return 'espace'
-    else:
-        return NameError('Cannot parse method type.\n')
 
 
 ###############      main      ###################
@@ -92,7 +66,7 @@ job['UserName'] = entry[1]
 job['Email'] = entry[2]
 job['GeneExpression'] = entry[3]
 job['HubGenes'] = entry[4]
-job['Method'] = parseMethod(entry[5])
+job['Method'] = entry[5]
 job['Param'] = entry[6]
 job['Param_2'] = entry[7]
 
@@ -108,24 +82,27 @@ print('*** Running new job {} using methods {}.'.format(job['JobID'], job['Metho
 # write gene expression data
 tmp_geneExpression = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'expr.{}.csv'.format(job['JobID'])))
 try:
-    with open(tmp_geneExpression, 'w') as f:
-        print(job['GeneExpression'], file=f)
+    expr_csv = open (tmp_geneExpression, 'wb')
+    expr_csv.write(job['GeneExpression'])
+    expr_csv.close()
 except:
     raise IOError('Cannot write gene expression data {}.'.format(job['JobID']))
 
 # run job based on their specified method
-if job['Method'] in ['GeneNet', 'ns', 'glasso', 'pcacmi', 'cmi2ni', 'space']:
-    cmd = 'Rscript {}.R {} {}'.format(job['Method'], tmp_geneExpression, job['Param'])
-elif job['Method'] in ['eglasso', 'espace']:
-    cmd = 'Rscript {}.R {} {} {} {}'.format(job['Method'], tmp_geneExpression, job['HubGenes'], job['Param'], job['Param_2'])
+if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
+    cmd = 'Rscript master.R {} {} {}'.format(job['JobID'], job['Method'], job['Param'])
+elif job['Method'] in [8, 9]:
+    cmd = 'Rscript master.R {} {} {} -b {} -p {}'.format(job['JobID'], job['Method'], job['Param'], job['HubGenes'], job['Param_2'])
+else:
+    raise IOError('Method input error: {}. method is supposed to be integer between 1 and 9.'.format(job['Method']))
 try:
     print(cmd)
+    os.system(cmd)
 except:
     raise SystemError('Cannot run command ${}'.format(cmd))
 
 ### check output result (!!!!!!!! need to use multiprocess to monitoring Rscript output !!!!!!!!!!)
-tmp_result_csv = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'result.{}.csv'.format(job['JobID'])))
-tmp_result_json = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'result.{}.json'.format(job['JobID'])))
+tmp_result_csv = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'est_edge.{}.csv'.format(job['JobID'])))
 # no result, stop the script
 if not os.path.exists(tmp_result_csv):
     sql = 'UPDATE Jobs SET Status = 3, FinishTime = now() WHERE JobID = \'{}\''.format(job['JobID'])
@@ -137,7 +114,6 @@ if not os.path.exists(tmp_result_csv):
 elif os.path.exists(tmp_result_csv):
     with open(tmp_result_csv) as i_f:
         network_csv = i_f.read()
-    with open(tmp_result_json) as i_f:
-        network_json = i_f.read()
+
 
 

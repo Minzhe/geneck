@@ -7,15 +7,20 @@ GeNeck
 Requirement
 ----------
 * PHP
-    - PHP (developed in PHP 7.0.18)
+    - PHP (developed with PHP 7.0.18)
 * MySQL
-    - MySQL (developed in MySQL 5.7.18)
+    - MySQL (developed with MySQL 5.7.18)
 * Python & modules:
     - Python 3 (developed in Python 3.6.1)
-* R & library
-    - R (developed in R 3.2.3)
-    - corpcor (developed in corpcor 1.6.9)
-    - GeneNet (developed in GeneNet 1.2.13)
+    - PyMySQL (developed with PyMySQL 0.7.11)
+* R & libraries
+    - R (developed with R 3.2.3)
+    - argparse (developed with argparse 1.0.4)
+    - corpcor (developed with corpcor 1.6.9)
+    - GeneNet (developed with GeneNet 1.2.13)
+    - CDLasso (developed with CDLasso 1.1)
+    - glasso (developed with glasso 1.8)
+    - space (developed with space 0.1.1)
 
 Deployment
 ----------
