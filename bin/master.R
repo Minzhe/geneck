@@ -46,11 +46,13 @@ expr.data <- read.csv(file = expr.file, header = TRUE)
 if (method == 1) {
     source("GeneNet.R")
     est_edge <- network.GeneNet(expr.data = expr.data, fdr = param)
+} else if (method == 2) {
+    source("ns.R")
+    est_edge <- network.ns(expr.data = expr.data, alpha = param)
 }
 
 #############  4. Write output  #################
 write.csv(est_edge, file = est_edge.csv, row.names = FALSE)
-file.remove("Rplots.pdf")
 
 ### close tmp file
 sink()

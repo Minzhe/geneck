@@ -6,6 +6,7 @@ import pymysql
 import os
 import sys
 import re
+import subprocess
 
 
 ###############      function      #################
@@ -119,16 +120,16 @@ except:
 
 # run job based on their specified method
 if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
-    cmd = 'Rscript master.R {} {} {}'.format(job['JobID'], job['Method'], job['Param'])
+    cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param'])]
 elif job['Method'] in [8, 9]:
-    cmd = 'Rscript master.R {} {} {} -b {} -p {}'.format(job['JobID'], job['Method'], job['Param'], job['HubGenes'], job['Param_2'])
+    cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']), job['HubGenes'], str(job['Param_2'])]
 else:
     raise IOError('Method input error: {}. method is supposed to be integer between 1 and 9.'.format(job['Method']))
+print(' '.join(cmd))
 try:
-    print(cmd)
-    os.system(cmd)
+    subprocess.run(cmd)
 except:
-    raise SystemError('Cannot run command ${}'.format(cmd))
+    raise SystemError('Cannot run command ${}'.format(' '.join(cmd)))
 
 # --------------------------------------------------- #
 
@@ -141,7 +142,7 @@ if not os.path.exists(tmp_result_csv):
     cursor.execute(sql)
     conn.commit()
     conn.close()
-    sys.exit('Command running time exceed time limit ${}'.format(cmd))
+    sys.exit('Command running time exceed time limit ${}'.format(' '.join(cmd)))
 # write json output for network visulization
 elif os.path.exists(tmp_result_csv):
     est_edge_json = open(tmp_result_json, 'w')

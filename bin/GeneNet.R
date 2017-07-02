@@ -24,6 +24,8 @@ network.GeneNet <- function(expr.data, fdr) {
     est_edge[,1] <- gene.index[est_edge[,1]]
     est_edge[,2] <- gene.index[est_edge[,2]]
     
+    file.remove("Rplots.pdf")
+    
     return(est_edge)
 }
 
