@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba3bdc2-8e5c-4857-bd2b-bcbdafa9675c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/GeneNet.R" afterPath="$PROJECT_DIR$/bin/GeneNet.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/job.py" afterPath="$PROJECT_DIR$/bin/job.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rst" afterPath="$PROJECT_DIR$/README.rst" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/master.R" afterPath="$PROJECT_DIR$/bin/master.R" />
     </list>
     <ignored path="exmachina.iws" />
@@ -67,14 +66,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="job.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="job.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/job.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-350">
+            <state relative-caret-position="1972">
               <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
               <folding>
                 <element signature="e#163#177#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,6 +149,7 @@
         <option value="$PROJECT_DIR$/submitjob.php" />
         <option value="$PROJECT_DIR$/bin/master.py" />
         <option value="$PROJECT_DIR$/bin/job.py" />
+        <option value="$PROJECT_DIR$/README.rst" />
       </list>
     </option>
   </component>
@@ -421,13 +431,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/analysis.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -692,11 +695,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/job.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
+        <state relative-caret-position="1972">
           <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
           <folding>
             <element signature="e#163#177#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -49,6 +49,9 @@ if (method == 1) {
 } else if (method == 2) {
     source("ns.R")
     est_edge <- network.ns(expr.data = expr.data, alpha = param)
+} else if (method == 3) {
+    source("glasso.R")
+    est_edge <- network.glasso(expr.data = expr.data, lambda = param)
 }
 
 #############  4. Write output  #################

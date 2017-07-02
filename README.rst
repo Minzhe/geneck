@@ -1,11 +1,11 @@
 GeNeck
-==========
+======
 
 .. contents:: GeNeck: a online tool kit for gene network construction.
    :local:
 
 Requirement
-----------
+-----------
 * PHP
     - PHP (developed with PHP 7.0.18)
 * MySQL
@@ -26,7 +26,7 @@ Deployment
 ----------
 
 Folders
-----------
+-------
 * this folder
     - Main page
         * index.php
