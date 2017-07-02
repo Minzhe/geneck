@@ -25,26 +25,33 @@ expr.file <- paste("../data/expr.", jobID, ".csv", sep = "")
 ### concat output edge data
 est_edge.csv <- paste("../data/est_edge.", jobID, ".csv", sep = "")
 
+### concat temp message file
+tmp.message.file <- paste("../data/tmp_message.", jobID, ".txt", sep = "")
+
+#############  2. Read data  #################
+### suppress printing message to tmp file
+log.f <- file(tmp.message.file, open = "wt")
+sink(file = log.f)
+
 ### check methods
 if (!(method %in% 1:9)) {
     stop('Parse method error, method should be in integer 1 to 9.')
 }
-print(c(jobID, method, param, hub, param_2, getwd()))
 
 ### read input data
 expr.data <- read.csv(file = expr.file, header = TRUE)
 
 
-#############  2. Parse methods & construct network #################
+#############  3. Parse methods & construct network #################
 if (method == 1) {
     source("GeneNet.R")
-    print(dim(expr.data))
     est_edge <- network.GeneNet(expr.data = expr.data, fdr = param)
-    print(dim(est_edge))
 }
 
-
-
-#############  3. Write output  #################
+#############  4. Write output  #################
 write.csv(est_edge, file = est_edge.csv, row.names = FALSE)
+file.remove("Rplots.pdf")
 
+### close tmp file
+sink()
+close(log.f)
