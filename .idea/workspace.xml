@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba3bdc2-8e5c-4857-bd2b-bcbdafa9675c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/glassosf.R" afterPath="$PROJECT_DIR$/bin/glassosf.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/job.py" afterPath="$PROJECT_DIR$/bin/job.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/master.R" afterPath="$PROJECT_DIR$/bin/master.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/pcacmi.R" afterPath="$PROJECT_DIR$/bin/pcacmi.R" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.php" afterPath="$PROJECT_DIR$/result.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/space.R" afterPath="$PROJECT_DIR$/bin/space.R" />
     </list>
     <ignored path="exmachina.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,34 +34,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="job.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="job.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/job.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
-              <caret line="111" column="10" lean-forward="true" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
+            <state relative-caret-position="296">
+              <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
               <folding>
                 <element signature="e#163#177#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="87" column="13" lean-forward="false" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resultnetwork.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resultnetwork.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -138,8 +116,8 @@
         <option value="$PROJECT_DIR$/submitjob.php" />
         <option value="$PROJECT_DIR$/bin/master.py" />
         <option value="$PROJECT_DIR$/README.rst" />
-        <option value="$PROJECT_DIR$/bin/job.py" />
         <option value="$PROJECT_DIR$/result.php" />
+        <option value="$PROJECT_DIR$/bin/job.py" />
       </list>
     </option>
   </component>
@@ -610,29 +588,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/job.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="111" column="10" lean-forward="true" selection-start-line="111" selection-start-column="10" selection-end-line="111" selection-end-column="10" />
-          <folding>
-            <element signature="e#163#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="87" column="13" lean-forward="false" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resultnetwork.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-374">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="87" column="13" lean-forward="false" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/job.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="130" column="23" lean-forward="true" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+          <folding>
+            <element signature="e#163#177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

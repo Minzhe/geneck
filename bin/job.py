@@ -122,7 +122,8 @@ except:
 if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
     cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param'])]
 elif job['Method'] in [8, 9]:
-    cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']), job['HubGenes'], str(job['Param_2'])]
+    cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']),
+           '-b', job['HubGenes'], '-p', str(job['Param_2'])]
 else:
     raise IOError('Method input error: {}. method is supposed to be integer between 1 and 9.'.format(job['Method']))
 print(' '.join(cmd))

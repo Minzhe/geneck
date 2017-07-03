@@ -41,6 +41,13 @@ if (!(method %in% 1:9)) {
 ### read input data
 expr.data <- read.csv(file = expr.file, header = TRUE)
 
+### parse hub gene
+if (!is.null(hub)) {
+    gene.index <- colnames(expr.data)
+    hub.v <- strsplit(hub, ",")[[1]]
+    hub.index <- sapply(1:length(hub.v), FUN = function(x) which(hub.v[x] == gene.index))
+}
+
 
 #############  3. Parse methods & construct network #################
 if (method == 1) {
@@ -64,6 +71,9 @@ if (method == 1) {
 } else if (method == 7) {
     source("space.R")
     est_edge <- network.space(expr.data = expr.data, alpha = param)
+} else if (method == 8) {
+    source("eglasso.R")
+    est_edge <- network.space(expr.data = expr.data, hub.index = hub.index, alpha = param, lambda = param_2)
 }
 
 #############  4. Write output  #################

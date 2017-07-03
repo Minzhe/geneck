@@ -1,6 +1,6 @@
-###                       glassosf.R                       ###
+###                       space.R                          ###
 ### ====================================================== ###
-# This R script is function to use pcacmi to constrcut gene network.
+# This R script is function to use space to constrcut gene network.
 
 suppressMessages(library(space))
 
