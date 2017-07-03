@@ -55,6 +55,9 @@ if (method == 1) {
 } else if (method == 4) {
     source("glassosf.R")
     est_edge <- network.glassosf(expr.data = expr.data, alpha = param)
+} else if (method == 5) {
+    source("pcacmi.R")
+    est_edge <- network.pcacmi(expr.data = expr.data, lambda = param)
 }
 
 #############  4. Write output  #################

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba3bdc2-8e5c-4857-bd2b-bcbdafa9675c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/glasso.R" afterPath="$PROJECT_DIR$/bin/glasso.R" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/glassosf.R" afterPath="$PROJECT_DIR$/bin/glassosf.R" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/master.R" afterPath="$PROJECT_DIR$/bin/master.R" />
     </list>
     <ignored path="exmachina.iws" />
@@ -33,44 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="methods-form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/methods-form.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="31" />
-              <folding>
-                <marker date="1498751436297" expanded="true" signature="1366:1586" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="1610:1832" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="2950:2999" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="3055:3143" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="3160:3189" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="3276:3303" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="3516:3543" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="3801:3828" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="4080:4129" ph="..." />
-                <marker date="1498751436297" expanded="true" signature="4147:4217" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="submitjob.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/submitjob.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
-              <folding>
-                <marker date="1498752647491" expanded="true" signature="3085:3251" ph="INSERT INTO Jobs... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="job.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="job.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/job.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+            <state relative-caret-position="306">
+              <caret line="128" column="4" lean-forward="true" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
               <folding>
                 <element signature="e#163#177#0" expanded="true" />
               </folding>
@@ -78,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.rst" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.rst">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -148,8 +116,8 @@
         <option value="$PROJECT_DIR$/methods-form.php" />
         <option value="$PROJECT_DIR$/submitjob.php" />
         <option value="$PROJECT_DIR$/bin/master.py" />
-        <option value="$PROJECT_DIR$/bin/job.py" />
         <option value="$PROJECT_DIR$/README.rst" />
+        <option value="$PROJECT_DIR$/bin/job.py" />
       </list>
     </option>
   </component>
@@ -656,25 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/methods-form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="31" />
-          <folding>
-            <marker date="1498751436297" expanded="true" signature="1366:1586" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="1610:1832" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="2950:2999" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="3055:3143" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="3160:3189" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="3276:3303" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="3516:3543" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="3801:3828" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="4080:4129" ph="..." />
-            <marker date="1498751436297" expanded="true" signature="4147:4217" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -687,19 +636,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1343">
           <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
-          <folding>
-            <marker date="1498752647491" expanded="true" signature="3085:3251" ph="INSERT INTO Jobs... " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/job.py">
+    <entry file="file://$PROJECT_DIR$/methods-form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="116" column="20" lean-forward="false" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
-          <folding>
-            <element signature="e#163#177#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -708,6 +651,16 @@
         <state relative-caret-position="17">
           <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/job.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="128" column="4" lean-forward="true" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+          <folding>
+            <element signature="e#163#177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
