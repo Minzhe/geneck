@@ -6,7 +6,7 @@ source("lib/PCA_CMI.R")
 
 network.pcacmi <- function(expr.data, lambda) {
     if (lambda <= 0) {
-        stop('Input error: parameter alpha for ns should be larger than 0.')
+        stop('Input error: parameter alpha for pcacmi should be larger than 0.')
     }
     p <- ncol(expr.data)
     n <- nrow(expr.data)

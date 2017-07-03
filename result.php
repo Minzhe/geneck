@@ -39,7 +39,7 @@
 				<div class="row">
 
                     <div class="3u">
-                        <?php include "methods.php"?>
+                        <?php include "methods-bar.php"?>
                     </div>
 				
 					<div class="9u skel-cell-important">
@@ -85,47 +85,6 @@
                                 </tr>
                             </table>
                             <iframe src="resultnetwork.php" width="100%" height="600px">Does not work.</iframe>
-                            <script type="text/javascript">
-                                var dom = document.getElementById("chart");
-                                var myChart = echarts.init(dom);
-                                myChart.showLoading();
-                                $.get('data/webkit-dep.json', function (webkitDep) {
-                                    myChart.hideLoading();
-
-                                    option = {
-                                        legend: {
-                                            data: ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other']
-                                        },
-                                        series: [{
-                                            type: 'graph',
-                                            layout: 'force',
-                                            animation: false,
-                                            label: {
-                                                normal: {
-                                                    position: 'right',
-                                                    formatter: '{b}'
-                                                }
-                                            },
-                                            draggable: true,
-                                            data: webkitDep.nodes.map(function (node, idx) {
-                                                node.id = idx;
-                                                return node;
-                                            }),
-                                            categories: webkitDep.categories,
-                                            force: {
-                                                // initLayout: 'circular'
-                                                // repulsion: 20,
-                                                edgeLength: 5,
-                                                repulsion: 20,
-                                                gravity: 0.2
-                                            },
-                                            edges: webkitDep.links
-                                        }]
-                                    };
-
-                                    myChart.setOption(option);
-                                });
-                            </script>
                         </div>
 					</div>
 					

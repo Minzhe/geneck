@@ -1,13 +1,12 @@
 ###                       glassosf.R                       ###
 ### ====================================================== ###
-# This R script is function to use glassosf to constrcut gene network.
+# This R script is function to use pcacmi to constrcut gene network.
 
-suppressMessages(library(glasso))
-source('lib/glasso_SF.R')
+suppressMessages(library(space))
 
-network.glassosf <- function(expr.data, alpha) {
+network.space <- function(expr.data, alpha) {
     if (alpha <= 0) {
-        stop('Input error: parameter alpha for glassosf should be larger than 0.')
+        stop('Input error: parameter alpha for space should be larger than 0.')
     }
     p <- ncol(expr.data)
     n <- nrow(expr.data)
@@ -15,8 +14,8 @@ network.glassosf <- function(expr.data, alpha) {
     
     expr.mat <- scale(as.matrix(expr.data), center = TRUE, scale = FALSE)
     
-    out <- glasso_sf(expr.mat, alpha)
-    est_edge <- which(abs(out$wi) > 0, T)
+    out <- space.joint(expr.mat, lam1 = alpha * n, iter = 5)
+    est_edge <- which(abs(out$ParCor) > 0, T)
     est_edge <- est_edge[est_edge[, 1] < est_edge[, 2], ]
     if (length(est_edge) == 2) est_edge <- matrix(est_edge, 1, 2)
     
@@ -26,5 +25,15 @@ network.glassosf <- function(expr.data, alpha) {
     est_edge[,2] <- gene.index[est_edge[,2]]
     
     return(est_edge)
+    
+    bic_val = sum(log(n / out$sig.fit)) + log(n) / n * nrow(est_edge) * 2
 }
+
+
+
+
+
+
+
+
 

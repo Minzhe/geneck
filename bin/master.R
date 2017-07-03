@@ -58,6 +58,12 @@ if (method == 1) {
 } else if (method == 5) {
     source("pcacmi.R")
     est_edge <- network.pcacmi(expr.data = expr.data, lambda = param)
+} else if (method == 6) {
+    source("cmi2ni.R")
+    est_edge <- network.cmi2ni(expr.data = expr.data, lambda = param)
+} else if (method == 7) {
+    source("space.R")
+    est_edge <- network.space(expr.data = expr.data, alpha = param)
 }
 
 #############  4. Write output  #################
