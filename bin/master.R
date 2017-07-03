@@ -73,7 +73,10 @@ if (method == 1) {
     est_edge <- network.space(expr.data = expr.data, alpha = param)
 } else if (method == 8) {
     source("eglasso.R")
-    est_edge <- network.space(expr.data = expr.data, hub.index = hub.index, alpha = param, lambda = param_2)
+    est_edge <- network.eglasso(expr.data = expr.data, hub.index = hub.index, alpha = param, lambda = param_2)
+} else if (method == 9) {
+    source("espace.R")
+    est_edge <- network.espace(expr.data = expr.data, hub.index = hub.index, alpha = param, lambda = param_2)
 }
 
 #############  4. Write output  #################
