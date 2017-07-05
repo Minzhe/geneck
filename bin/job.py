@@ -144,11 +144,17 @@ if not os.path.exists(tmp_result_csv):
     conn.commit()
     conn.close()
     sys.exit('Command running time exceed time limit ${}'.format(' '.join(cmd)))
-# write json output for network visulization
+# write json output for network visualization
 elif os.path.exists(tmp_result_csv):
-    est_edge_json = open(tmp_result_json, 'w')
-    est_edge_json.write('Just a test.\n')
-    est_edge_json.close()
+    if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
+        cmd = ['python', 'preNetJson.py', tmp_result_csv]
+    elif job['Method'] in [8, 9]:
+        cmd = ['python', 'preNetJson.py', tmp_result_csv, job['HubGenes']]
+    print(' '.join(cmd))
+    try:
+        subprocess.run(cmd)
+    except:
+        raise SystemError('Cannot run command ${}'.format(' '.join(cmd)))
 
 # --------------------------------------------------- #
 

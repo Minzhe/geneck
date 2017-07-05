@@ -2,7 +2,7 @@
 <html style="height: 100%">
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
+    <title>GeNeck</title>
     <script type="text/javascript" src="js/echarts.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
@@ -12,12 +12,12 @@
     var dom = document.getElementById("container");
     var myChart = echarts.init(dom);
     myChart.showLoading();
-    $.get('data/webkit-dep.json', function (webkitDep) {
+    $.get('data/est_edge.595d3917defee4.37470250.json', function (webkitDep) {
         myChart.hideLoading();
 
         option = {
             legend: {
-                data: ['HTMLElement', 'WebGL', 'SVG', 'CSS', 'Other']
+                data: ['gene', 'hub gene']
             },
             series: [{
                 type: 'graph',

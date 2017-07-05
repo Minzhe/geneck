@@ -21,6 +21,7 @@ Requirement
     - CDLasso (developed with CDLasso 1.1)
     - glasso (developed with glasso 1.8)
     - space (developed with space 0.1.1)
+    - espace (install the package with the tar.gz included in bin/ folder)
 
 Deployment
 ----------
@@ -46,6 +47,7 @@ Folders
 
     - Function pages
         * submitjob.php
+
     - Element
         * header.php
         * footer.php
