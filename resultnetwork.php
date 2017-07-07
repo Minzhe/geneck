@@ -12,42 +12,78 @@
     var dom = document.getElementById("container");
     var myChart = echarts.init(dom);
     myChart.showLoading();
-    $.get('data/est_edge.595d3917defee4.37470250.json', function (webkitDep) {
-        myChart.hideLoading();
 
-        option = {
-            legend: {
-                data: ['gene', 'hub gene']
+    <?php
+
+    include "../../dbincloc/geneck.inc";
+
+    // Open a new connection to the MySQL server
+    $db_conn = new mysqli($hostname, $usr, $pwd, $dbname);
+
+    // Output any connection error
+    if ($db_conn -> connect_error) {
+        die('Error : (' . $db_conn -> connect_errno . ') ' . $db_conn->connect_error);
+    }
+
+    if (isset($_GET['jobid'])) {
+        $jobid = mysqli_real_escape_string($db_conn, $_GET['jobid']);
+    }
+
+    $stmt = $db_conn -> prepare("SELECT EstEdge_json FROM Results WHERE JobID = ?");
+
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "s", $jobid);
+        mysqli_stmt_execute($stmt);
+        $stmt->bind_result($estEdgeJson);
+        $stmt->fetch();
+
+        mysqli_stmt_close($stmt);
+
+    } else {
+        trigger_error('Statement failed : ' . mysqli_stmt_error($stmt), E_USER_ERROR);
+    }
+
+    $db_conn->close();
+
+    echo "edgeJson = ";
+    echo $estEdgeJson;
+    ?>
+
+    myChart.hideLoading();
+
+    option = {
+        legend: {
+            data: ['gene', 'hub gene']
+        },
+        series: [{
+            type: 'graph',
+            layout: 'force',
+            animation: false,
+            label: {
+                normal: {
+                    position: 'right',
+                    formatter: '{b}'
+                }
             },
-            series: [{
-                type: 'graph',
-                layout: 'force',
-                animation: false,
-                label: {
-                    normal: {
-                        position: 'right',
-                        formatter: '{b}'
-                    }
-                },
-                draggable: true,
-                data: webkitDep.nodes.map(function (node, idx) {
-                    node.id = idx;
-                    return node;
-                }),
-                categories: webkitDep.categories,
-                force: {
-                    // initLayout: 'circular'
-                    // repulsion: 20,
-                    edgeLength: 5,
-                    repulsion: 20,
-                    gravity: 0.2
-                },
-                edges: webkitDep.links
-            }]
-        };
+            draggable: true,
+            data: edgeJson.nodes.map(function (node, idx) {
+                node.id = idx;
+                return node;
+            }),
+            categories: edgeJson.categories,
+            force: {
+                // initLayout: 'circular'
+                // repulsion: 20,
+                edgeLength: 50,
+                repulsion: 20,
+                gravity: 0.2
+            },
+            edges: edgeJson.links
+        }]
+    };
 
-        myChart.setOption(option);
-    });
+    myChart.setOption(option);
+
 </script>
 </body>
 </html>
