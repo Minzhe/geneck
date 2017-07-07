@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ba3bdc2-8e5c-4857-bd2b-bcbdafa9675c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/job.py" afterPath="$PROJECT_DIR$/bin/job.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/result.php" afterPath="$PROJECT_DIR$/result.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resultnetwork.php" afterPath="$PROJECT_DIR$/resultnetwork.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/space.php" afterPath="$PROJECT_DIR$/space.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submitjob.php" afterPath="$PROJECT_DIR$/submitjob.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="exmachina.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,55 +35,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Results-EstEdge.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/Results-EstEdge.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="648" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="waiting.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/waiting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
-              <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
-              <folding>
-                <marker date="1499444943091" expanded="true" signature="2956:3029" ph="SELECT Statu... Jobs" />
-                <marker date="1499444943091" expanded="true" signature="3624:5987" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="3680:5961" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="3706:5950" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="3735:3806" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="3855:5935" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="3881:4248" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="3999:4221" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4286:5916" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4333:5492" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4333:5893" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4403:4510" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4539:4686" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4584:4656" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4715:5304" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4760:4894" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="4939:5082" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="5127:5274" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="5333:5492" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="5378:5492" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="5612:5685" ph="..." />
-                <marker date="1499444943091" expanded="true" signature="5714:5864" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/result.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="276">
+              <caret line="94" column="9" lean-forward="true" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
+              <folding>
+                <marker date="1499456918017" expanded="true" signature="2972:3037" ph="SELECT Metho... Jobs" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,10 +50,22 @@
       <file leaf-file-name="resultnetwork.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resultnetwork.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="38">
               <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="28" />
               <folding>
                 <marker date="1499444405456" expanded="true" signature="981:1029" ph="SELECT EstEd... Results" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="waiting.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/waiting.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="116" selection-end-column="1" />
+              <folding>
+                <marker date="1499444943091" expanded="true" signature="2956:3029" ph="SELECT Statu... Jobs" />
               </folding>
             </state>
           </provider>
@@ -164,19 +134,19 @@
         <option value="$PROJECT_DIR$/pcacmi.php" />
         <option value="$PROJECT_DIR$/cmi2ni.php" />
         <option value="$PROJECT_DIR$/methods-form.php" />
-        <option value="$PROJECT_DIR$/submitjob.php" />
         <option value="$PROJECT_DIR$/bin/master.py" />
         <option value="$PROJECT_DIR$/README.rst" />
         <option value="$PROJECT_DIR$/glasso.php" />
         <option value="$PROJECT_DIR$/data/Results-EstEdge.json" />
         <option value="$PROJECT_DIR$/bin/prepareJson.py" />
         <option value="$PROJECT_DIR$/bin/preNetJson.py" />
-        <option value="$PROJECT_DIR$/bin/job.py" />
         <option value="$PROJECT_DIR$/space.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/resultnetwork.php" />
-        <option value="$PROJECT_DIR$/result.php" />
+        <option value="$PROJECT_DIR$/submitjob.php" />
         <option value="$PROJECT_DIR$/waiting.php" />
+        <option value="$PROJECT_DIR$/bin/job.py" />
+        <option value="$PROJECT_DIR$/result.php" />
       </list>
     </option>
   </component>
@@ -317,12 +287,6 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -387,12 +351,12 @@
       <workItem from="1499095209788" duration="176000" />
       <workItem from="1499271569683" duration="661000" />
       <workItem from="1499351035621" duration="8101000" />
-      <workItem from="1499438779870" duration="6222000" />
+      <workItem from="1499438779870" duration="8533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160053000" />
+    <option name="totallyTimeSpent" value="162364000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,13 +382,23 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19907764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -652,13 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/job.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="80" column="44" lean-forward="true" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/webkit-dep.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -687,35 +654,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/submitjob.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <marker date="1498752647491" expanded="true" signature="3085:3251" ph="INSERT INTO Jobs... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/space.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="47" column="97" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/Results-EstEdge.json">
+    <entry file="file://$PROJECT_DIR$/data/Results-EstEdge.json" />
+    <entry file="file://$PROJECT_DIR$/bin/job.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="648" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="-850">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitjob.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="99" column="1" lean-forward="true" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+          <folding>
+            <marker date="1499446061655" expanded="true" signature="3085:3251" ph="INSERT INTO Jobs... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waiting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="116" selection-end-column="1" />
+          <folding>
+            <marker date="1499444943091" expanded="true" signature="2956:3029" ph="SELECT Statu... Jobs" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resultnetwork.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="38">
           <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="28" />
           <folding>
             <marker date="1499444405456" expanded="true" signature="981:1029" ph="SELECT EstEd... Results" />
@@ -725,39 +701,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/result.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waiting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+        <state relative-caret-position="276">
+          <caret line="94" column="9" lean-forward="true" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
           <folding>
-            <marker date="1499444943091" expanded="true" signature="2956:3029" ph="SELECT Statu... Jobs" />
-            <marker date="1499444943091" expanded="true" signature="3624:5987" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="3680:5961" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="3706:5950" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="3735:3806" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="3855:5935" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="3881:4248" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="3999:4221" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4286:5916" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4333:5492" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4333:5893" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4403:4510" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4539:4686" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4584:4656" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4715:5304" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4760:4894" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="4939:5082" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="5127:5274" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="5333:5492" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="5378:5492" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="5612:5685" ph="..." />
-            <marker date="1499444943091" expanded="true" signature="5714:5864" ph="..." />
+            <marker date="1499456918017" expanded="true" signature="2972:3037" ph="SELECT Metho... Jobs" />
           </folding>
         </state>
       </provider>

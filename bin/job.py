@@ -9,7 +9,7 @@ import re
 import subprocess
 
 
-###############      function      #################
+### ==================      function      =================== ###
 def parseDBconfig(config_file):
     '''
     Read database configuration information
@@ -62,12 +62,12 @@ def executeSQL(connection, cursor, sql, value=None):
         sys.exit('MySQL error: {}'.format(sql))
 
 
-###############      main      ###################
-### parse database configuration
+### ===================      main      ===================== ###
+
+### -----------   database config   ---------------- ###
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 db_config_path = os.path.realpath(os.path.join(cur_dir, '..', '..', '..', 'dbincloc', 'geneck.inc'))
 db_config_dict = parseDBconfig(config_file=db_config_path)
-
 ### connect to database
 conn = pymysql.connect(host=db_config_dict['hostname'],
                        user=db_config_dict['usr'],
@@ -75,20 +75,16 @@ conn = pymysql.connect(host=db_config_dict['hostname'],
                        db=db_config_dict['dbname'],
                        charset='utf8')
 cursor = conn.cursor()
-
 ### retrieve the lasted unprocessed job
 sql = 'SELECT JobID, UserName, Email, GeneExpression, HubGenes, Method, Param, Param_2 ' \
       'FROM `Jobs` WHERE Status = 0 ORDER by CreateTime DESC LIMIT 1'
 cursor.execute(sql)
 entry = cursor.fetchone()
-
 ### if no new job, stop this script
 if entry is None:
     sys.exit('No new job found in database.\n')
 
-# --------------------------------------------------- #
-
-### assign job content
+### --------------------  assign job content  ---------------------- ###
 job = dict()
 job['JobID'] = entry[0]
 job['UserName'] = entry[1]
@@ -98,17 +94,12 @@ job['HubGenes'] = entry[4]
 job['Method'] = entry[5]
 job['Param'] = entry[6]
 job['Param_2'] = entry[7]
-
 ### update job status
 sql = 'UPDATE Jobs SET Status = 1 WHERE JobID = \'{}\''.format(job['JobID'])
 executeSQL(connection=conn, cursor=cursor, sql=sql)
 
-
-# --------------------------------------------------- #
-
-### start job
+### ----------------------  start job  --------------------------- ###
 print('*** Running new job {} using methods {}.'.format(job['JobID'], job['Method']))
-
 # write gene expression data
 tmp_geneExpression = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'expr.{}.csv'.format(job['JobID'])))
 try:
@@ -117,23 +108,18 @@ try:
     expr_csv.close()
 except:
     raise IOError('Cannot write gene expression data {}.'.format(job['JobID']))
-
 # run job based on their specified method
 if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
     cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param'])]
 elif job['Method'] in [8, 9]:
-    cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']),
-           '-b', job['HubGenes'], '-p', str(job['Param_2'])]
-else:
-    raise IOError('Method input error: {}. method is supposed to be integer between 1 and 9.'.format(job['Method']))
+    cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']), '-b', job['HubGenes'], '-p', str(job['Param_2'])]
 print(' '.join(cmd))
 try:
     subprocess.run(cmd)
 except:
-    raise SystemError('Cannot run command ${}'.format(' '.join(cmd)))
+    print('Cannot run command ${}'.format(' '.join(cmd)))
 
-# --------------------------------------------------- #
-
+### -------------------  monitor job  --------------------------- ###
 ### check output result (!!!!!!!! need to use multiprocess to monitoring Rscript output !!!!!!!!!!)
 tmp_result_csv = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'est_edge.{}.csv'.format(job['JobID'])))
 tmp_result_json = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'est_edge.{}.json'.format(job['JobID'])))
@@ -145,30 +131,29 @@ if not os.path.exists(tmp_result_csv):
     conn.close()
     sys.exit('Command running time exceed time limit ${}'.format(' '.join(cmd)))
 # write json output for network visualization
-elif os.path.exists(tmp_result_csv):
+else:
     if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
         cmd = ['python', 'preNetJson.py', tmp_result_csv]
     elif job['Method'] in [8, 9]:
         cmd = ['python', 'preNetJson.py', tmp_result_csv, job['HubGenes']]
-    print(' '.join(cmd))
     try:
         subprocess.run(cmd)
     except:
-        raise SystemError('Cannot run command ${}'.format(' '.join(cmd)))
+        print('Cannot run command ${}'.format(' '.join(cmd)))
 
-# --------------------------------------------------- #
+### ---------------------  store result  ------------------------- ###
+if os.path.exists(tmp_result_csv) and os.path.exists(tmp_result_json):
+    # read csv and json content
+    est_edge_csv = readFileContent(tmp_result_csv)
+    est_edge_json = readFileContent(tmp_result_json)
+    # insert into mysql
+    sql = 'INSERT INTO Results (JobID, EstEdge_csv, EstEdge_json) VALUES (%s, %s, %s)'
+    executeSQL(connection=conn, cursor=cursor, sql=sql, value=(job['JobID'], est_edge_csv, est_edge_json))
+    # update job status to be fininshed
+    sql = 'UPDATE Jobs SET Status = 2, FinishTime = now() WHERE JobID = \'{}\''.format(job['JobID'])
+    executeSQL(connection=conn, cursor=cursor, sql=sql)
 
-### insert result into database
-# read csv and json content
-est_edge_csv = readFileContent(tmp_result_csv)
-est_edge_json = readFileContent(tmp_result_json)
-# insert into mysql
-sql = 'INSERT INTO Results (JobID, EstEdge_csv, EstEdge_json) VALUES (%s, %s, %s)'
-executeSQL(connection=conn, cursor=cursor, sql=sql, value=(job['JobID'], est_edge_csv, est_edge_json))
-# update job status to be fininshed
-sql = 'UPDATE Jobs SET Status = 2, FinishTime = now() WHERE JobID = \'{}\''.format(job['JobID'])
-executeSQL(connection=conn, cursor=cursor, sql=sql)
-# remove local result file
+### ----------------  remove local temp file  --------------------- ###
 tmp_message = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'tmp_message.{}.txt'.format(job['JobID'])))
 os.remove(tmp_geneExpression)
 os.remove(tmp_result_csv)

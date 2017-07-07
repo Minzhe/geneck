@@ -99,4 +99,6 @@ if ($stmt = $db_conn -> prepare("INSERT INTO Jobs (JobID, Status, UserName, Orga
     $stmt -> close();
 }
 $db_conn -> close();
+
+echo "<script type='text/javascript'>location.href='waiting.php?jobid=${jobid}'</script>";
 ?>
