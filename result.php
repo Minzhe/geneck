@@ -155,7 +155,7 @@
                                     </td>
                                 </tr>
                             </table>
-                            <iframe src="resultnetwork.php?jobid=<?php echo $_GET['jobid'];?>" width="100%" height="600px">Does not work.</iframe>
+                            <iframe src="resultnetwork.php?jobid=<?php echo $_GET['jobid'];?>" width="100%" height="600px">Does support iframe.</iframe>
                         </div>
 					</div>
 					

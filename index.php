@@ -59,8 +59,7 @@
                                 <div class="modal">
                                     <label class="modal-bg" for="modal-1"></label>
                                     <div class="modal-content">
-                                        <p>xxxxxxxxxxxxxxxxxxxxxx</p>
-                                        <script type="text/javascript" src="js/network.js"></script>
+                                        <iframe src="demonetwork.php" width="100%" height="100%">Does support iframe.</iframe>
                                     </div>
                                 </div>
                             </div>

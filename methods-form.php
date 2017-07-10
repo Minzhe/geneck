@@ -77,7 +77,7 @@ $param_2_box = "<tr>
                         <input name="expression_data" type="file">
                     </label>
                 </td>
-                <td><label class="demo-button"><a>example</a></label></td>
+                <td><label class="demo-button"><a href="data/demo_data.csv">example</a></label></td>
             </tr>
             <tr>
                 <td class="table-right-align"><p><?php echo $param; ?></p></td>

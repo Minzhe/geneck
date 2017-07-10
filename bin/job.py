@@ -1,10 +1,11 @@
 #####################################################
-###                  master.py                    ###
+###                   job.py                      ###
 #####################################################
+#!/opt/anaconda3/bin/python
 
+import sys
 import pymysql
 import os
-import sys
 import re
 import subprocess
 
@@ -61,6 +62,13 @@ def executeSQL(connection, cursor, sql, value=None):
     except:
         sys.exit('MySQL error: {}'.format(sql))
 
+def cleanExit():
+    os.remove(tmp_geneExpression)
+    os.remove(tmp_result_csv)
+    os.remove(tmp_result_json)
+    os.remove(tmp_message)
+    sys.exit()
+
 
 ### ===================      main      ===================== ###
 
@@ -77,12 +85,13 @@ conn = pymysql.connect(host=db_config_dict['hostname'],
 cursor = conn.cursor()
 ### retrieve the lasted unprocessed job
 sql = 'SELECT JobID, UserName, Email, GeneExpression, HubGenes, Method, Param, Param_2 ' \
-      'FROM `Jobs` WHERE Status = 0 ORDER by CreateTime DESC LIMIT 1'
+      'FROM `Jobs` WHERE Status = 0 ORDER by CreateTime LIMIT 1'
 cursor.execute(sql)
 entry = cursor.fetchone()
 ### if no new job, stop this script
 if entry is None:
-    sys.exit('No new job found in database.\n')
+    sys.exit()
+    # sys.exit('No new job found in database.\n')
 
 ### --------------------  assign job content  ---------------------- ###
 job = dict()
@@ -99,7 +108,7 @@ sql = 'UPDATE Jobs SET Status = 1 WHERE JobID = \'{}\''.format(job['JobID'])
 executeSQL(connection=conn, cursor=cursor, sql=sql)
 
 ### ----------------------  start job  --------------------------- ###
-print('*** Running new job {} using methods {}.'.format(job['JobID'], job['Method']))
+# print('*** Running new job {} using methods {}.'.format(job['JobID'], job['Method']))
 # write gene expression data
 tmp_geneExpression = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'expr.{}.csv'.format(job['JobID'])))
 try:
@@ -107,29 +116,33 @@ try:
     expr_csv.write(job['GeneExpression'])
     expr_csv.close()
 except:
-    raise IOError('Cannot write gene expression data {}.'.format(job['JobID']))
+    print('Cannot write gene expression data {}.'.format(job['JobID']))
+    cleanExit()
 # run job based on their specified method
 if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
     cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param'])]
 elif job['Method'] in [8, 9]:
     cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']), '-b', job['HubGenes'], '-p', str(job['Param_2'])]
-print(' '.join(cmd))
+# print(' '.join(cmd))
 try:
     subprocess.run(cmd)
 except:
     print('Cannot run command ${}'.format(' '.join(cmd)))
+    cleanExit()
 
 ### -------------------  monitor job  --------------------------- ###
 ### check output result (!!!!!!!! need to use multiprocess to monitoring Rscript output !!!!!!!!!!)
 tmp_result_csv = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'est_edge.{}.csv'.format(job['JobID'])))
 tmp_result_json = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'est_edge.{}.json'.format(job['JobID'])))
+tmp_message = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'tmp_message.{}.txt'.format(job['JobID'])))
 # no result, stop the script
 if not os.path.exists(tmp_result_csv):
     sql = 'UPDATE Jobs SET Status = 3, FinishTime = now() WHERE JobID = \'{}\''.format(job['JobID'])
     cursor.execute(sql)
     conn.commit()
     conn.close()
-    sys.exit('Command running time exceed time limit ${}'.format(' '.join(cmd)))
+    print('Command running time exceed time limit ${}'.format(' '.join(cmd)))
+    cleanExit()
 # write json output for network visualization
 else:
     if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
@@ -140,6 +153,7 @@ else:
         subprocess.run(cmd)
     except:
         print('Cannot run command ${}'.format(' '.join(cmd)))
+        cleanExit()
 
 ### ---------------------  store result  ------------------------- ###
 if os.path.exists(tmp_result_csv) and os.path.exists(tmp_result_json):
@@ -154,8 +168,4 @@ if os.path.exists(tmp_result_csv) and os.path.exists(tmp_result_json):
     executeSQL(connection=conn, cursor=cursor, sql=sql)
 
 ### ----------------  remove local temp file  --------------------- ###
-tmp_message = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'tmp_message.{}.txt'.format(job['JobID'])))
-os.remove(tmp_geneExpression)
-os.remove(tmp_result_csv)
-os.remove(tmp_result_json)
-os.remove(tmp_message)
+cleanExit()

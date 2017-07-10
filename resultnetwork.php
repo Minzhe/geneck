@@ -50,7 +50,8 @@
     ?>
 
     myChart.hideLoading();
-
+    // customize graph
+    coeff = Object.keys(edgeJson.nodes).length / 500;
     option = {
         legend: {
             data: ['gene', 'hub gene']
@@ -74,16 +75,15 @@
             force: {
                 // initLayout: 'circular'
                 // repulsion: 20,
-                edgeLength: 50,
-                repulsion: 20,
-                gravity: 0.2
+                edgeLength: 50 / Math.cbrt(coeff),
+                repulsion: 20 / Math.cbrt(coeff),
+                gravity: 0.2 * Math.sqrt(coeff)
             },
             edges: edgeJson.links
         }]
     };
 
     myChart.setOption(option);
-
 </script>
 </body>
 </html>
