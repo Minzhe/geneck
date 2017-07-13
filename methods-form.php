@@ -5,7 +5,7 @@ $page_name = explode('/', $path)[2];
 
 if ($page_name == 'GeneNet.php') {
     $method_index = 'GeneNet';
-    $param = 'false discover rate (FDR):';
+    $param = 'False discover rate:';
     $default = '0.2';
 } elseif ($page_name == 'ns.php') {
     $method_index = 'ns';
@@ -43,6 +43,10 @@ if ($page_name == 'GeneNet.php') {
     $default = '0.8';
     $param_2 = 'Lambda:';
     $default_2 = '1.0';
+} elseif ($page_name == 'ena.php') {
+    $method_index = 'ena';
+    $param = 'False discover rate:';
+    $default = '0.01';
 } else {
     echo 'methods error: ' . $page_name . "<br>";
 }

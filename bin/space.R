@@ -28,12 +28,3 @@ network.space <- function(expr.data, alpha) {
     
     bic_val = sum(log(n / out$sig.fit)) + log(n) / n * nrow(est_edge) * 2
 }
-
-
-
-
-
-
-
-
-

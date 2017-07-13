@@ -38,29 +38,7 @@
 				<div class="row">
 
 					<div class="3u">
-						<section class="sidebar">
-							<header>
-								<h2>Basic Methods</h2>
-							</header>
-							<ul class="style1 methods">
-								<li><a href="GeneNet.php">GeneNet</a></li>
-								<li><a href="ns.php">Neighborhood Selection</a></li>
-								<li><a href="glasso.php">GLASSO</a></li>
-								<li><a href="glassosf.php">GLASSO-SF</a></li>
-								<li><a href="pcacmi.php">PCACMI</a></li>
-								<li><a href="cmi2ni.php">CMI2NI</a></li>
-								<li><a href="space.php">SPACE</a></li>
-							</ul>
-						</section>
-						<section class="sidebar">
-							<header>
-								<h2>Extended Methods</h2>
-							</header>
-							<ul class="style1 methods">
-								<li><a href="eglasso.php">EGLASSO</a></li>
-								<li><a href="espace.php">ESPACE</a></li>
-							</ul>
-						</section>
+                        <?php include "methods-bar.php"?>
 					</div>
 				
 					<div class="9u skel-cell-important">

@@ -32,10 +32,11 @@ if ($source == 'GeneNet') {
     $method = 8;
 } elseif ($source == 'espace') {
     $method = 9;
+} elseif ($source == 'ena') {
+    $method = 10;
 } else {
     echo 'methods error: ' . $source . "<br>";
 }
-echo $method . "<br>";
 
 /*********************************************************************************/
 /* Gene expression data and hub genes                                            */
@@ -51,7 +52,6 @@ if ($_FILES['expression_data']['size'] > 0) {
 // ------------ hub genes -------------
 if (isset($_POST['hubgenes'])) {
     $hubgenes = cleanInput($_POST['hubgenes']);
-    echo $hubgenes . "<br>";
 }
 
 
@@ -67,7 +67,6 @@ if (isset($_POST['param'])) {
 if (isset($_POST['param'])) {
     $param_2 = $_POST['param_2'];
 }
-echo $param . " " . $param_2 . "<br>";
 
 
 

@@ -1,4 +1,4 @@
-###                       glassosf.R                       ###
+###                       cmi2ni.R                         ###
 ### ====================================================== ###
 # This R script is function to use cmi2ni to constrcut gene network.
 

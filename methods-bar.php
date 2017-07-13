@@ -21,6 +21,8 @@ if ($page_name == 'GeneNet.php') {
     $method_index = 'eglasso';
 } elseif ($page_name == 'espace.php') {
     $method_index = 'espace';
+} elseif ($page_name == 'ena.php') {
+    $method_index = 'ena';
 } else {
     $method_index = 'analysis';
 }
@@ -47,5 +49,13 @@ if ($page_name == 'GeneNet.php') {
     <ul class="style1 methods">
         <li <?php if($method_index == 'eglasso') {echo 'class="method-active"';}?>><a href="eglasso.php">EGLASSO</a></li>
         <li <?php if($method_index == 'espace') {echo 'class="method-active"';}?>><a href="espace.php">ESPACE</a></li>
+    </ul>
+</section>
+<section class="sidebar" id="methods">
+    <header>
+        <h2>Integrative Methods</h2>
+    </header>
+    <ul class="style1 methods">
+        <li <?php if($method_index == 'ena') {echo 'class="method-active"';}?>><a href="ena.php">ENA</a></li>
     </ul>
 </section>

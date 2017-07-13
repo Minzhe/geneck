@@ -1,4 +1,4 @@
-###                       glassosf.R                       ###
+###                       pcacmi.R                         ###
 ### ====================================================== ###
 # This R script is function to use pcacmi to constrcut gene network.
 

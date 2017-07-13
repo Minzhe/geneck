@@ -14,7 +14,7 @@ Requirement
     - ``Python 3`` (developed in Python 3.6.1 | Anaconda 4.4.0)
     - ``PyMySQL`` (developed with PyMySQL 0.7.11)
 * R & libraries
-    - ``R** (developed with R 3.2.3)
+    - ``R`` (developed with R 3.2.3)
     - ``argparse`` (developed with argparse 1.0.4)
     - ``corpcor`` (developed with corpcor 1.6.9)
     - ``GeneNet`` (developed with GeneNet 1.2.13)
@@ -61,6 +61,7 @@ PHP page
     - ``space.php``
     - ``eglasso.php``
     - ``espace.php``
+    - ``ena.php``
 
 * Function pages
     - ``submitjob.php`` (check parameter and data, submit to server)

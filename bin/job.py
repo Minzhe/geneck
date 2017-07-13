@@ -71,6 +71,9 @@ def cleanExit():
 
 
 ### ===================      main      ===================== ###
+verbose = False
+if len(sys.argv) > 1 and sys.argv[1] == 'verbose':
+    verbose = True
 
 ### -----------   database config   ---------------- ###
 cur_dir = os.path.dirname(os.path.abspath(__file__))
@@ -90,8 +93,9 @@ cursor.execute(sql)
 entry = cursor.fetchone()
 ### if no new job, stop this script
 if entry is None:
+    if verbose:
+        sys.exit('No new job found in database.\n')
     sys.exit()
-    # sys.exit('No new job found in database.\n')
 
 ### --------------------  assign job content  ---------------------- ###
 job = dict()
@@ -108,7 +112,8 @@ sql = 'UPDATE Jobs SET Status = 1 WHERE JobID = \'{}\''.format(job['JobID'])
 executeSQL(connection=conn, cursor=cursor, sql=sql)
 
 ### ----------------------  start job  --------------------------- ###
-# print('*** Running new job {} using methods {}.'.format(job['JobID'], job['Method']))
+if verbose:
+    print('*** Running new job {} using methods {}.'.format(job['JobID'], job['Method']))
 # write gene expression data
 tmp_geneExpression = os.path.realpath(os.path.join(cur_dir, '..', 'data', 'expr.{}.csv'.format(job['JobID'])))
 try:
@@ -119,11 +124,12 @@ except:
     print('Cannot write gene expression data {}.'.format(job['JobID']))
     cleanExit()
 # run job based on their specified method
-if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
+if job['Method'] in [1, 2, 3, 4, 5, 6, 7, 10]:
     cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param'])]
 elif job['Method'] in [8, 9]:
     cmd = ['Rscript', 'master.R', job['JobID'], str(job['Method']), str(job['Param']), '-b', job['HubGenes'], '-p', str(job['Param_2'])]
-# print(' '.join(cmd))
+if verbose:
+    print(' '.join(cmd))
 try:
     subprocess.run(cmd)
 except:
@@ -145,7 +151,7 @@ if not os.path.exists(tmp_result_csv):
     cleanExit()
 # write json output for network visualization
 else:
-    if job['Method'] in [1, 2, 3, 4, 5, 6, 7]:
+    if job['Method'] in [1, 2, 3, 4, 5, 6, 7, 10]:
         cmd = ['python', 'preNetJson.py', tmp_result_csv]
     elif job['Method'] in [8, 9]:
         cmd = ['python', 'preNetJson.py', tmp_result_csv, job['HubGenes']]

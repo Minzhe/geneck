@@ -7,7 +7,7 @@ suppressMessages(library(argparse))
 #############  1. Parse comandline argument  #################
 parser <- ArgumentParser(description = "This pipline is to construct gene network using gene co-expression data and specified hub gene information.")
 parser$add_argument("jobID", type = "character", help = "jobID which will be used to find .")
-parser$add_argument("method", type = "integer", help = "method to use to construct the gene network, should be integer [1,9].")
+parser$add_argument("method", type = "integer", help = "method to use to construct the gene network, should be integer [1,10].")
 parser$add_argument("param", type = "double", help = "parameter for method")
 parser$add_argument("-b", "--hub", type = "character", help = "list of hub genes separated by comma, [gene1,gene2,...], only necessary when method is 8 or 9.")
 parser$add_argument("-p", "--param_2", type = "double", help = "additional parameter if the method is 8 or 9.")
@@ -34,7 +34,7 @@ log.f <- file(tmp.message.file, open = "wt")
 sink(file = log.f)
 
 ### check methods
-if (!(method %in% 1:9)) {
+if (!(method %in% 1:10)) {
     stop('Parse method error, method should be in integer 1 to 9.')
 }
 
@@ -77,6 +77,9 @@ if (method == 1) {
 } else if (method == 9) {
     source("espace.R")
     est_edge <- network.espace(expr.data = expr.data, hub.index = hub.index, alpha = param, lambda = param_2)
+} else if (method == 10) {
+    source("ena.R")
+    est_edge <- network.ena(expr.data = expr.data, n.perm = 10, sig.quant = 1-param)
 }
 
 #############  4. Write output  #################
