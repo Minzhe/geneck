@@ -44,26 +44,28 @@ function parseMethod($method) {
     } elseif ($method == 2) {
         return 'Neighborhood selection';
     } elseif ($method == 3) {
-        return 'glasso';
+        return 'GLASSO';
     } elseif ($method == 4) {
-        return 'glassosf';
+        return 'GLASSO-SF';
     } elseif ($method == 5) {
-        return 'pcacmi';
+        return 'PCA-CMI';
     } elseif ($method == 6) {
-        return 'cmi2ni';
+        return 'CMI2NI';
     } elseif ($method == 7) {
-        return 'space';
+        return 'SPACE';
     } elseif ($method == 8) {
-        return 'eglasso';
+        return 'EGLASSO';
     } elseif ($method == 9) {
-        return 'espace';
+        return 'ESPACE';
+    } elseif ($method == 10) {
+        return 'ENA';
     } else {
         return Null;
     }
 }
 
 function parseParam($method) {
-    if ($method == 1) {
+    if (in_array($method, array(1, 10))) {
         return 'FDR: ';
     } elseif (in_array($method, array(2, 4, 7, 8, 9))) {
         return 'Alpha: ';

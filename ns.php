@@ -49,7 +49,6 @@
                 <section>
                     <header>
                         <h2>Neighborhood Selection</h2>
-                        <span class="byline">Augue praesent a lacus at urna congue rutrum</span>
                     </header>
                     <p> Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce
                         odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac

@@ -140,7 +140,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <p>Hub genes: <strong><?php if (isset($hub_genes)) {echo $hub_genes;} else {echo 'Not set.';}?></strong></p>
+                                        <p><strong><?php if (isset($hub_genes)) {echo 'Hub genes: ' . $hub_genes;}?></strong></p>
                                     </td>
                                 </tr>
                                 <tr><td><a class="button">download</a></td></tr>

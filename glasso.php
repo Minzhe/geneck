@@ -46,7 +46,7 @@
                 <section>
                     <header>
                         <h2>GLASSO</h2>
-                        <span class="byline">Augue praesent a lacus at urna congue rutrum</span>
+                        <span class="byline">Graphical Lasso</span>
                     </header>
                     <p> Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce
                         odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac
