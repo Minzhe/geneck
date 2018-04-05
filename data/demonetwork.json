@@ -2,2488 +2,2488 @@
     "type": "force",
     "categories": [
         {
-            "name": "HTMLElement",
+            "name": "",
             "keyword": {},
             "base": "HTMLElement"
         },
         {
-            "name": "WebGL",
+            "name": "",
             "keyword": {},
             "base": "WebGLRenderingContext"
         },
         {
-            "name": "SVG",
+            "name": "",
             "keyword": {},
             "base": "SVGElement"
         },
         {
-            "name": "CSS",
+            "name": "",
             "keyword": {},
             "base": "CSSRule"
         },
         {
-            "name": "Other",
+            "name": "",
             "keyword": {}
         }
     ],
     "nodes": [
         {
-            "name": "AnalyserNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Uint8Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Float32Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ArrayBuffer",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ArrayBufferView",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Attr",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Node",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Element",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioBuffer",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioBufferCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioBufferSourceNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioSourceNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioGain",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioParam",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioContext",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioDestinationNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AudioListener",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "BiquadFilterNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ChannelMergerNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ChannelSplitterNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ConvolverNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DelayNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DynamicsCompressorNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "GainNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaElementAudioSourceNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaStreamAudioDestinationNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaStreamAudioSourceNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "OscillatorNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "PannerNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ScriptProcessorNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WaveShaperNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WaveTable",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CanvasRenderingContext",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "HTMLCanvasElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "CanvasRenderingContext2D",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ImageData",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CanvasGradient",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CanvasPattern",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "HTMLImageElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLVideoElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "TextMetrics",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CDATASection",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Text",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CharacterData",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ClientRectList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ClientRect",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Clipboard",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DataTransferItemList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Comment",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Console",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MemoryInfo",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Crypto",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CSSCharsetRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSRule",
+            "name": "",
             "value": 3,
             "category": 3
         },
         {
-            "name": "CSSFontFaceRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSStyleDeclaration",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSImportRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "MediaList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CSSStyleSheet",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSMediaRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSRuleList",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSPageRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSPrimitiveValue",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSValue",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "Counter",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RGBColor",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Rect",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CSSStyleRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "StyleSheet",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "CSSUnknownRule",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "CSSValueList",
+            "name": "",
             "value": 1,
             "category": 3
         },
         {
-            "name": "Database",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLTransactionCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DatabaseCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DatabaseSync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLTransactionSyncCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DataTransferItem",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "StringCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Entry",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "File",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DataView",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DedicatedWorkerContext",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WorkerContext",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DirectoryEntry",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DirectoryReader",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "VoidCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DirectoryEntrySync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "EntrySync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DirectoryReaderSync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileEntrySync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "EntriesCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "EntryArraySync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DocumentFragment",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NodeList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DocumentType",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NamedNodeMap",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMFileSystem",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMFileSystemSync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMImplementation",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "HTMLDocument",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "DOMMimeType",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMPlugin",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMMimeTypeArray",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMPluginArray",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMSelection",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Range",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMSettableTokenList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMTokenList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMStringMap",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ShadowRoot",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Entity",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "EntityReference",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "EntryArray",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MetadataCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "EntryCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Metadata",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ErrorCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileError",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileEntry",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileWriterCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileWriterSync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileReader",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileReaderSync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileSystemCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "FileWriter",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Float64Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "GamepadList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Gamepad",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Geolocation",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "PositionCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Geoposition",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Coordinates",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "HTMLAllCollection",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLAnchorElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLElement",
+            "name": "",
             "value": 3,
             "category": 0
         },
         {
-            "name": "HTMLAppletElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLAreaElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLAudioElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLMediaElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLBaseElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLBaseFontElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLBodyElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLBRElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLButtonElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLFormElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "ValidityState",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "HTMLCollection",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLContentElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLDataListElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLDetailsElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLDirectoryElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLDivElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLDListElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLEmbedElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "SVGDocument",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "HTMLFieldSetElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLFontElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLFormControlsCollection",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLFrameElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLFrameSetElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLHeadElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLHeadingElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLHRElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLHtmlElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLIFrameElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLInputElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLKeygenElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLLabelElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLLegendElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLLIElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLLinkElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLMapElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLMarqueeElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "TimeRanges",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaController",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaError",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "TextTrackList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "TextTrack",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "HTMLMenuElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLMetaElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLMeterElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLModElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLObjectElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLOListElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLOptGroupElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLOptionElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLOptionsCollection",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLOutputElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLParagraphElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLParamElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLPreElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLProgressElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLQuoteElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLScriptElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLSelectElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLShadowElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLSourceElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLSpanElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLStyleElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTableCaptionElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTableCellElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTableColElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTableElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTableSectionElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTableRowElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTextAreaElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTitleElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLTrackElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLUListElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "HTMLUnknownElement",
+            "name": "",
             "value": 1,
             "category": 0
         },
         {
-            "name": "IDBCursor",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBAny",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBKey",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBRequest",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBCursorWithValue",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBDatabase",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMStringList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBObjectStore",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBTransaction",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBFactory",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBVersionChangeRequest",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBOpenDBRequest",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBIndex",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "IDBKeyRange",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMError",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Int16Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Int32Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Int8Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "JavaScriptCallFrame",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "LocalMediaStream",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaStream",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Location",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaQueryList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaQueryListListener",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaSource",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SourceBufferList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SourceBuffer",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaStreamTrackList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaStreamList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MediaStreamTrack",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MessageChannel",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MessagePort",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MutationObserver",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "MutationRecord",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Navigator",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "BatteryManager",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NavigatorUserMediaErrorCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NavigatorUserMediaError",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NavigatorUserMediaSuccessCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NodeFilter",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NodeIterator",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Notation",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Notification",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NotificationPermissionCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "NotificationCenter",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "OESVertexArrayObject",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebGLVertexArrayObjectOES",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "Performance",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "PerformanceNavigation",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "PerformanceTiming",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "PositionErrorCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "PositionError",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ProcessingInstruction",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RadioNodeList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCDataChannel",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCPeerConnection",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCSessionDescription",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCIceCandidate",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCSessionDescriptionCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCStatsCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCStatsResponse",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCStatsReport",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "RTCStatsElement",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ScriptProfile",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "ScriptProfileNode",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SharedWorker",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "AbstractWorker",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SharedWorkerContext",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechGrammarList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechGrammar",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechInputResultList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechInputResult",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechRecognition",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechRecognitionResult",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechRecognitionAlternative",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SpeechRecognitionResultList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLResultSet",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLResultSetRowList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLStatementCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLTransaction",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLStatementErrorCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLTransactionErrorCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLError",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SQLTransactionSync",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "StorageInfo",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "StorageInfoUsageCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "StorageInfoQuotaCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "StorageInfoErrorCallback",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMCoreException",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "StyleSheetList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SVGAElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGTransformable",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedString",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAltGlyphDefElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGElement",
+            "name": "",
             "value": 3,
             "category": 2
         },
         {
-            "name": "SVGAltGlyphElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGURIReference",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAltGlyphItemElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimateColorElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimationElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedAngle",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAngle",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedLength",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGLength",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedLengthList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGLengthList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedNumberList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGNumberList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedPreserveAspectRatio",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGPreserveAspectRatio",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedRect",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGRect",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedTransformList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGTransformList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimateElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimateMotionElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimateTransformElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "ElementTimeControl",
-            "value": 1,
-            "category": 4
-        },
-        {
-            "name": "SVGCircleElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGClipPathElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGAnimatedEnumeration",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGColor",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGComponentTransferFunctionElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGAnimatedNumber",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGCursorElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGExternalResourcesRequired",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGDefsElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGDescElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGStylable",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGSVGElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGElementInstance",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "EventTarget",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "SVGElementInstanceList",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGUseElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGEllipseElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedBoolean",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEBlendElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFilterPrimitiveStandardAttributes",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEColorMatrixElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEComponentTransferElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFECompositeElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEConvolveMatrixElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGAnimatedInteger",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEDiffuseLightingElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEDisplacementMapElement",
+            "name": "",
             "value": 1,
             "category": 2
         },
         {
-            "name": "SVGFEDistantLightElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEDropShadowElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEFloodElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEFuncAElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEFuncBElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEFuncGElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEFuncRElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEGaussianBlurElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEImageElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEMergeElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEMergeNodeElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEMorphologyElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEOffsetElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFEPointLightElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFESpecularLightingElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFESpotLightElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFETileElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFETurbulenceElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFilterElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFitToViewBox",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFontElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFontFaceElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFontFaceFormatElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFontFaceNameElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFontFaceSrcElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGFontFaceUriElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGForeignObjectElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGGElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGGlyphElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGGlyphRefElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGGradientElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGHKernElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGImageElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGLinearGradientElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGLineElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGLocatable",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGMatrix",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGMarkerElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGMaskElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGMetadataElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGMissingGlyphElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGMPathElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGNumber",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPaint",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegList",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegArcAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegArcRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegClosePath",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoCubicAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoCubicRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoCubicSmoothAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoCubicSmoothRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoQuadraticAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoQuadraticRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoQuadraticSmoothAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegCurvetoQuadraticSmoothRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegLinetoAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegLinetoHorizontalAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegLinetoHorizontalRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegLinetoRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegLinetoVerticalAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegLinetoVerticalRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegMovetoAbs",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSegMovetoRel",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPoint",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPathSeg",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPatternElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPointList",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPolygonElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGPolylineElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGRadialGradientElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGRectElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGScriptElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGSetElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGStopElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGStyleElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGLangSpace",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGZoomAndPan",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGViewSpec",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTransform",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGSwitchElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGSymbolElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTests",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGStringList",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTextContentElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTextElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTextPathElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTextPositioningElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTitleElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTRefElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGTSpanElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGViewElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "SVGVKernElement",
-            "value": 1,
-            "category": 2
-        },
-        {
-            "name": "TextTrackCueList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "TextTrackCue",
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
+            "value": 1,
+            "category": 2
+        },
+        {
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Touch",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "TouchList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "TreeWalker",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Uint16Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Uint32Array",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Uint8ClampedArray",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebGLRenderingContext",
+            "name": "",
+            "value": 1,
+            "category": 4
+        },
+        {
+            "name": "",
             "value": 3,
             "category": 1
         },
         {
-            "name": "WebGLProgram",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLBuffer",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLFramebuffer",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLRenderbuffer",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLTexture",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLShader",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLActiveInfo",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLContextAttributes",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLShaderPrecisionFormat",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebGLUniformLocation",
+            "name": "",
             "value": 1,
             "category": 1
         },
         {
-            "name": "WebKitAnimationList",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitAnimation",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitCSSFilterValue",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitCSSKeyframeRule",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitCSSKeyframesRule",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitCSSMatrix",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitCSSMixFunctionValue",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitCSSTransformValue",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebKitNamedFlow",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WebSocket",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "Worker",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WorkerLocation",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "WorkerNavigator",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XMLHttpRequest",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XMLHttpRequestUpload",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "DOMFormData",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XPathEvaluator",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XPathExpression",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XPathNSResolver",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XPathResult",
+            "name": "",
             "value": 1,
             "category": 4
         },
         {
-            "name": "XSLTProcessor",
+            "name": "",
             "value": 1,
             "category": 4
         }

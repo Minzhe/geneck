@@ -1,84 +1,46 @@
-<!DOCTYPE HTML>
-<!--
-	Ex Machina by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-<head>
-    <title>GeNeck</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet'
-          type='text/css'>
-    <!--[if lte IE 8]>
-    <script src="js/html5shiv.js"></script><![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-panels.min.js"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="css/skel-noscript.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-desktop.css"/>
-    </noscript>
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="css/ie/v9.css"/><![endif]-->
-</head>
-<body class="left-sidebar">
+<?php
+session_start();
+$_SESSION['page_name'] = "glassosf.php";
 
-<!-- Header -->
-<!-- Banner -->
-<?php include "header.php"; ?>
+include "methods-js.php";
+?>
 
-<!-- Main -->
-<div id="page">
+<section>
+    <header>
+        <h2>GLASSO-SF</h2>
+        <span class="byline">GLASSO with reweighted strategy for scale-free network</span>
+    </header>
+    <p class="text-justify">
+        <code>GLASSO-SF</code> is the reweighted $ℓ_1$ regularization method of <code>GLASSO</code> to improve the
+        performance of the estimation  for the scale-free network. <code>GLASSO-SF</code> changes the $ℓ_1$ norm penalty
+        in the existing methods to the power law regularization
+        $$p_{\lambda, \gamma }(\Omega) = \lambda \sum_{i=1}^{p}log(\left\| \omega_{-i}\right\|_{1} + \epsilon_{i} ) + \gamma\sum_{i=1}^{p}\left | \omega_{ii} \right |,$$
+        where $\lambda$ and $\gamma$ are nonnegative tuning parameters,
+        $\omega_{-i} = \{\omega_{ij} | j \ne i\}, \left\| \omega_{-i}\right\|_{1} = \sum_{j\neq i}\left| \omega_{ij}\right|$,
+        and $\epsilon_i$ is a small positive number for $i=1,2,...,p$.
+    </p>
+    <p class="text-justify" id="detail-intro">
+        The following objective function will be optimized
+        $$f(\Omega;X,\lambda, \gamma) = L(X, \Omega) + u_{L} . p_{\lambda,\gamma}(\Omega),$$
+        where $L(X, \Omega)$ denotes the objective function of the existing method without its penalty terms, $u_L = 1$
+        if $L$ is convex and $u_L = -1$ if $L$ is concave for $\Omega$. The choice of $L$ is flexible. For instance,
+        $L(X, \Omega)$ can be the log-likelihood function of $\Omega$ as in the graphical lasso or the squared loss function
+        as in the <code>NS</code> and the <code>SPACE</code>.
 
-    <!-- Main -->
-    <div id="main" class="container">
-        <div class="row">
-
-            <div class="3u">
-                <?php include "methods-bar.php" ?>
-            </div>
-
-            <div class="9u skel-cell-important">
-                <section>
-                    <header>
-                        <h2>GLASSO-SF</h2>
-                        <span class="byline">GLASSO with reweighted strategy for scale-free network</span>
-                    </header>
-                    <p>Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce
-                        odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac
-                        sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec
-                        nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia
-                        metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue.
-                        Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non,
-                        nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet,
-                        magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem.
-                        Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit
-                        libero, in blandit augue justo quis nisl.</p>
-                </section>
-                <?php include "methods-form.php"?>
-            </div>
-        </div>
-    </div>
-    <!-- Main -->
-
-</div>
-<!-- /Main -->
-<!-- Featured -->
-<!-- /Featured -->
-
-<!-- Footer -->
-<!-- /Footer -->
-
-<!-- Copyright -->
-<?php include "footer.php"; ?>
-
-
-</body>
-</html>
+        To obtain the maximizer of $f(\Omega; X, \lambda, \gamma)$, <code>GLASSO-SF</code> employs iteratively reweighted $ℓ_1$
+        regularization procedure based on the minorization-maximization (MM) algorithm, which solve the following problem:
+        $$\Omega^{(k+1)} = \underset{\Omega}{arg max}L(X, \Omega) - \sum_{i=1}^p\sum_{j \ne i}\eta^{(k)}_{ij}|\omega_{ij}|-\gamma\sum_{i=1}^p|\omega_{ii}|,$$
+        where $\Omega^{(k)} = (\omega^{(k)}_{ij})$ is the estimate at the $k$th iteration,
+        ${∥\omega^{(k)}_{-i}∥}_1 = \sum_{l \ne i}|\omega^{(k)}_{il}|,$ and
+        $\eta^{(k)}_{ij} = \lambda(1/({∥\omega^{(k)}_{i}∥}_1 + \epsilon_i) + 1/({∥\omega^{(k)}_{-j}∥}_1 + \epsilon_j))$.
+    </p>
+    <?php include "methods-button.php";?>
+    <p class="text-justify">
+        <br/><strong>Note:</strong><br/>
+        <i>
+            Change the $\lambda$ value $(\lambda > 0)$ to control the sparsity of network. <b>The larger the $\lambda$, the more
+                sparse the constructed network</b>. If you don't know how to choose a value, use the default one.
+        </i>
+    </p>
+</section>
+<?php include "methods-form.php" ?>

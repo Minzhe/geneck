@@ -1,0 +1,34 @@
+<?php
+include "../../dbincloc/geneck.inc";
+
+//open the database connection
+$db_conn = new mysqli($hostname, $usr, $pwd, $dbname);
+if ($db_conn -> connect_error) {
+    die('Unable to connect to database: ' . $db_conn -> connect_error);
+}
+
+if (isset($_GET['jobid'])) {
+    $jobid = mysqli_real_escape_string($db_conn, $_GET['jobid']);
+}
+
+header("Content-type: text/plain");
+header("Content-length: " . strlen($csvresult) ."\"");
+header("Content-Disposition: attachment; filename=geneNetwork.csv");
+header("Content-Description: Gene Network Result");
+header("Content-transfer-encoding: binary");
+
+if(!empty($jobid) && $result = $db_conn->prepare("SELECT EstEdge_csv FROM Results WHERE JobID = ?"))
+{
+    $result->bind_param("s", $jobid);
+    $result->execute();
+    $result->store_result();
+    $result->bind_result($resultgene);
+    $result->fetch();
+
+    echo $resultgene;
+
+    $result->close();
+}
+
+$db_conn->close();
+?>

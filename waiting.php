@@ -38,51 +38,7 @@
 <!-- retrieve data from mysql -->
 <?php
 /******************  Function  ***********************/
-function parseMethod($method) {
-    if ($method == 1) {
-        return 'GeneNet';
-    } elseif ($method == 2) {
-        return 'Neighborhood selection';
-    } elseif ($method == 3) {
-        return 'GLASSO';
-    } elseif ($method == 4) {
-        return 'GLASSO-SF';
-    } elseif ($method == 5) {
-        return 'PCA-CMI';
-    } elseif ($method == 6) {
-        return 'CMI2NI';
-    } elseif ($method == 7) {
-        return 'SPACE';
-    } elseif ($method == 8) {
-        return 'EGLASSO';
-    } elseif ($method == 9) {
-        return 'ESPACE';
-    } elseif ($method == 10) {
-        return 'ENA';
-    } else {
-        return Null;
-    }
-}
-
-function parseParam($method) {
-    if (in_array($method, array(1, 10))) {
-        return 'FDR: ';
-    } elseif (in_array($method, array(2, 4, 7, 8, 9))) {
-        return 'Alpha: ';
-    } elseif (in_array($method, array(3, 5, 6))) {
-        return 'Lambda: ';
-    } else {
-        return Null;
-    }
-}
-
-function parseParam_2($method) {
-    if ($method == 8 | $method == 9) {
-        return 'Lambda: ';
-    } else {
-        return Null;
-    }
-}
+include "cleandata.php";
 
 /******************  main  ***********************/
 include "../../dbincloc/geneck.inc";
@@ -98,6 +54,7 @@ if (isset($_GET['jobid'])) {
 }
 
 $status = 0;
+$message = "";
 
 if (!empty($jobid)) {
     if ($stmt = $db_conn -> prepare("SELECT Status, Method, Param, Param_2, HubGenes FROM Jobs WHERE JobID = ?;")) {
@@ -108,6 +65,11 @@ if (!empty($jobid)) {
         $stmt -> fetch();
     }
 
+    if ($method == 10) {
+        if ($param_2 == 0) {$param_2 = 'No';}
+        if ($param_2 == 1) {$param_2 = 'Yes';}
+    }
+
     if ($stmt -> num_rows > 0) {
         if ($status == 2 || $status == 3) {
             echo "<script>location.href='result.php?jobid=${jobid}'</script>";
@@ -115,7 +77,11 @@ if (!empty($jobid)) {
         } else {
             echo "<body onload='JavaScript:timedRefresh(5000)'>";
         }
+    } else {
+        echo "<script>location.href='result.php?jobid=${jobid}'</script>";
     }
+} else {
+    echo "<script>location.href='result.php?jobid=${jobid}'</script>";
 }
 
 ?>
@@ -135,15 +101,22 @@ if (!empty($jobid)) {
             <div class="9u skel-cell-important">
                 <section>
                     <span class="byline"><strong>Your job has been submitted!</strong></span>
-                    <p> The job takes about several minutes to finish. <br/>
+                    <p>
+                        The job takes about several minutes to finish.
+                        If you select BayesianGLASSO, it will take much longer.<br/>
                         This page will automatically refresh every 5 seconds.
-                        Once your job is done, the results will be shown on this page.</p>
+                        Once your job is done, the results will be shown on this page.<br/>
+                    </p>
+                    <p>
+                        Record the following link, so you can go back and check your job status:<br/>
+                        <?php echo "<a href='http://lce.biohpc.swmed.edu/geneck/waiting.php?jobid=${jobid}'>http://lce.biohpc.swmed.edu/geneck/waiting.php?jobid=${jobid}</a>";?>
+                    </p>
                 </section>
                 <div class="text-bg">
                     <table class="para-table">
                         <!-- waiting -->
                         <tr>
-                            <td><strong>GeNeck is running ... </strong></td>
+                            <td><strong>GeNeCK is running ... </strong></td>
                         </tr>
                         <tr>
                             <td colspan="3">
@@ -152,18 +125,18 @@ if (!empty($jobid)) {
                         </tr>
                         <tr>
                             <td width="40%">
-                                <p>Methods: <strong><?php echo parseMethod($method);?></strong></p>
+                                <p><strong>Methods: </strong><?php echo parseMethod($method);?></p>
                             </td>
                             <td width="30%">
-                                <p><?php echo parseParam($method)?><strong><?php echo $param;?></strong></p>
+                                <p><strong><?php echo parseParam($method)?></strong><?php echo $param;?></p>
                             </td>
                             <td width="30%">
-                                <p><?php echo parseParam_2($method)?><strong><?php echo $param_2;?></strong></p>
+                                <p><strong><?php if(parseParam_2($method)!=null){ echo parseParam_2($method);}?></strong><?php if(parseParam_2($method)!=null){echo $param_2;}?></p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <p>Hub genes: <strong><?php if (isset($hub_genes)) {echo $hub_genes;} else {echo 'Not set.';}?></strong></p>
+                                <p><?php if (isset($hub_genes)) {echo "<strong>Hub genes: </strong>" . $hub_genes;}?></p>
                             </td>
                         </tr>
                         <tr>

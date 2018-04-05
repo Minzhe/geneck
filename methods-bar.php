@@ -1,61 +1,39 @@
 <?php
-$directoryURI = $_SERVER['REQUEST_URI'];
-$path = parse_url($directoryURI, PHP_URL_PATH);
-$page_name = explode('/', $path)[2];
-
-if ($page_name == 'GeneNet.php') {
-    $method_index = 'GeneNet';
-} elseif ($page_name == 'ns.php') {
-    $method_index = 'ns';
-} elseif ($page_name == 'glasso.php') {
-    $method_index = 'glasso';
-} elseif ($page_name == 'glassosf.php') {
-    $method_index = 'glassosf';
-} elseif ($page_name == 'pcacmi.php') {
-    $method_index = 'pcacmi';
-} elseif ($page_name == 'cmi2ni.php') {
-    $method_index = 'cmi2ni';
-} elseif ($page_name == 'space.php') {
-    $method_index = 'space';
-} elseif ($page_name == 'eglasso.php') {
-    $method_index = 'eglasso';
-} elseif ($page_name == 'espace.php') {
-    $method_index = 'espace';
-} elseif ($page_name == 'ena.php') {
-    $method_index = 'ena';
-} else {
-    $method_index = 'analysis';
-}
+//$directoryURI = $_SERVER['REQUEST_URI'];
+//$path = parse_url($directoryURI, PHP_URL_PATH);
+//$page_name = explode('/', $path)[2];
+session_start();
 ?>
 
 <section class="sidebar" id="side-methods">
     <header>
-        <h2>Basic Methods</h2>
+        <h2>Network Inference Method</h2>
     </header>
     <ul class="style1 methods">
-        <li <?php if($method_index == 'GeneNet') {echo 'class="method-active"';}?>><a href="GeneNet.php" class="select">GeneNet</a></li>
-        <li <?php if($method_index == 'ns') {echo 'class="method-active"';}?>><a href="ns.php">Neighborhood Selection</a></li>
-        <li <?php if($method_index == 'glasso') {echo 'class="method-active"';}?>><a href="glasso.php">GLASSO</a></li>
-        <li <?php if($method_index == 'glassosf') {echo 'class="method-active"';}?>><a href="glassosf.php">GLASSO-SF</a></li>
-        <li <?php if($method_index == 'pcacmi') {echo 'class="method-active"';}?>><a href="pcacmi.php">PCACMI</a></li>
-        <li <?php if($method_index == 'cmi2ni') {echo 'class="method-active"';}?>><a href="cmi2ni.php">CMI2NI</a></li>
-        <li <?php if($method_index == 'space') {echo 'class="method-active"';}?>><a href="space.php">SPACE</a></li>
+        <li style="cursor:pointer" id="genemethod1" <?php if ($method == 1) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=1">GeneNet</a></li>
+        <li style="cursor:pointer" id="genemethod2" <?php if ($method == 2) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=2">Neighborhood Selection</a></li>
+        <li style="cursor:pointer" id="genemethod3" <?php if ($method == 3) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=3">GLASSO</a></li>
+        <li style="cursor:pointer" id="genemethod4" <?php if ($method == 4) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=4">GLASSO-SF</a></li>
+        <li style="cursor:pointer" id="genemethod5" <?php if ($method == 5) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=5">PCACMI</a></li>
+        <li style="cursor:pointer" id="genemethod6" <?php if ($method == 6) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=6">CMI2NI</a></li>
+        <li style="cursor:pointer" id="genemethod7" <?php if ($method == 7) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=7">SPACE</a></li>
+        <li style="cursor:pointer" id="genemethod11" <?php if ($method == 11) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=11">BayesianGLASSO</a></li>
     </ul>
 </section>
 <section class="sidebar" id="methods">
     <header>
-        <h2>Extended Methods</h2>
+        <h2>Incorporates Hub Genes</h2>
     </header>
     <ul class="style1 methods">
-        <li <?php if($method_index == 'eglasso') {echo 'class="method-active"';}?>><a href="eglasso.php">EGLASSO</a></li>
-        <li <?php if($method_index == 'espace') {echo 'class="method-active"';}?>><a href="espace.php">ESPACE</a></li>
+        <li style="cursor:pointer" id="genemethod8" <?php if ($method == 8) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=8">EGLASSO</a></li>
+        <li style="cursor:pointer" id="genemethod9" <?php if ($method == 9) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=9">ESPACE</a></li>
     </ul>
 </section>
 <section class="sidebar" id="methods">
     <header>
-        <h2>Integrative Methods</h2>
+        <h2>Integrative Method</h2>
     </header>
     <ul class="style1 methods">
-        <li <?php if($method_index == 'ena') {echo 'class="method-active"';}?>><a href="ena.php">ENA</a></li>
+        <li style="cursor:pointer" id="genemethod10" <?php if ($method == 10) echo "class=\"method-active\"";?>><a href="analysis.php?pageindex=10">ENA</a></li>
     </ul>
 </section>

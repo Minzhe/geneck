@@ -3,15 +3,15 @@
 # This R script is function to use ena to constrcut gene network.
 
 suppressMessages(library(corpcor))
-suppressMessages(library(GeneNet))
 suppressMessages(library(CDLasso))
 suppressMessages(library(glasso))
-source('lib/glasso_SF.R')
+source("lib/glasso_SF.R")
 source("lib/PCA_CMI.R")
 source("lib/CMI2NI.R")
 suppressMessages(library(space))
+source("lib/BayesianGLasso.R")
 
-network.ena <- function(expr.data, n.perm, sig.quant) {
+network.ena <- function(expr.data, n.perm, sig.quant, if.bayes) {
     if (sig.quant <= 0 | sig.quant >= 1) {
         stop('Input error: parameter sig.quant for ena should be between 0 and 1.')
     }
@@ -21,15 +21,6 @@ network.ena <- function(expr.data, n.perm, sig.quant) {
     expr.mat <- scale(as.matrix(expr.data), center = TRUE, scale = FALSE)
     
     est_edge <- list()
-    ### GeneNet
-    pcor_est <- pcor.shrink(expr.mat)
-    test_pcor <- network.test.edges(pcor_est)
-    est_edge.GeneNet <- matrix(0, p, p)
-    for (i in 1:nrow(test_pcor)) {
-        est_edge.GeneNet[test_pcor$node1[i], test_pcor$node2[i]] <- test_pcor$prob[i]
-    }
-    est_edge[[1]] <- est_edge.GeneNet
-    file.remove("Rplots.pdf")
     
     ### ns
     est_res.ns <- matrix(0, p, p)
@@ -41,31 +32,36 @@ network.ena <- function(expr.data, n.perm, sig.quant) {
         out <- l2.reg(prd, rsp, lambda = lam)
         est_res.ns[k, -k] <- out$estimate
     }
-    est_edge[[2]] <- (abs(est_res.ns) + t(abs(est_res.ns))) / 2
+    est_edge[[1]] <- (abs(est_res.ns) + t(abs(est_res.ns))) / 2
     
     ### glasso
     S <- t(expr.mat) %*% expr.mat / n
     out <- glasso(S, rho = 0.6)
-    est_edge[[3]] <- abs(out$wi)
+    est_edge[[2]] <- abs(out$wi)
     
     ### glasso-sf
     out <- glasso_sf(expr.mat, alpha = 0.3)
-    est_edge[[4]] <- abs(out$wi)
+    est_edge[[3]] <- abs(out$wi)
     
     ### pcacmi
     out <- pca_cmi(t(expr.mat), 0.03)
-    est_edge[[5]] <- abs(out$Gval)
-    
-    ### cmi2ni
-    out <- cmi2ni(t(expr.mat), 0.03)
-    est_edge[[6]] <- abs(out$Gval)
+    est_edge[[4]] <- abs(out$Gval)
     
     ### space
     out <- space.joint(expr.mat, lam1 = 1 * n, iter = 5)
-    est_edge[[7]] <- abs(out$ParCor)
+    est_edge[[5]] <- abs(out$ParCor)
+    
+    ### BayesianGLasso
+    if (if.bayes == 1) {
+        a <- 10^(-2); b <- 10^(-6); iter <- 2000; burn <- 1000
+        out <- blockGLasso_s(expr.mat, iterations = iter, burnIn = burn, lambdaPriora = a, lambdaPriorb = b, verbose = FALSE)
+        est_edge[[6]] <- abs(out)
+    } else if (if.bayes != 0) {
+        stop('Input error: parameter if.bayes for ena should be 0 or 1.')
+    }
     
     ### ena
-    for (i in 1:7) {
+    for (i in 1:length(est_edge)) {
         est_edge[[i]][lower.tri(est_edge[[i]], diag = TRUE)] <- 1
         est_edge[[i]][upper.tri(est_edge[[i]], diag = FALSE)] <- rank(-est_edge[[i]][upper.tri(est_edge[[i]], diag = FALSE)])
         est_edge[[i]] <- log10(1 / est_edge[[i]])

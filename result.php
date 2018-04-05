@@ -7,6 +7,7 @@
 <html>
 	<head>
 		<title>GeNeck</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -28,51 +29,7 @@
 	<body class="left-sidebar">
     <?php
     /******************  Function  ***********************/
-    function parseMethod($method) {
-        if ($method == 1) {
-            return 'GeneNet';
-        } elseif ($method == 2) {
-            return 'Neighborhood selection';
-        } elseif ($method == 3) {
-            return 'GLASSO';
-        } elseif ($method == 4) {
-            return 'GLASSO-SF';
-        } elseif ($method == 5) {
-            return 'PCACMI';
-        } elseif ($method == 6) {
-            return 'CMI2NI';
-        } elseif ($method == 7) {
-            return 'SPACE';
-        } elseif ($method == 8) {
-            return 'EGLASSO';
-        } elseif ($method == 9) {
-            return 'ESPACE';
-        } elseif ($method == 10) {
-            return 'ENA';
-        } else {
-            return Null;
-        }
-    }
-
-    function parseParam($method) {
-        if (in_array($method, array(1, 10))) {
-            return 'FDR: ';
-        } elseif (in_array($method, array(2, 4, 7, 8, 9))) {
-            return 'Alpha: ';
-        } elseif (in_array($method, array(3, 5, 6))) {
-            return 'Lambda: ';
-        } else {
-            return Null;
-        }
-    }
-
-    function parseParam_2($method) {
-        if ($method == 8 | $method == 9) {
-            return 'Lambda: ';
-        } else {
-            return Null;
-        }
-    }
+    include "cleandata.php";
 
     /******************  main  ***********************/
     include "../../dbincloc/geneck.inc";
@@ -87,20 +44,42 @@
         $jobid = mysqli_real_escape_string($db_conn, $_GET['jobid']);
     }
 
+    $message = "";
+    $status = 0;
+
     if (!empty($jobid)) {
-        if ($stmt = $db_conn -> prepare("SELECT Method, Param, Param_2, HubGenes FROM Jobs WHERE JobID = ?;")) {
+        if ($stmt = $db_conn -> prepare("SELECT Status, Method, Param, Param_2, HubGenes FROM Jobs WHERE JobID = ?;")) {
             $stmt -> bind_param("s", $jobid);
             $stmt -> execute();
             $stmt -> store_result();
-            $stmt -> bind_result($method, $param, $param_2, $hub_genes);
+            $stmt -> bind_result($status, $method, $param, $param_2, $hub_genes);
             $stmt -> fetch();
+
+            if ($stmt -> num_rows > 0) {
+                if ($status == 3) {
+                    $message = "Your job was failed.";
+                } elseif ($status == 2) {
+                    $message = "Network construction is completed, see the constructed network below and download the network file.";
+                } elseif ($status == 1 || $status == 0) {
+                    echo "<script>location.href='waiting.php?jobid=${jobid}'</script>";
+                }
+            } else {
+                $message = "Job ID not found.";
+            }
+
+        } else {
+            $message = "GeNeCK has problem connecting to databse.";
         }
+    } else {
+        $message = "Job ID incorrect.";
     }
+    $db_conn->close();
+
+
     ?>
 	<!-- Header -->
 	<!-- Banner -->
 	<?php include "header.php";?>
-
 	<!-- Main -->
 		<div id="page">
 				
@@ -115,11 +94,11 @@
 					<div class="9u skel-cell-important">
 						<section>
 							<header>
-								<h2>Result</h2>
+								<h2><?php if ($status == 2) {echo "Result";} else {echo "Error";}?></h2>
 							</header>
-							<p>Network construction is completed, see the following summary statistics and download the network file.</p>
+							<p><?php echo $message; ?></p>
 						</section>
-
+                        <?php if ($status == 2): ?>
                         <div class="text-bg">
                             <table class="para-table">
                                 <!-- summary -->
@@ -129,21 +108,21 @@
                                 <tr><td colspan="3"><hr/></td></tr>
                                 <tr>
                                     <td width="40%">
-                                        <p>Methods: <strong><?php echo parseMethod($method);?></strong></p>
+                                        <p><strong>Methods: </strong><?php echo parseMethod($method);?></p>
                                     </td>
                                     <td width="30%">
-                                        <p><?php echo parseParam($method)?><strong><?php echo $param;?></strong></p>
+                                        <p><strong><?php echo parseParam($method)?></strong><?php echo $param;?></p>
                                     </td>
                                     <td width="30%">
-                                        <p><?php echo parseParam_2($method)?><strong><?php echo $param_2;?></strong></p>
+                                        <p><strong><?php if(parseParam_2($method)!=null){ echo parseParam_2($method);}?></strong><?php if(parseParam_2($method)!=null){echo parseParam2_value($method, $param_2);}?></p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <p><strong><?php if (isset($hub_genes)) {echo 'Hub genes: ' . $hub_genes;}?></strong></p>
+                                        <p><?php if (isset($hub_genes)) {echo "<strong>Hub genes: </strong>" . $hub_genes;}?></p>
                                     </td>
                                 </tr>
-                                <tr><td><a class="button">download</a></td></tr>
+                                <tr><td><a class="button" href="resultDownload.php?jobid=<?php echo $_GET['jobid'];?>">Download</a></td></tr>
                                 <tr><td><br/></td></tr>
 
                                 <!-- plot -->
@@ -159,6 +138,7 @@
                             </table>
                             <iframe src="resultnetwork.php?jobid=<?php echo $_GET['jobid'];?>" width="100%" height="600px">Does support iframe.</iframe>
                         </div>
+                        <?php endif;?>
 					</div>
 					
 				</div>

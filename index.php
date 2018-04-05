@@ -7,16 +7,21 @@
 <html>
 	<head>
 		<title>GeNeck</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
+        <script src="js/jquery_3.2.1.min.js"></script>
+        <script src="js/bootstrap_3.3.7.min.js"></script>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
-        <script type="text/javascript" src="js/echarts.js"></script>
+        <script type="text/javascript" src="js/echarts.min.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -24,91 +29,98 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+        <script>
+            $(document).ready(function() {
+                // header & banner
+                $("#banner").hide();
+                $("#index").addClass("active");
+            });
+        </script>
 	</head>
-	<body class="homepage">
 
+	<body class="no-sidebar">
 	<!-- Header -->
 	<!-- Banner -->
-	<?php include "header.php"; ?>
-
+	    <?php include "header.php"; ?>
 	<!-- Main -->
 		<div id="page">
-
-			<!-- Extra -->
-			<!-- /Extra -->
-				
-			<!-- Main -->
-			<div id="main" class="container">
+            <div id="main" class="container">
+                <header>
+                    <h2>Welcome to GeNeCK!</h2>
+                    <span class="byline">An online tool kit to construct gene regulatory networks</span>
+                </header>
+            </div>
+			<div class="container">
 				<div class="row">
 					<div class="8u">
 						<section>
-							<header>
-								<h2>Welcome to GeNeck!</h2>
-								<span class="byline">An online tool kit to construct gene regulatory network</span>
-							</header>
-                            <div class="text-bg">
-                                <p><strong>Gene Regulatory Network (GRN)</strong></p>
-                                <p>A gene regulatory network (GRN) describes interactions and regulatory relationship among genes. It provides a systematic understanding of molecular mechanism underlying biological process.</p>
-                                <p><strong>Hub Gene</strong></p>
-                                <p>A typical GRN approximate a scale free network topology with a few highly connected nodes (hub genes) and many poorly connected nodes. These hub genes are master regulator in gene network, and control network stability. They usually have essential function in biological system.</p>
-                                <p><strong>Network Construction with GeNeck</strong></p>
-                                <p>GeNeck (Gene Network Construction Kit) is a comprehensive online tool kit that integrate multiple existing algorithms currently used for network constructions from <strong>gene co-expression data</strong> along with newly proposed enhanced methods that can incorporate our prior knowledge about <strong>hub genes</strong> for network rectification. </p>
-                                <label for="modal-1"><a class="button">View DEMO</a></label>
-                                <input class="modal-state" id="modal-1" type="checkbox">
-                                <!-- Modal -->
-                                <div class="modal">
-                                    <label class="modal-bg" for="modal-1"></label>
-                                    <div class="modal-content">
-                                        <iframe src="demonetwork.php" width="100%" height="100%">Does support iframe.</iframe>
-                                    </div>
-                                </div>
+                            <div class="subtitle text-bg">
+<!--                                <h2>Gene Regulatory Network (GRN)</h2>-->
+<!--                                <p style="text-align: justify;">A gene regulatory network (GRN) describes interactions and regulatory relationship among genes. It provides a systematic understanding of molecular mechanism underlying biological process.</p>-->
+<!--                                <h2>Hub Gene</h2>-->
+<!--                                <p style="text-align: justify;">A typical GRN approximate a scale free network topology with a few highly connected nodes (hub genes) and many poorly connected nodes. These hub genes are master regulator in gene network, and control network stability. They usually have essential function in biological system.</p>-->
+                                <h2>Network Construction with GeNeCK</h2>
+                                <p style="text-align: justify;">
+                                    <b>GeNeCK</b> (Gene Network Construction Kit) is a comprehensive online tool kit that integrate
+                                    various statistical methods to construct gene networks based on gene expression
+                                    data and optional hub gene information.
+                                </p>
+                                <p>
+                                    >>> Go to <a href="analysis.php">analysis</a> page to get started!
+                                </p>
+                                <iframe src="demonetwork.php" width="100%" height="490">Does not support iframe.</iframe>
                             </div>
 						</section>
 					</div>
-
 					<div class="4u" id="featured">
                         <div class="index-right">
                             <h3>News</h3>
-                            <ul><li><p>07/01/17 GeNeck 1.0 release!.</p></li></ul>
+                            <p style="text-align: justify; font-size: 14px;">03/01/18 GeNeCK paper was submitted to ...  !</p>
+                            <p style="text-align: justify; font-size: 14px;">07/01/17 GeNeCK 1.0 release!</p>
                         </div>
                         <hr/>
                         <div class="index-right">
                             <h3>Citations</h3>
-                            <ul><li><p>Donghyeon Yu, Johan Lim, Xinlei Wang, Faming Liang, Guanghua Xiao. Enhanced Construction of Gene Regulatory Networks using Hub Gene Information.</p></li></ul>
+                            <p style="text-align: justify; color: #014b7c;">GeNeCK: a web server for gene network construction and visualization.</p>
+                            <p style="text-align: justify; font-size: 13px;">Minzhe Zhang, Qiwei Li, Donghyeon Yu, Yang Xie, & Xiao Guanghua. [<a>bioRxir</a>]</p>
+                            <p style="text-align: justify; color: #014b7c;">Enhanced construction of gene regulatory networks using hub gene information.</p>
+                            <p style="text-align: justify; font-size: 13px;">Donghyeon Yu, Johan Lim, Xinlei Wang, Faming Liang, and Guanghua Xiao. <i>BMC bioinformatics</i>, 18.1(2017), 186. [<a target="_blank" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1576-1">link</a>]</p>
                         </div>
                         <hr/>
                         <div class="index-right">
                             <h3>Getting Started</h3>
-                            <p>GeNeck is very simple to use. It takes three steps to construct gene network with GeNeck:</p>
+                            <p style="text-align: justify;">Three quick steps to start using <b>GeNeCK</b> for gene network construction:</p>
                             <ol>
+                                <li>Select an algorithm</li>
                                 <li>Upload data</li>
-                                <li>Select algorithm</li>
                                 <li>Download and visualize</li>
                             </ol>
-                            <p><a>>> Get started</a></p>
+                            <a class="button" data-target="#myModal" data-toggle="modal" type="button">Demo</a>
+					    </div>
+				    </div>
+                    <div class="modal modal-wide fade in" id="myModal" role="dialog" style="padding-right: 13px;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">
+                                        <b>Example: How to generate gene network</b>
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p><img style="width: auto; height: auto;" src="images/figure.guide.png"/></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
-                        <hr/>
-                        <div class="index-right">
-                            <h3>More Details</h3>
-                            <p>To use GeNeck, you don't need sophisticated knowledge about gene network and algorithms. If you are interested in the detail theory, you can refer to our papers listed above. You can also go to the <a>download</a> page for other algorithms we incorporated in GeNeck.</p>
-                        </div>
-					</div>
-
-				</div>
-			</div>
-			<!-- Main -->
-
-		</div>
+                    </div>
+			    </div>
+		    </div>
 	<!-- /Main -->
-
-	<!-- Featured -->
-	<!-- /Featured -->
-
-	<!-- Footer -->
-	<!-- /Footer -->
-
+        </div>
 	<!-- Copyright -->
-	<?php include "footer.php"; ?>
-
+<?php include "footer.php"; ?>
 	</body>
 </html>

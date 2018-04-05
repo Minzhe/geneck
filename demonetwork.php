@@ -37,9 +37,10 @@
                 categories: networkData.categories,
                 force: {
                     // initLayout: 'circular'
+//                    edgeLength: 50,
                     // repulsion: 20,
-                    edgeLength: 50,
-                    repulsion: 20,
+                    edgeLength: 12,
+                    repulsion: 12,
                     gravity: 0.2
                 },
                 edges: networkData.links

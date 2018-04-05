@@ -26,7 +26,7 @@ Requirement
 Deployment
 ----------
 * MySQL databasse
-    - Edit the ``geneck.inc`` in ``bin/deploy/`` folder, and move it to ``dbincloc/`` folder which should be two level up of ``geneck/`` folder (``../../dbincloc``).
+    - Edit the ``geneck.inc`` and the ``geneck1.inc``  in ``bin/deploy/`` folder, and move it to ``dbincloc/`` folder which should be two level up of ``geneck/`` folder (``../../dbincloc``).
     - Import the ``geneNetwork.sql.txt`` to mysql database.
 * Crontab
     - The ``job.py`` script needs to be added into crontab or run periodically.

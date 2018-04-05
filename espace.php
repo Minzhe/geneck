@@ -1,71 +1,46 @@
-<!DOCTYPE HTML>
-<!--
-	Ex Machina by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>GeNeck</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
-	<body class="left-sidebar">
-
-	<!-- Header -->
-	<!-- Banner -->
-	<?php include "header.php";?>
-
-	<!-- Main -->
-		<div id="page">
-				
-			<!-- Main -->
-			<div id="main" class="container">
-				<div class="row">
-
-                    <div class="3u">
-                        <?php include "methods-bar.php"?>
-                    </div>
-				
-					<div class="9u skel-cell-important">
-						<section>
-							<header>
-								<h2>ESPACE</h2>
-								<span class="byline">Extended sparse partial correlation estimation</span>
-							</header>
-							<p> Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl.</p>
-						</section>
-                        <?php include "methods-form.php"?>
-					</div>
-				</div>
-			</div>
-			<!-- Main -->
-
-		</div>
-	<!-- /Main -->
-	<!-- Featured -->
-	<!-- /Featured -->
-
-	<!-- Footer -->
-	<!-- /Footer -->
-
-	<!-- Copyright -->
-	<?php include "footer.php"; ?>
-
-
-	</body>
-</html>
+<?php
+session_start();
+$_SESSION['page_name'] = "espace.php";
+?>
+<script>
+    MathJax.Hub.Config({
+        jax: ["input/TeX", "output/HTML-CSS"],
+        displayAlign: "center",
+        tex2jax: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        menuSettings: { zoom: "Click" }
+    });
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+</script>
+<section>
+    <header>
+        <h2>ESPACE</h2>
+        <span class="byline">Extended sparse partial correlation estimation</span>
+    </header>
+    <p class="text-justify">
+        To incorporate information about hub nodes, <code>ESPACE</code> extends the <code>SPACE</code> model by using an
+        additional tuning parameter $\alpha$ on edges connected to the given hub nodes. $\lambda$ is the lasso penalty term.
+        $\alpha$ reflect the hub gene information by reducing the penalty on edges connected to hub nodes. To be specific,
+        let $H$ be the set of hub nodes that were previously identified. The <code>ESPACE</code> method we propose solves
+        $$\underset{p}{min}\frac{1}{2}\sum_{i=1}^{p}\left \{ w_{i}\sum_{k=1}^{n} (X_{i}^{k} - \sum_{j\neq i}p^{ij}\sqrt{\frac{\omega_{ij}}{\omega_{ii}}}X_{j}^{k})^{2} \right \} + \alpha\lambda \sum_{i < j, \left \{ i\in H\right \}\cup \left \{ j\in H\right \}}|p^{ij}| + \lambda \sum_{i < j, i,j\in H^{c}}|p^{ij}|,$$
+        where $\lambda \geq 0$, $0 \leq \alpha \leq 1$. $w_i$ is weighted for the squared error loss.
+    </p>
+    <p class="text-justify">
+        <br/><strong>Note:</strong><br/>
+        <i>
+            1. Change the $\lambda$ value $(\lambda \geq 0)$ to control the sparsity of the network. <b>A larger $\lambda$ will give you
+                a more sparse network</b>. If you don't know how to choose a value, use the default one.<br/>
+        </i>
+        <i>
+            2. Change the $\alpha$ value $(0 \leq \alpha \leq 1)$ to control the penalty on hub genes. <b>A smaller $\alpha$
+                will give less penalty on edges connected to hub genes</b>. If you don't
+            know how to choose a value, use the default one.<br/>
+        </i>
+        <i>
+            3. The hub gene input should be gene names separated by a comma, e.g. "Gene13,Gene52,Gene199". All the gene names
+            must be contained in column names of the expression data.
+        </i>
+    </p>
+</section>
+<?php include "methods-form.php" ?>

@@ -1,50 +1,47 @@
-<?php
-$directoryURI = $_SERVER['REQUEST_URI'];
-$path = parse_url($directoryURI, PHP_URL_PATH);
-$page_name = explode('/', $path)[2];
-
-if (empty($page_name) || $page_name == 'index.php') {
-    $page_index = 'index';
-} elseif ($page_name == 'download.php') {
-    $page_index = 'download';
-} elseif ($page_name == 'contact.php') {
-    $page_index = 'contact';
-} else {
-    $page_index = 'analysis';
-}
-?>
-
 <!-- Header -->
 <div id="header">
     <div class="container">
 
         <!-- Logo -->
         <div id="logo">
-            <h1><a href="#">GeNe<span style="color: #888888">ck</span></a></h1>
+            <h1><a href="index.php">GeNe<span style="color: #888888;">CK</span></a></h1>
         </div>
-
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
         <!-- Nav -->
-        <nav id="nav">
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <nav id="nav" class="nav navbar-nav navbar-right">
             <ul>
-                <li class="<?php if ($page_index == 'index') {echo "active";}?>"><a href="index.php">Homepage</a></li>
-                <li class="<?php if ($page_index == 'analysis') {echo "active";}?>"><a href="analysis.php">Analysis</a></li>
-                <li class="<?php if ($page_index == 'download') {echo "active";}?>"><a href="download.php">Download</a></li>
-                <li class="<?php if ($page_index == 'contact') {echo "active";}?>"><a href="">Contact Us</a></li>
+                <li id="index"><a href="index.php">Homepage</a></li>
+                <li id="analysis"><a href="analysis.php">Analysis</a></li>
+                <li id="download"><a href="download.php">Download</a></li>
+                <li id="contact"><a href="contact.php">Contact Us</a></li>
             </ul>
         </nav>
-
+        </div>
     </div>
 </div>
 <!-- Header -->
 
 <!-- Banner -->
-<div id="banner">
+<div id="homebanner">
     <div class="container">
-        <?php
-        if ($page_index == 'index') {
-            echo "<h1 class=\"tagline\">Gene Network Construction Kit @ QBRC</h1>";
-        }
-        ?>
+    <h1 class="tagline">Gene Network Construction Tool Kit @ QBRC</h1>
     </div>
 </div>
+<div id="banner">
+    <div class="container"></div>
+</div>
+
+
+<!--<div id="banner">-->
+<!--    <div class="container">-->
+<!--        if ($page_index == 'index') {-->
+<!--            echo "<h1 class=\"tagline\">Gene Network Construction Kit @ QBRC</h1>";-->
+<!--       }-->
+<!--    </div>-->
+<!--</div>-->
 <!-- /Banner -->

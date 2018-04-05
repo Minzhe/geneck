@@ -1,69 +1,49 @@
-<!DOCTYPE HTML>
-<!--
-	Ex Machina by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-<html>
-	<head>
-		<title>GeNeck</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
-	<body class="left-sidebar">
+<?php
+session_start();
+$_SESSION['page_name'] = "space.php";
 
-	<!-- Header -->
-	<!-- Banner -->
-	<?php include "header.php";?>
+include "methods-js.php";
+?>
 
-	<!-- Main -->
-		<div id="page">
-				
-			<!-- Main -->
-			<div id="main" class="container">
-				<div class="row">
-
-                    <div class="3u">
-                        <?php include "methods-bar.php"?>
-                    </div>
-
-					<div class="9u skel-cell-important">
-						<section>
-							<header>
-								<h2>SPACE</h2>
-								<span class="byline">Extended Sparse PArtial Correlation Estimation method</span>
-							</header>
-							<p>Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo. Aliquam lacinia metus ut elit. Suspendisse iaculis mauris nec lorem. Donec leo. Vivamus fermentum nibh in augue. Praesent a lacus at urna congue rutrum. Nulla enim eros, porttitor eu, tempus id, varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum, nunc lectus vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl.</p>
-						</section>
-                        <?php include "methods-form.php"?>
-					</div>
-				</div>
-			</div>
-			<!-- Main -->
-
-		</div>
-	<!-- /Main -->
-	<!-- Featured -->
-	<!-- /Featured -->
-
-	<!-- Footer -->
-	<!-- /Footer -->
-
-	<!-- Copyright -->
-	<?php include "footer.php"; ?>
-	</body>
-</html>
+<section>
+    <header>
+        <h2>SPACE</h2>
+        <span class="byline">Extended Sparse PArtial Correlation Estimation method</span>
+    </header>
+    <p class="text-justify">
+        Spare partial correlation estimation (<code>SPACE</code>) is a joint sparse regression problem, which resolves
+        a symmetrically constrained and $ℓ_1$-regularizated regression problem under high-dimensional settings.
+    </p>
+    <div class="text-justify" id="detail-intro">
+        <p>
+            In the Gaussian graphical models, the conditional dependencies among p variables can be represented by a
+            graph $G = (V,E)$, where $V={1,2,...,p}$ is a set of nodes representing $p$ variables and
+            $E = \{(i,j) | \omega_{ij} \ne 0, 1 \leq i \ne j \leq p\}$ is a set of edges corresponding to the nonzero
+            off-diagonal elements of $\Omega$.
+        </p>
+        <p>
+            <code>SPACE</code> considers linear models such that for $i=1,2,...,p$,
+            $$X_{i} = \sum_{j\neq i}\beta_{ij}X_{j} + \epsilon_{i}$$
+            where $\epsilon_{i}$ is an n-dimensional random vector from the multivariate normal distribution
+            with mean $0$ and covariance matrix $1 / \omega_{ii}I_n$ is an identity matrix with size of $n×n$.
+            Under normality, the regression coefficients $\beta_{ij}$ can be replaced with the partial correlations
+            $\rho^{ij}$ by the relationship
+            $$\beta_{ij} = - \frac{\omega_{ij}}{\omega_{ij}} = p^{ij}\sqrt{\frac{\omega_{jj}}{\omega_{ii}}}$$
+            where
+            $p^{ij} = corr (X_{i}, X_{j} | X_{k}, k \neq i, j) = -\omega_{ij} /\sqrt{\omega_{ii}\omega_{jj}}$
+            is a partial correlation between $X_i$ and $X_j$. <code>SPACE</code> method solves the
+            following $ℓ_1$-regularized problem:
+            $$\underset{p}{min}\frac{1}{2}\sum_{i=1}^{p}\left \{ w_{i}\sum_{k=1}^{n} (X_{i}^{k} - \sum_{j\neq i}p^{ij}\sqrt{\frac{\omega_{ij}}{\omega_{ii}}}X_{j}^{k})^{2} \right \} + \lambda \sum_{1\leq i\le j \leq p}|p^{ij}|$$
+            where $w_i$ is a nonnegative weight for the $i$-th squared error loss.
+        </p>
+    </div>
+    <?php include "methods-button.php";?>
+    <p class="text-justify">
+        <br/><strong>Note:</strong><br/>
+        <i>
+            Change the $\alpha$ value $(\alpha > 0)$ to control the sparsity of network. <b>Larger the $\alpha$ is, more
+                sparse is the constructed network</b>. If you don't know how to choose a value, use the default one.
+        </i>
+    </p>
+</section>
+<?php include "methods-form.php" ?>

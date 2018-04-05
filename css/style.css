@@ -4,12 +4,12 @@
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
-@charset 'UTF-8';
+@charset "UTF-8";
 
 @font-face {
     font-family: 'FontAwesome';
-    src: url('font/fontawesome-webfont.eot?v=4.0.1');
-    src: url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
+    /*src: url('font/fontawesome-webfont.eot?v=4.0.1');*/
+    /*src: url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');*/
     font-weight: normal;
     font-style: normal
 }
@@ -184,12 +184,12 @@ ul.default {
 
 ul.default li {
     display: block;
-    padding: 2em 0em 1.25em 0em;
+    padding: 2em 0 1.25em 0;
     border-top: 1px solid #303030;
 }
 
 ul.default li:first-child {
-    padding-top: 0em;
+    padding-top: 0;
     border-top: none;
 }
 
@@ -209,7 +209,7 @@ ul.style1 {
 }
 
 ul.style1 li {
-    padding: 0.60em 0em;
+    padding: 0.60em 0;
     border-top: 1px solid;
     border-color: rgba(0, 0, 0, .1);
 }
@@ -220,7 +220,11 @@ ul.style1 li:first-child {
 
 ul.style1 img {
 }
-
+ul.style1 li a {
+    display: block;
+    height:100%;
+    width:100%;
+}
 ul.style2 {
     margin: 0;
     padding: 0;
@@ -228,7 +232,7 @@ ul.style2 {
 }
 
 ul.style2 li {
-    padding: 1.90em 0em 1.60em 0em;
+    padding: 1.90em 0 1.60em 0;
     border-top: 1px solid;
     border-color: rgba(0, 0, 0, .1);
 }
@@ -245,8 +249,8 @@ ul.style2 img {
 
 ul.style5 {
     overflow: hidden;
-    margin: 0em 0em 1em 0em;
-    padding: 0em;
+    margin: 0 0 1em 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -2001,7 +2005,7 @@ ul.style5 a {
 
 #header .container {
     position: relative;
-    padding: 4em 0em;
+    padding: 4em 0;
 }
 
 /*********************************************************************************/
@@ -2010,7 +2014,7 @@ ul.style5 a {
 
 #logo {
     position: absolute;
-    left: 0em;
+    left: 0;
     top: 3em;
 }
 
@@ -2022,7 +2026,8 @@ ul.style5 a {
     display: block;
     font-size: 3.6em;
     font-weight: 600;
-    text-shadow: 0 0 5px #000
+    text-shadow: 0 0 5px #000;
+    text-decoration: none;
 }
 
 /*********************************************************************************/
@@ -2031,7 +2036,7 @@ ul.style5 a {
 
 #nav {
     position: absolute;
-    right: 0em;
+    right: 0;
     top: 2.2em;
 }
 
@@ -2065,6 +2070,96 @@ ul.style5 a {
 #nav > ul > li > ul {
     display: none;
 }
+.navbar-collapse {
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: visible;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+.navbar-collapse.in {
+    overflow-y: auto;
+}
+@media (min-width: 300px) {
+    .navbar-collapse {
+        width: auto;
+        border-top: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+    .navbar-collapse.in {
+        overflow-y: visible;
+    }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-static-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+    max-height: 340px;
+}
+@media (max-device-width: 480px) and (orientation: landscape) {
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        max-height: 200px;
+    }
+}
+.container > .navbar-header,
+.container-fluid > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 768px) {
+    .container > .navbar-header,
+    .container-fluid > .navbar-header,
+    .container > .navbar-collapse,
+    .container-fluid > .navbar-collapse {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.navbar-toggle:focus {
+    outline: 0;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+@media (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+}
 
 
 /*********************************************************************************/
@@ -2073,12 +2168,19 @@ ul.style5 a {
 
 #banner {
     position: relative;
-    padding: 12em 0em;
+    padding: 12em 0;
     background: url(../images/banner.jpg) no-repeat center;
     background-size: cover;
     color: #fff;
 }
-
+#homebanner {
+    position: relative;
+    padding: 12em 0;
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+    height:300px;
+    color: #fff;
+}
 .tagline {
     vertical-align: top;
     font-size: 2em;
@@ -2132,7 +2234,7 @@ ul.style5 a {
 
 #copyright {
     position: relative;
-    padding: 3em 0em;
+    padding: 3em 0;
     border-top: 1px solid #303030;
     letter-spacing: 1px;
     text-align: center;
@@ -2165,6 +2267,8 @@ ul.style5 a {
 
 #featured {
     position: relative;
+    border-radius: 10px;
+    border: 1px solid #d3d3d3;
 }
 
 #featured .divider {
@@ -2214,33 +2318,37 @@ blockquote {
 }
 
 .item-entry h2 {
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
 .item-entry span {
-    color: #b3b3b3;
-    margin-bottom: 0.5em;
+    color: #808080;
+    margin-bottom: 0.3em;
     display: block;
-    font-size: smaller;
+    font-size: 1em;
     line-height: 150%;
 }
 
-.item-entry > img {
+.item-entry > a {
     float: right;
-    width: 10%;
+
 }
+/*div.index-right:first-child{*/
+/*div.item-entry:nth-child(1){*/
+    /*width: 80%;*/
+/*}*/
 
 .item-entry > div {
-    width: 77%;
+    width: 80%;
     margin-right: 5%;
 }
 
-/*********************************************************************************/
-/* Modal                                                                         */
-/*********************************************************************************/
+/*!*********************************************************************************!*/
+/*!* Modal                                                                         *!*/
+/*!*********************************************************************************!*/
 
-.modal {
+.cmodal {
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -2249,10 +2357,11 @@ blockquote {
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, .75);
-    transition: opacity .3s;
+    transition: opacity .3s ease;
+    z-index: 9998;
 }
 
-.modal-bg {
+.cmodal-bg {
     position: absolute;
     top: 0;
     right: 0;
@@ -2261,16 +2370,16 @@ blockquote {
     cursor: default;
 }
 
-.modal-state {
+.cmodal-state {
     display: none;
 }
 
-.modal-state:checked + .modal {
+.cmodal-state:checked + .cmodal {
     opacity: 1;
     visibility: visible;
 }
 
-.modal-content {
+.cmodal-content {
     transition: top .3s ease;
     position: absolute;
     top: 0;
@@ -2285,6 +2394,63 @@ blockquote {
     padding: 1em 2em;
     height: 80%;
 }
+.cmodal__inner {
+    transition: top .25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    margin: auto;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
+    padding: 1em 2em;
+    height: 80%;
+}
+.cmodal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+
+.cmodal__close:after,
+.cmodal__close:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: #ccc;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+}
+
+.cmodal__close:hover:after,
+.cmodal__close:hover:before {
+    background: #aaa;
+}
+
+.cmodal__close:before {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+
+    .cmodal__inner {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+    }
+}
+
+
 
 /*********************************************************************************/
 /* Background                                                                    */
@@ -2295,19 +2461,21 @@ blockquote {
     border-radius: 4px;
     padding: 20px;
     margin-right: 15px;
+
 }
 
 /*********************************************************************************/
 /* index-right                                                                   */
 /*********************************************************************************/
 .index-right {
-    margin-top: 20px;
-    margin-left: 15px;
+    margin-top: 15px;
+    margin-left: 10px;
     padding-left: 10px;
     padding-right: 20px;
 }
 
 .index-right h3 {
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -2329,7 +2497,14 @@ blockquote {
     list-style-type: disc;
 }
 
+/*div.index-right:first-child{*/
+    /*margin-top:0;*/
+    /*padding-top:0;*/
 
+/*}*/
+/*[class~='index-right']:last-of-type{*/
+
+/*}*/
 
 
 
@@ -2337,13 +2512,28 @@ blockquote {
 /* Analysis                                                                      */
 /*********************************************************************************/
 
+/**************** introduction ******************/
+.intro h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
 /**************** methods bar ******************/
 
 .methods a {
-    list-style-type: disc;
+    /*list-style-type: disc;*/
     margin-left: 15px;
     margin-right: 30px;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.methods h3 {
+    /*list-style-type: disc;*/
+    padding-left: 15px;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .method-active {
@@ -2394,4 +2584,64 @@ blockquote {
     color: #FFF !important;
 }
 
-/**************** result ******************/
+/**************** button ******************/
+.detail-button {
+    border: none;
+    background-color: transparent;
+    color: #014b7c;
+}
+
+/**************** rewrite boostrap style ******************/
+.modal-body {
+    max-height:790px;
+    max-width:1500px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+.modal.modal-wide .modal-dialog {
+    width: 75%;
+    max-height:790px;
+    max-width:1300px;
+}
+.modal-wide .modal-body {
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.subtitle h2{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+/*************contact style*************************/
+.h2 small {
+    font-size: 20px;
+}
+hr.style2 {
+    border-top: 3px double #8c8b8b;
+}
+/**************input error**************/
+.error {
+    border: solid 1px #FF0000;
+    box-shadow:0 0 3px red;
+}
+/*******MATH CHARACTORS********/
+.sup {
+    position: relative;
+    bottom: 1ex;
+    font-size: 80%;
+}
+.sub {
+    position: relative;
+    top: 1ex;
+    font-size: 80%;
+}
+
+.under{
+    display: inline-block;
+    width: 2px;
+    height:1px;
+}
+.supsub {position: absolute}
+.subscript {font-size:10px; display:block; position:relative; left:2px; top: -20px}
+.superscript { font-size:10px; display:block; position:relative; left:2px; top: -4px}
+.hat{font-size:6px; display:block; position:relative; left:2px; top: -20px}
+.base{display:block; position:relative;left:2px; top:-10px}

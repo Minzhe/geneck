@@ -20,11 +20,11 @@ body, input, textarea, select {
 /*********************************************************************************/
 
 #banner {
-    padding: 6em 0em;
+    padding: 6em 0;
 }
 
 .homepage #banner {
-    padding: 6em 0em 18em 0em;
+    padding: 6em 0;
 }
 
 /*********************************************************************************/
@@ -32,11 +32,11 @@ body, input, textarea, select {
 /*********************************************************************************/
 
 #page {
-    padding: 2em 0em 6em 0em;
+    padding: 2em 0 6em 0;
 }
 
 .homepage #page {
-    padding: 6em 0em;
+    padding: 6em 0;
 }
 
 #main {
@@ -46,8 +46,8 @@ body, input, textarea, select {
 }
 
 .homepage #main {
-    margin-top: 0em;
-    padding-top: 0em;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /*********************************************************************************/
@@ -55,7 +55,7 @@ body, input, textarea, select {
 /*********************************************************************************/
 
 #footer {
-    padding: 0em 0em 4em 0em;
+    padding: 0 0 4em 0;
 }
 
 /*********************************************************************************/
@@ -63,10 +63,11 @@ body, input, textarea, select {
 /*********************************************************************************/
 
 #featured {
-    padding: 4em 0em;
+    position: relative;
+    padding: 4em 0;
 }
 
 #featured .divider {
-    padding: 2em 0em;
+    padding: 2em 0;
 }
 	
