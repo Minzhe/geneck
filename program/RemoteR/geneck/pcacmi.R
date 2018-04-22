@@ -1,12 +1,13 @@
-###                       glasso.R                       ###
-### ==================================================== ###
-# This R script is function to use glasso to constrcut gene network.
+###                       pcacmi.R                         ###
+### ====================================================== ###
+# This R script is function to use pcacmi to constrcut gene network.
 
-suppressMessages(library(glasso))
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
+source("lib/PCA_CMI.R")
 
-network.glasso <- function(expr.data, lambda) {
+network.pcacmi <- function(expr.data, lambda) {
     if (lambda <= 0) {
-        stop('Input error: parameter lambda for ns should be larger than 1.')
+        stop('Input error: parameter alpha for pcacmi should be larger than 0.')
     }
     p <- ncol(expr.data)
     n <- nrow(expr.data)
@@ -14,9 +15,8 @@ network.glasso <- function(expr.data, lambda) {
     
     expr.mat <- scale(as.matrix(expr.data), center = TRUE, scale = FALSE)
     
-    S <- t(expr.mat) %*% expr.mat / n
-    out <- glasso(S, rho = lambda)
-    est_edge <- which(abs(out$wi) > 0, T)
+    out <- pca_cmi(t(expr.mat), lambda)
+    est_edge <- which(out$G == 1, T)
     est_edge <- est_edge[est_edge[, 1] < est_edge[, 2], ]
     if (length(est_edge) == 2) est_edge <- matrix(est_edge, 1, 2)
     
@@ -27,6 +27,4 @@ network.glasso <- function(expr.data, lambda) {
     
     return(est_edge)
 }
-
-
 

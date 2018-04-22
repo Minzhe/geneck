@@ -45,7 +45,7 @@ include "methods-js.php";
         removes the pairs of variables such that the maximal CMI of two variables given $L+1$ adjacent variables is less
         than a given threshold $\alpha$, where $\alpha$ determines whether two variables are independent or not and adjacent
         variables denote variables connected to the two target variables in <code>PCACMI</code> at the previous step.
-        <code>PCACMI</code> repeats the above steps until there is no higher order <connection class=""></connection>
+        <code>PCACMI</code> repeats the above steps until there is no higher order.
     </p>
     <?php include "methods-button.php";?>
     <p class="text-justify">
@@ -56,4 +56,4 @@ include "methods-js.php";
         </i>
     </p>
 </section>
-<?php include "methods-form.php" ?>
+<?php include "methods-form.php"; ?>

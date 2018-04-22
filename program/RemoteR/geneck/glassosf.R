@@ -1,12 +1,14 @@
-###                       cmi2ni.R                         ###
+###                       glassosf.R                       ###
 ### ====================================================== ###
-# This R script is function to use cmi2ni to constrcut gene network.
+# This R script is function to use glassosf to constrcut gene network.
 
-source("lib/CMI2NI.R")
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
+suppressMessages(library(glasso))
+source('lib/glasso_SF.R')
 
-network.cmi2ni <- function(expr.data, lambda) {
-    if (lambda <= 0) {
-        stop('Input error: parameter lambda for cmi2ni should be larger than 0.')
+network.glassosf <- function(expr.data, alpha) {
+    if (alpha <= 0) {
+        stop('Input error: parameter alpha for glassosf should be larger than 0.')
     }
     p <- ncol(expr.data)
     n <- nrow(expr.data)
@@ -14,8 +16,8 @@ network.cmi2ni <- function(expr.data, lambda) {
     
     expr.mat <- scale(as.matrix(expr.data), center = TRUE, scale = FALSE)
     
-    out <- cmi2ni(t(expr.mat), lambda)
-    est_edge <- which(out$G == 1, T)
+    out <- glasso_sf(expr.mat, alpha)
+    est_edge <- which(abs(out$wi) > 0, T)
     est_edge <- est_edge[est_edge[, 1] < est_edge[, 2], ]
     if (length(est_edge) == 2) est_edge <- matrix(est_edge, 1, 2)
     

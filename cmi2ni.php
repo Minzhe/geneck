@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['page_name'] = "cmi2ni.php";
 
-include "methods-js.php"
+include "methods-js.php";
 ?>
 
 <section>

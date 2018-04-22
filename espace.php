@@ -43,4 +43,4 @@ $_SESSION['page_name'] = "espace.php";
         </i>
     </p>
 </section>
-<?php include "methods-form.php" ?>
+<?php include "methods-form.php"; ?>

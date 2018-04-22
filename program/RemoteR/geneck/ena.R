@@ -2,6 +2,7 @@
 ### ====================================================== ###
 # This R script is function to use ena to constrcut gene network.
 
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 suppressMessages(library(corpcor))
 suppressMessages(library(CDLasso))
 suppressMessages(library(glasso))

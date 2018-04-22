@@ -46,4 +46,4 @@ include "methods-js.php";
         </i>
     </p>
 </section>
-<?php include "methods-form.php" ?>
+<?php include "methods-form.php"; ?>

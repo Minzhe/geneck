@@ -1,4 +1,5 @@
 <?php
+require_once('util.php');
 include "../../dbincloc/geneck.inc";
 
 //open the database connection
@@ -8,16 +9,15 @@ if ($db_conn -> connect_error) {
 }
 
 if (isset($_GET['jobid'])) {
-    $jobid = mysqli_real_escape_string($db_conn, $_GET['jobid']);
+    $jobid = util::clean($_GET['jobid']);
 }
 
 header("Content-type: text/plain");
-header("Content-length: " . strlen($csvresult) ."\"");
 header("Content-Disposition: attachment; filename=geneNetwork.csv");
 header("Content-Description: Gene Network Result");
 header("Content-transfer-encoding: binary");
 
-if(!empty($jobid) && $result = $db_conn->prepare("SELECT EstEdge_csv FROM Results WHERE JobID = ?"))
+if(!empty($jobid) && $result = $db_conn->prepare("SELECT EstEdge_csv FROM GeneckResults WHERE JobID = ?"))
 {
     $result->bind_param("s", $jobid);
     $result->execute();
@@ -31,4 +31,3 @@ if(!empty($jobid) && $result = $db_conn->prepare("SELECT EstEdge_csv FROM Result
 }
 
 $db_conn->close();
-?>

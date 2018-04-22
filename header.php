@@ -1,7 +1,6 @@
 <!-- Header -->
 <div id="header">
     <div class="container">
-
         <!-- Logo -->
         <div id="logo">
             <h1><a href="index.php">GeNe<span style="color: #888888;">CK</span></a></h1>
@@ -35,13 +34,3 @@
 <div id="banner">
     <div class="container"></div>
 </div>
-
-
-<!--<div id="banner">-->
-<!--    <div class="container">-->
-<!--        if ($page_index == 'index') {-->
-<!--            echo "<h1 class=\"tagline\">Gene Network Construction Kit @ QBRC</h1>";-->
-<!--       }-->
-<!--    </div>-->
-<!--</div>-->
-<!-- /Banner -->

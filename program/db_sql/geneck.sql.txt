@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.20, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.17, for osx10.6 (x86_64)
 --
--- Host: localhost    Database: geneNetwork
+-- Host: localhost    Database: RemoteR
 -- ------------------------------------------------------
--- Server version	5.7.20-0ubuntu0.16.04.1
+-- Server version	5.6.17
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -15,55 +15,37 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
---
--- Table structure for table `Jobs`
---
 
-DROP TABLE IF EXISTS `Jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Jobs` (
+CREATE TABLE `GeneckParameters` (
   `JobID` varchar(40) NOT NULL,
-  `Status` tinyint(1) NOT NULL DEFAULT '0',
   `UserName` varchar(100) DEFAULT NULL,
   `Organization` varchar(100) DEFAULT NULL,
-  `Email` varchar(50) DEFAULT NULL,
+  `Email` varchar(100) DEFAULT NULL,
   `GeneExpression` mediumblob NOT NULL,
   `HubGenes` varchar(100) DEFAULT NULL,
-  `Method` tinyint(1) NOT NULL,
   `Param` decimal(10,3) DEFAULT NULL,
   `Param_2` decimal(10,3) DEFAULT NULL,
-  `CreateTime` datetime NOT NULL,
-  `FinishTime` datetime DEFAULT NULL,
   PRIMARY KEY (`JobID`),
-  KEY `Status` (`Status`)
+  CONSTRAINT `fk_geneckp_jobid` FOREIGN KEY (`JobID`) REFERENCES `Jobs` (`JobID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `Results`
+-- Table structure for table `GeneckResults`
 --
-
-DROP TABLE IF EXISTS `Results`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `Results` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `GeneckResults` (
   `JobID` varchar(40) NOT NULL,
   `EstEdge_csv` mediumblob NOT NULL,
   `EstEdge_json` mediumblob NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `JobID` (`JobID`)
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`JobID`),
+  CONSTRAINT `fk_geneckr_jobid` FOREIGN KEY (`JobID`) REFERENCES `Jobs` (`JobID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2017-12-15 10:57:39
+--
+-- Table structure for table `Jobs`
+--

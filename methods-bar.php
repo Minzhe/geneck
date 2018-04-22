@@ -1,10 +1,3 @@
-<?php
-//$directoryURI = $_SERVER['REQUEST_URI'];
-//$path = parse_url($directoryURI, PHP_URL_PATH);
-//$page_name = explode('/', $path)[2];
-session_start();
-?>
-
 <section class="sidebar" id="side-methods">
     <header>
         <h2>Network Inference Method</h2>

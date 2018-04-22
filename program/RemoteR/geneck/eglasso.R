@@ -2,6 +2,7 @@
 ### ======================================================== ###
 # This R script is function to use eglasso to constrcut gene network.
 
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 suppressMessages(library(glasso))
 
 network.eglasso <- function(expr.data, hub.index, alpha, lambda) {

@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Ex Machina by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 <head>
     <title>GeNeck</title>
@@ -15,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
     <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery_3.2.1.min.js"></script>
     <script src="js/skel.min.js"></script>
     <script src="js/skel-panels.min.js"></script>
     <script src="js/init.js"></script>
@@ -58,21 +53,21 @@
             </div>
             <div class="5u">
                     <form class="">
-                        <h3 style="font-size:28px"><i class="fa fa-globe"></i> Contact Information<h3><hr class="style2">
-                                <address style="font-size:15px">
+                        <h3 style="font-size:28px"><i class="fa fa-globe"></i> Contact Information</h3><hr class="style2">
+                                <div style="font-size:15px">
                                     <strong>UTSouthwestern Medical Center</strong><br>
                                     5323 Harry Hines Blvd.<br>
                                     Dallas, TX 75390-9077<br>
-                                </address>
+                                </div>
                                 <br>
-                                <address>
-                                    <p style="font-size:16px"><i class="fa fa-building-o"></i>
-                                        <abbr title="Email">D</abbr>:
-                                        Department of Clinical Sciences</p>
-                                    <p style="font-size:16px"><i class="fa fa-envelope-o"></i>
-                                        <abbr title="Email">E</abbr>:
-                                        <a href="mailto:zenroute.mzhang@gmail.com">zenroute.mzhang@gmail.com</a>
-                                </address>
+                                <div>
+                                    <div style="font-size:16px"><i class="fa fa-building-o"></i>
+                                        <div title="Email">D</div>:
+                                        Department of Clinical Sciences<br>
+                                    <div style="font-size:16px"><i class="fa fa-envelope-o"></i>
+                                        <div title="Email">E</div>:
+                                        <a href="mailto:zenroute.mzhang@gmail.com">zenroute.mzhang@gmail.com</a></div>
+                                </div>
                                 <br><br><br>
                     </form>
             </div>

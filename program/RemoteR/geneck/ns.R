@@ -1,6 +1,8 @@
 ###                       ns.R                       ###
 ### ================================================ ###
 # This R script is function to use neighborhood selection to constrcut gene network.
+
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 suppressMessages(library(CDLasso))
 
 network.ns <- function(expr.data, alpha) {

@@ -2,6 +2,7 @@
 ### ======================================================== ###
 # This R script is function to use espace to constrcut gene network.
 
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 suppressMessages(library(espace))
 
 nrm <- function(x) return(sum(x ^ 2))

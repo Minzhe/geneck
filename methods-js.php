@@ -3,7 +3,7 @@
         jax: ["input/TeX", "output/HTML-CSS"],
         displayAlign: "center",
         tex2jax: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
         },
         menuSettings: { zoom: "Click" }
     });

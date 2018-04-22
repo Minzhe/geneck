@@ -2,6 +2,7 @@
 ### ====================================================== ###
 # This R script is function to use space to constrcut gene network.
 
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 suppressMessages(library(space))
 
 network.space <- function(expr.data, alpha) {

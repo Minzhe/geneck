@@ -2645,3 +2645,9 @@ hr.style2 {
 .superscript { font-size:10px; display:block; position:relative; left:2px; top: -4px}
 .hat{font-size:6px; display:block; position:relative; left:2px; top: -20px}
 .base{display:block; position:relative;left:2px; top:-10px}
+
+/************* error page add by bo yao************/
+.error-template {padding: 40px 15px;text-align: center;}
+.error-actions {margin-top:15px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+/************* error page *************************/

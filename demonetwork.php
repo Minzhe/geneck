@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>GeNeck</title>
     <script type="text/javascript" src="js/echarts.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery_3.2.1.min.js"></script>
 </head>
 <body style="height: 100%; margin: 0">
 <div id="container" style="height: 100%"></div>
@@ -15,7 +15,7 @@
     $.get('data/demonetwork.json', function (networkData) {
         myChart.hideLoading();
 
-        option = {
+        var option = {
             legend: {
                 data: []
             },

@@ -33,7 +33,6 @@ for($i=0;$i<strlen($authnum);$i++){
 }
 
 imagerectangle($aimg,0,0,$img_width-1,$img_height-1,$textcolor);//put the image in a rectangle frame
-Header("Content-type: image/PNG");//send the content type header so the image is displayed properly
-ImagePNG($aimg);//output the image to the browser
-ImageDestroy($aimg);//destroy the image to free up the memory
-?>
+header("Content-type: image/PNG");//send the content type header so the image is displayed properly
+imagepng($aimg);//output the image to the browser
+imagedestroy($aimg);//destroy the image to free up the memory

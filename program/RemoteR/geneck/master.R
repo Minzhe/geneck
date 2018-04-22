@@ -2,6 +2,7 @@
 ### =============================================== ###
 # This R script is a pipline to construct gene network
 
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 suppressMessages(library(argparse))
 
 #############  1. Parse comandline argument  #################
@@ -20,13 +21,13 @@ hub <- args$hub
 param_2 <- args$param_2
 
 ### concat input expression data
-expr.file <- paste("../data/expr.", jobID, ".csv", sep = "")
+expr.file <- paste("expr.", jobID, ".csv", sep = "")
 
 ### concat output edge data
-est_edge.csv <- paste("../data/est_edge.", jobID, ".csv", sep = "")
+est_edge.csv <- paste("est_edge.", jobID, ".csv", sep = "")
 
 ### concat temp message file
-tmp.message.file <- paste("../data/tmp_message.", jobID, ".txt", sep = "")
+tmp.message.file <- paste("tmp_message.", jobID, ".txt", sep = "")
 
 #############  2. Read data  #################
 ### suppress printing message to tmp file

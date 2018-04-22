@@ -2,6 +2,7 @@
 ### ============================================================ ###
 # This R script is function to use bayesianglasso to constrcut gene network.
 
+setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
 source("lib/BayesianGLasso.R")
 
 network.bayesianglasso <- function(expr.data, prob) {

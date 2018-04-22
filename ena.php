@@ -45,4 +45,4 @@ include "methods-js.php";
         </p>
     </div>
 </section>
-<?php include "methods-form.php"?>
+<?php include "methods-form.php"; ?>
