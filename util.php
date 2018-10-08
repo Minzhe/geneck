@@ -50,9 +50,9 @@ class util
     public static function parseParam($method) {
         if ($method == 10) {
             return 'p-value: ';
-        } elseif (in_array($method, array(1, 2, 5, 6, 7, 11))) {
+        } elseif (in_array($method, array(1, 2, 5, 6, 7, 8, 9, 11))) {
             return 'Alpha: ';
-        } elseif (in_array($method, array(3, 4, 8, 9))) {
+        } elseif (in_array($method, array(3, 4))) {
             return 'Lambda: ';
         } else {
             return Null;
@@ -61,7 +61,7 @@ class util
 
     public static function parseParam_2($method) {
         if ($method == 8 | $method == 9) {
-            return 'Alpha: ';
+            return 'Lambda: ';
         } elseif ($method == 10) {
             return 'BayesianGLASSO: ';
         } else {

@@ -152,7 +152,7 @@
                             <tr>
                                 <td class="table-right-align"><p>False positive rate (alpha):</p></td>
                                 <td>
-                                    <input type="number" min=0.001 max=0.999 step=0.001 class="inputbox" name="param" value=0.200 required>
+                                    <input type="number" min=0.001 max=0.999 step=0.001 class="inputbox" name="param" value=0.500 required>
                                     <img src="images/icon-question.png" title="0.001 ~ 0.999"/>
                                 </td>
                             </tr>
