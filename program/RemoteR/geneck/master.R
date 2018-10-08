@@ -80,7 +80,7 @@ if (method == 1) {
     est_edge <- network.espace(expr.data = expr.data, hub.index = hub.index, alpha = param, lambda = param_2)
 } else if (method == 10) {
     source("ena.R")
-    est_edge <- network.ena(expr.data = expr.data, n.perm = 10, sig.quant = 1-param, if.bayes = param_2)
+    est_edge <- network.ena(expr.data = expr.data, n.perm = 10, p.val.cutoff = param, if.bayes = param_2)
 } else if (method == 11) {
     source("bayesianglasso.R")
     est_edge <- network.bayesianglasso(expr.data = expr.data, prob = param)

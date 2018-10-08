@@ -3,6 +3,7 @@
 # This R script is function to use ena to constrcut gene network.
 
 setwd(paste(Sys.getenv("remoter_path"), "geneck/", sep = ""))
+suppressMessages(library(reshape2))
 suppressMessages(library(corpcor))
 suppressMessages(library(CDLasso))
 suppressMessages(library(glasso))
@@ -12,9 +13,9 @@ source("lib/CMI2NI.R")
 suppressMessages(library(space))
 source("lib/BayesianGLasso.R")
 
-network.ena <- function(expr.data, n.perm, sig.quant, if.bayes) {
-    if (sig.quant <= 0 | sig.quant >= 1) {
-        stop('Input error: parameter sig.quant for ena should be between 0 and 1.')
+network.ena <- function(expr.data, n.perm, p.val.cutoff, if.bayes) {
+    if (p.val.cutoff <= 0 | p.val.cutoff >= 1) {
+        stop('Input error: parameter p.value for ena should be between 0 and 1.')
     }
     p <- ncol(expr.data)
     n <- nrow(expr.data)
@@ -75,12 +76,16 @@ network.ena <- function(expr.data, n.perm, sig.quant, if.bayes) {
         est_edge.perm <- perm.edge(edge.list = est_edge)
         perm.v <- c(perm.v, est_edge.perm[upper.tri(est_edge.perm, diag = FALSE)])
     }
-    sig.level <- quantile(perm.v, probs = sig.quant)
+    perm.ecdf <- ecdf(perm.v)
     
     ### true edge
-    est_edge.sig <- which(est_edge.ena > sig.level & est_edge.ena < 0, TRUE)
-    est_edge.sig <- as.data.frame(est_edge.sig)
-    colnames(est_edge.sig) <- c("node1", "node2")
+    est_edge.sig <- setNames(melt(est_edge.ena), c("node1", "node2", "p.value"))
+    est_edge.sig <- est_edge.sig[with(est_edge.sig, node1 < node2),]
+    est_edge.sig$p.value <- p.adjust(1 - perm.ecdf(est_edge.sig$p.value), method = "fdr")
+    est_edge.sig <- est_edge.sig[with(est_edge.sig, p.value < p.val.cutoff),]
+
+    est_edge.sig$p.value <- signif(est_edge.sig$p.value, 4)
+    est_edge.sig <- est_edge.sig[with(est_edge.sig, order(p.value)),]
     est_edge.sig[,1] <- gene.index[est_edge.sig[,1]]
     est_edge.sig[,2] <- gene.index[est_edge.sig[,2]]
     

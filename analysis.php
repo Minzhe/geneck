@@ -1,6 +1,3 @@
-<?php
-require_once('util.php');
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -50,145 +47,6 @@ require_once('util.php');
             // header & banner
             $("#homebanner").hide();
             $("#analysis").addClass("active");
-
-            $('#alert').hide();
-            var error, pageindex;
-            error= "<?php if(isset($_GET['error'])) echo util::clean($_GET['error']); ?>";
-            pageindex="<?php if(isset($_GET['pageindex'])) echo util::clean($_GET['pageindex']); ?>";
-            console.log(pageindex);
-
-            // Display error alert
-            if(error) {
-                if (error === '0') {
-                    document.getElementById("alert").innerHTML = "The entered verification code is incorrect.";
-                    $('#alert').show();
-                }
-                if (error === '1') {
-                    document.getElementById("alert").innerHTML = "Your uploaded file is invalid. Please click Example to check upload file requirements";
-                    $('#alert').show();
-                }
-                if (error === '2') {
-                    document.getElementById("alert").innerHTML = "The input hubgene doesn't exist in the upload file";
-                    $('#alert').show();
-                }
-                if (error === '3') {
-                    document.getElementById("alert").innerHTML = "Fail to send email";
-                    $('#alert').show();
-                }
-                if (error === '4') {
-                    document.getElementById("alert").innerHTML = "Expression data dimension too big the for BayesianGLASSO";
-                    $('#alert').show();
-                }
-            }
-
-            //load different forms and contents
-            if (pageindex === '1') {
-                $("#ajaxcontent").load("GeneNet.php");
-                $("#genemethod1").addClass("method-active");
-            }
-            if (pageindex === '2') {
-                $("#ajaxcontent").load("ns.php");
-                $("#genemethod2").addClass("method-active");
-            }
-            if (pageindex === '3') {
-                $("#ajaxcontent").load("glasso.php");
-                $("#genemethod3").addClass("method-active");
-            }
-            if (pageindex === '4') {
-                $("#ajaxcontent").load("glassosf.php");
-                $("#genemethod4").addClass("method-active");
-            }
-            if (pageindex === '5') {
-                $("#ajaxcontent").load("pcacmi.php");
-                $("#genemethod5").addClass("method-active");
-            }
-            if (pageindex === '6') {
-                $("#ajaxcontent").load("cmi2ni.php");
-                $("#genemethod6").addClass("method-active");
-            }
-            if (pageindex === '7') {
-                $("#ajaxcontent").load("space.php");
-                $("#genemethod7").addClass("method-active");
-            }
-            if (pageindex === '8') {
-                $("#ajaxcontent").load("eglasso.php");
-                $("#genemethod8").addClass("method-active");
-            }
-            if (pageindex === '9') {
-                $("#ajaxcontent").load("espace.php");
-                $("#genemethod9").addClass("method-active");
-            }
-            if (pageindex === '10') {
-                $("#ajaxcontent").load("ena.php");
-                $("#genemethod10").addClass("method-active");
-            }
-            if (pageindex === '11') {
-                $("#ajaxcontent").load("bayesianglasso.php");
-                $("#genemethod11").addClass("method-active");
-            }
-
-            //activate side menu item
-            $('ul li').click(function(){
-                $('li').removeClass("method-active");
-                $(this).addClass("method-active");
-                // get the string following the ?
-                var query = window.location.search.substring(1)
-                if(query.length) {
-                    // are the new history methods available ?
-                    if(window.history != undefined && window.history.pushState != undefined) {
-                        // if pushstate exists, add a new state the the history, this changes the url without reloading the page
-                        window.history.pushState({}, document.title, window.location.pathname);
-                    }
-                }
-            });
-
-            //load different forms and contents based on selected menu item, and hide error alert
-            $(document).on("click",'#genemethod1',function(e){
-                e.preventDefault();
-                $('#alert').hide();
-                $("#ajaxcontent").load("GeneNet.php");
-            });
-            $("#genemethod2").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("ns.php");
-            });
-            $("#genemethod3").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("glasso.php");
-            });
-            $("#genemethod4").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("glassosf.php");
-            });
-            $("#genemethod5").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("pcacmi.php");
-            });
-            $("#genemethod6").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("cmi2ni.php");
-            });
-            $("#genemethod7").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("space.php");
-            });
-            $("#genemethod8").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("eglasso.php");
-            });
-            $("#genemethod9").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("espace.php");
-            });
-            $("#genemethod10").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("ena.php");
-            });
-            $("#genemethod11").click(function(){
-                $('#alert').hide();
-                $("#ajaxcontent").load("bayesianglasso.php");
-            });
-
         });
     </script>
 
@@ -204,20 +62,21 @@ require_once('util.php');
             <div class="alert alert-danger" id="alert" hidden></div>
         </div>
         <div class="row">
+        <!-- **********************************  side bar  ************************************* -->
             <div class="3u">
                 <section class="sidebar" id="side-methods">
                     <header>
                         <h2>Network Inference Method</h2>
                     </header>
                     <ul class="style1 methods">
-                        <li style="cursor:pointer" id="genemethod1"><a>GeneNet</a></li>
-                        <li style="cursor:pointer" id="genemethod2"><a>Neighborhood Selection</a></li>
-                        <li style="cursor:pointer" id="genemethod3"><a>GLASSO</a></li>
-                        <li style="cursor:pointer" id="genemethod4"><a>GLASSO-SF</a></li>
-                        <li style="cursor:pointer" id="genemethod5"><a>PCACMI</a></li>
-                        <li style="cursor:pointer" id="genemethod6"><a>CMI2NI</a></li>
-                        <li style="cursor:pointer" id="genemethod7"><a>SPACE</a></li>
-                        <li style="cursor:pointer" id="genemethod11"><a>BayesianGLASSO</a></li>
+                        <li style="cursor:pointer" id="genemethod1"><a href="genenet.php">GeneNet</a></li>
+                        <li style="cursor:pointer" id="genemethod2"><a href="ns.php">Neighborhood Selection</a></li>
+                        <li style="cursor:pointer" id="genemethod3"><a href="glasso.php">GLASSO</a></li>
+                        <li style="cursor:pointer" id="genemethod4"><a href="glassosf.php">GLASSO-SF</a></li>
+                        <li style="cursor:pointer" id="genemethod5"><a href="pcacmi.php">PCACMI</a></li>
+                        <li style="cursor:pointer" id="genemethod6"><a href="cmi2ni.php">CMI2NI</a></li>
+                        <li style="cursor:pointer" id="genemethod7"><a href="space.php">SPACE</a></li>
+                        <li style="cursor:pointer" id="genemethod11"><a href="bayesianglasso.php">BayesianGLASSO</a></li>
                     </ul>
                 </section>
                 <section class="sidebar" id="methods">
@@ -225,8 +84,8 @@ require_once('util.php');
                         <h2>Incorporate Hub Gene</h2>
                     </header>
                     <ul class="style1 methods">
-                        <li style="cursor:pointer" id="genemethod8"><a>EGLASSO</a></li>
-                        <li style="cursor:pointer" id="genemethod9"><a>ESPACE</a></li>
+                        <li style="cursor:pointer" id="genemethod8"><a href="eglasso.php">EGLASSO</a></li>
+                        <li style="cursor:pointer" id="genemethod9"><a href="espace.php">ESPACE</a></li>
                     </ul>
                 </section>
                 <section class="sidebar" id="methods">
@@ -234,12 +93,12 @@ require_once('util.php');
                         <h2>Integrative Methods</h2>
                     </header>
                     <ul class="style1 methods">
-                        <li style="cursor:pointer" id="genemethod10"><a>ENA</a></li>
+                        <li style="cursor:pointer" id="genemethod10"><a href="ena.php">ENA</a></li>
                     </ul>
                 </section>
             </div>
+            <!-- ************************************************************************************ -->
 
-            <!--load different method contents-->
             <div class="9u skel-cell-important" id="ajaxcontent">
                 <section class="intro">
                     <header>
@@ -270,7 +129,7 @@ require_once('util.php');
                         </div>
                     </div>
 
-                    <!-- ****************** setion 1 ******************** -->
+                    <!-- ************************************  setion 1  ***************************************** -->
                     <div class="method-active">
                         <table class="para-table">
                             <tr>
@@ -310,7 +169,7 @@ require_once('util.php');
                         </p>
                     </div>
 
-                    <!-- ****************** setion 2 ******************** -->
+                    <!-- ********************************* setion 2 ********************************** -->
                     <div class="method-active">
                         <table class="para-table">
                             <tr>
@@ -387,7 +246,7 @@ require_once('util.php');
                         </p>
                     </div>
 
-                    <!-- ****************** setion 3 ******************** -->
+                    <!-- ********************************** setion 3 *************************************** -->
                     <div class="method-active">
                         <table class="para-table">
                             <tr>

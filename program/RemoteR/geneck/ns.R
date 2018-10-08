@@ -30,6 +30,13 @@ network.ns <- function(expr.data, alpha) {
     
     est_edge <- as.data.frame(est_edge)
     colnames(est_edge) <- c("node1", "node2")
+    est_edge$p.corr <- 0
+    for (i in 1:nrow(est_edge)) {
+        est_edge$p.corr[i] <- mean(est_res[est_edge$node1[i], est_edge$node2[i]], est_res[est_edge$node2[i], est_edge$node1[i]])
+    }
+    
+    est_edge$p.corr <- signif(est_edge$p.corr, 4)
+    est_edge <- est_edge[with(est_edge, order(-abs(p.corr))),]
     est_edge[,1] <- gene.index[est_edge[,1]]
     est_edge[,2] <- gene.index[est_edge[,2]]
     

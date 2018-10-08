@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Ex Machina by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 <head>
     <title>GeNeck</title>
@@ -13,8 +8,7 @@
     <meta name="keywords" content=""/>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet'
-          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
     <script src="js/jquery_3.2.1.min.js"></script>
     <script src="js/bootstrap_3.3.7.min.js"></script>
     <!--[if lte IE 8]>
@@ -175,7 +169,7 @@
                             <span style="text-align: justify;">Space PArtial Correlation Estimation</span>
                             <p style="text-align: justify;">Partial correlation estimation with joint sparse regression
                                 model.</p>
-                            <span style="text-align: justify;">Peng, Jie, et al. "Partial correlation estimation by joint sparse regression models." <i>Journal of the American Statistical Association</i> 104.486 (2009): 735-746.</span>
+                            <span style="text-align: justify;">Peng, Jie, Pei Wang, Nengfeng Zhou, and Ji Zhu. "Partial correlation estimation by joint sparse regression models." <i>Journal of the American Statistical Association</i> 104.486 (2009): 735-746.</span>
                             <!--									<a href="https://cran.r-project.org/web/packages/space/index.html" class="button" target="_blank">Visit site</a>-->
                         </div>
                     </div>

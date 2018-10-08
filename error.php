@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Ex Machina by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 <head>
     <title>GeNeck</title>
@@ -56,16 +51,19 @@
             <div class="col-md-12">
                 <div class="error-template">
                     <h1>
-                        Oops!</h1>
+                        Oops!
+                    </h1>
                     <h2>
-                        404 Not Found</h2>
+                        404 Not Found
+                    </h2>
                     <div class="error-details">
                         Sorry, an error has occured, Requested page not found!
                     </div>
                     <br>
                     <div class="error-actions">
                         <a href="analysis.php" class="btn btn-primary btn">
-                            Resend the job </a>
+                            Resend the job 
+                        </a>
                     </div>
                 </div>
             </div>

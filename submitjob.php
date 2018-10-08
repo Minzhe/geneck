@@ -10,13 +10,6 @@ $organization = isset($_POST['organization'])?util::clean($_POST['organization']
 /*********************************************************************************/
 /* Define function                                                               */
 /*********************************************************************************/
-function cleanInput($inputStr) {
-    $inputStr = trim($inputStr);
-    $inputStr = stripcslashes($inputStr);
-    $inputStr = htmlspecialchars($inputStr);
-    return $inputStr;
-}
-
 function convertYesNo($inputStr) {
     if ($inputStr == 'no') {
         return 0;
@@ -30,66 +23,41 @@ function convertYesNo($inputStr) {
 /* Get methods                                                                   */
 /*********************************************************************************/
 session_start();
-if (empty($_POST['input_verifycode']) || strtolower($_SESSION['imgverify_code']) != strtolower($_POST['input_verifycode'])) {
-    $vercodefail=0;
-    $page_index=0;
-    if(isset($_SESSION['page_name'])) {
-        if($_SESSION['page_name']=='GeneNet.php') {
-            $page_index = 1;
-        }elseif($_SESSION['page_name']=='ns.php'){
-            $page_index = 2;
-        }elseif($_SESSION['page_name']=='glasso.php'){
-            $page_index = 3;
-        }elseif($_SESSION['page_name']=='glassosf.php'){
-            $page_index = 4;
-        }elseif($_SESSION['page_name']=='pcacmi.php'){
-            $page_index = 5;
-        }elseif($_SESSION['page_name']=='cmi2ni.php'){
-            $page_index = 6;
-        }elseif($_SESSION['page_name']=='space.php'){
-            $page_index = 7;
-        }elseif($_SESSION['page_name']=='eglasso.php'){
-            $page_index = 8;
-        }elseif($_SESSION['page_name']=='espace.php'){
-            $page_index = 9;
-        }elseif($_SESSION['page_name']=='ena.php'){
-            $page_index = 10;
-        }elseif($_SESSION['page_name']=='bayesianglasso.php'){
-            $page_index = 11;
-        }else{
-            header("location:analysis.php?");
-            exit();
-        }
-        header("location:analysis.php?error=$vercodefail&&pageindex=".$page_index);
+$method = intval(util::clean($_POST['method']));
+if (isset($method)) {
+    if ($method == 1) {
+        $page = "genenet";
+    } elseif($method == 2) {
+        $page = "ns";
+    } elseif($method == 3) {
+        $page = "glasso";
+    } elseif($method == 4) {
+        $page = "glassosf";
+    } elseif($method == 5) {
+        $page = "pcacmi";
+    } elseif($method == 6) {
+        $page = "cmi2ni";
+    } elseif($method == 7) {
+        $page = "space";
+    } elseif($method == 8) {
+        $page = "eglasso";
+    } elseif($method == 9) {
+        $page = "espace";
+    } elseif($method == 10) {
+        $page = "ena";
+    } elseif($method == 11) {
+        $page = "bayesianglasso";
+    } else {
+        echo "method error" . $method . "<br/>";
         exit();
     }
+if (empty($_POST['input_verifycode']) || strtolower($_SESSION['imgverify_code']) != strtolower($_POST['input_verifycode'])) { 
+    $vercodefail = 0;
+    header("location:$page.php?error=$vercodefail");
+    exit();
+    }
 }
-$source = util::clean($_POST['method']);
-if ($source == 'GeneNet') {
-    $method = 1;
-} elseif ($source == 'ns') {
-    $method = 2;
-} elseif ($source == 'glasso') {
-    $method = 3;
-} elseif ($source == 'glassosf') {
-    $method = 4;
-} elseif ($source == 'pcacmi') {
-    $method = 5;
-} elseif ($source == 'cmi2ni') {
-    $method = 6;
-} elseif ($source == 'space') {
-    $method = 7;
-} elseif ($source == 'eglasso') {
-    $method = 8;
-} elseif ($source == 'espace') {
-    $method = 9;
-} elseif ($source == 'ena') {
-    $method = 10;
-} elseif ($source == 'bayesianglasso') {
-    $method = 11;
-} else {
-    echo 'methods error: ' . $source . "<br>";
-}
+
 
 /*********************************************************************************/
 /* Gene expression data and hub genes                                            */
@@ -100,21 +68,21 @@ $info=pathinfo($_FILES["expression_data"]["name"]);
 $ext = $info['extension'];
 if ($_FILES['expression_data']['size'] < 0||$_FILES['expression_data']['size'] >12000000||(!in_array($ext,$allowed))) {
     $vercodefail=1;
-    header("location:analysis.php?error=$vercodefail&&pageindex=".$method);
+    header("location:$page.php?error=$vercodefail");
     exit();
 } else {
     $expression_path = $_FILES['expression_data']['tmp_name'];
     $expr_data = file_get_contents($expression_path);
     $csvFile = fopen($expression_path, 'r');
     $firstline_arr=fgetcsv($csvFile);
-    $colnum=sizeof($firstline_arr);
-    while(($line = fgetcsv($csvFile)) !== FALSE){
-        $vercodefail=1;
-        $line_colnum=sizeof($line);
-        $picker=rand(0,$line_colnum-1);
+    $colnum = sizeof($firstline_arr);
+    while (($line = fgetcsv($csvFile)) !== FALSE) {
+        $vercodefail = 1;
+        $line_colnum = sizeof($line);
+        $picker = rand(0,$line_colnum-1);
         //echo "picker:",$picker, "line[]:",$line[$picker];
-        if($colnum!=$line_colnum||(!is_numeric($line[$picker]))){
-            header("location:analysis.php?error=$vercodefail&&pageindex=".$method);
+        if($colnum != $line_colnum || (!is_numeric($line[$picker]))) {
+            header("location:$page.php?error=$vercodefail");
             exit();
         }
     }
@@ -123,12 +91,12 @@ if ($_FILES['expression_data']['size'] < 0||$_FILES['expression_data']['size'] >
 // ------------ hub genes -------------
 if (isset($_POST['hubgenes'])) {
     $hubgenes = util::clean($_POST['hubgenes']);
-    $hubinput_array=explode(',',$hubgenes);
-    $i=0;
-    while($i<sizeof($hubinput_array)){
-        if(!in_array($hubinput_array[$i],$firstline_arr)){
-            $vercodefail=2;
-            header("location:analysis.php?error=$vercodefail&&pageindex=".$method);
+    $hubinput_array = explode(',',$hubgenes);
+    $i = 0;
+    while ($i<sizeof($hubinput_array)) {
+        if (!in_array($hubinput_array[$i],$firstline_arr)) {
+            $vercodefail = 2;
+            header("location:$page.php?error=$vercodefail");
             exit();
         }
         $i++;
@@ -156,7 +124,7 @@ if ($method == 11 || ($method == 10 && $param_2 == 1)) {
     $rownum = count(file($expression_path));
     if ($rownum > 100 || $colnum > 50) {
         $vercodefail=4;
-        header("location:analysis.php?error=$vercodefail&&pageindex=".$method);
+        header("location:$page.php?error=$vercodefail");
         exit();
     }
 }
@@ -183,7 +151,7 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
     $mail->WordWrap = 80;  // maximum character number in one line
     $failtosend=3;
     if (!$mail->Send()) {
-        header("location:analysis.php?error=$failtosend&&pageindex=".$method);
+        header("location:$page.php?error=$failtosend");
         exit();
     }
 }

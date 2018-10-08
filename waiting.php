@@ -1,46 +1,3 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>GeNeck</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet'
-          type='text/css'>
-    <!--[if lte IE 8]>
-    <script src="js/html5shiv.js"></script><![endif]-->
-    <script src="js/jquery_3.2.1.min.js"></script>
-    <script src="js/bootstrap_3.3.7.min.js"></script>
-    <script src="js/skel.min.js"></script>
-    <script src="js/skel-panels.min.js"></script>
-    <script src="js/init.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="css/skel-noscript.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/style-desktop.css"/>
-    </noscript>
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
-    <!--[if lte IE 9]>
-    <link rel="stylesheet" href="css/ie/v9.css"/><![endif]-->
-    <script type="text/javascript">
-        function timedRefresh(timeoutPeriod) {
-            setTimeout("location.reload(true);", timeoutPeriod)
-        }
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            // header & banner
-            $("#homebanner").hide();
-            $("#analysis").addClass("active");
-        });
-    </script>
-</head>
-<body class="left-sidebar">
-
 <!-- retrieve data from mysql -->
 <?php
 /******************  Function  ***********************/
@@ -94,8 +51,7 @@ if (!empty($jobid)) {
             if ($method == 10) {
                 if ($param_2 == 0) {
                     $param_2 = 'No';
-                }
-                if ($param_2 == 1) {
+                } elseif ($param_2 == 1) {
                     $param_2 = 'Yes';
                 }
             }
@@ -108,6 +64,50 @@ if (!empty($jobid)) {
     echo "<script>location.href='error.php'</script>";
 }
 ?>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>GeNeck</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet'
+          type='text/css'>
+    <!--[if lte IE 8]>
+    <script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery_3.2.1.min.js"></script>
+    <script src="js/bootstrap_3.3.7.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-panels.min.js"></script>
+    <script src="js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="css/skel-noscript.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/style-desktop.css"/>
+    </noscript>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="css/ie/v9.css"/><![endif]-->
+    <script type="text/javascript">
+        function timedRefresh(timeoutPeriod) {
+            setTimeout("location.reload(true);", timeoutPeriod)
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // header & banner
+            $("#homebanner").hide();
+            $("#analysis").addClass("active");
+            <?php echo "$(\"#genemethod$method\").addClass(\"method-active\");"; ?>
+        });
+    </script>
+</head>
+<body class="left-sidebar">
 <!-- Header -->
 <!-- Banner -->
 <?php include "header.php"; ?>
@@ -120,23 +120,61 @@ if (!empty($jobid)) {
             <div class="alert alert-danger" id="alert" hidden></div>
         </div>
         <div class="row">
+            <!-- **********************************  side bar  ************************************* -->
             <div class="3u">
-                <?php include "methods-bar.php"; ?>
+                <section class="sidebar" id="side-methods">
+                    <header>
+                        <h2>Network Inference Method</h2>
+                    </header>
+                    <ul class="style1 methods">
+                        <li style="cursor:pointer" id="genemethod1"><a href="genenet.php">GeneNet</a></li>
+                        <li style="cursor:pointer" id="genemethod2"><a href="ns.php">Neighborhood Selection</a></li>
+                        <li style="cursor:pointer" id="genemethod3"><a href="glasso.php">GLASSO</a></li>
+                        <li style="cursor:pointer" id="genemethod4"><a href="glassosf.php">GLASSO-SF</a></li>
+                        <li style="cursor:pointer" id="genemethod5"><a href="pcacmi.php">PCACMI</a></li>
+                        <li style="cursor:pointer" id="genemethod6"><a href="cmi2ni.php">CMI2NI</a></li>
+                        <li style="cursor:pointer" id="genemethod7"><a href="space.php">SPACE</a></li>
+                        <li style="cursor:pointer" id="genemethod11"><a href="bayesianglasso.php">BayesianGLASSO</a></li>
+                    </ul>
+                </section>
+                <section class="sidebar" id="methods">
+                    <header>
+                        <h2>Incorporate Hub Gene</h2>
+                    </header>
+                    <ul class="style1 methods">
+                        <li style="cursor:pointer" id="genemethod8"><a href="eglasso.php">EGLASSO</a></li>
+                        <li style="cursor:pointer" id="genemethod9"><a href="espace.php">ESPACE</a></li>
+                    </ul>
+                </section>
+                <section class="sidebar" id="methods">
+                    <header>
+                        <h2>Integrative Methods</h2>
+                    </header>
+                    <ul class="style1 methods">
+                        <li style="cursor:pointer" id="genemethod10"><a href="ena.php">ENA</a></li>
+                    </ul>
+                </section>
             </div>
+            <!-- ****************************************************************************** -->
+
             <div class="9u skel-cell-important">
                 <section>
-                    <span class="byline"><strong>Your job has been submitted!</strong></span>
+                    <header>
+                    <h2 class="byline">Your job has been submitted!</h2>
+                    </header>
                     <p>
                         The job takes about several minutes to finish.
                         If you select BayesianGLASSO, it will take much longer.<br/>
                         This page will automatically refresh every 5 seconds.
                         Once your job is done, the results will be shown on this page.<br/>
-                    </p>
+                    </p><br/>
                     <p>
                         Record the following link, so you can go back and check your job status:<br/>
                         <?php echo "<a href=\"http://lce.biohpc.swmed.edu/geneck/waiting.php?jobid=" . $jobid . "\">http://lce.biohpc.swmed.edu/geneck/waiting.php?jobid=" .$jobid . "</a>"; ?>
                     </p>
                 </section>
+
+                <!-- ***************************  param table  ****************************** -->
                 <div class="text-bg">
                     <table class="para-table">
                         <!-- waiting -->
@@ -156,18 +194,31 @@ if (!empty($jobid)) {
                                 <p><strong><?php echo util::parseParam($method); ?></strong><?php echo $param; ?></p>
                             </td>
                             <td width="30%">
-                                <p><strong><?php if (util::parseParam_2($method) != null) {
-                                            echo util::parseParam_2($method);
-                                        } ?></strong><?php if (util::parseParam_2($method) != null) {
+                                <p>
+                                    <strong>
+                                    <?php 
+                                    if (util::parseParam_2($method) != null) {
+                                        echo util::parseParam_2($method);
+                                    } 
+                                    ?>
+                                    </strong>
+                                    <?php 
+                                    if (util::parseParam_2($method) != null) {
                                         echo util::parseParam2_value($method, $param_2);
-                                    } ?></p>
+                                    } 
+                                    ?>
+                                </p>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <p><?php if (isset($hub_genes)) {
-                                        echo "<strong>Hub genes: </strong>" . $hub_genes;
-                                    } ?></p>
+                                <p>
+                                <?php 
+                                if ($hub_genes != "") {
+                                    echo "<strong>Hub genes: </strong>" . $hub_genes;
+                                } 
+                                ?>
+                                </p>
                             </td>
                         </tr>
                         <tr>
@@ -178,20 +229,11 @@ if (!empty($jobid)) {
                         </tr>
                     </table>
                 </div>
+                <!-- ***************************************************************** -->
             </div>
         </div>
     </div>
-    <!-- Main -->
-
 </div>
-<!-- /Main -->
-<!-- Featured -->
-<!-- /Featured -->
-
-<!-- Footer -->
-<!-- /Footer -->
-
-<!-- Copyright -->
 <?php include "footer.php"; ?>
 </body>
 </html>

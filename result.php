@@ -49,7 +49,7 @@ include "../../dbincloc/geneck.inc";
 $jobid = "";
 $message = "";
 $status = 0;
-$method = "";
+$method = "Job finished";
 $param = "";
 $param_2 = "";
 $hub_genes = "";
@@ -104,91 +104,66 @@ $db_conn->close();
     <!-- Main -->
     <div id="main" class="container">
         <div class="row">
-
-            <div class="3u">
-                <?php include "methods-bar.php" ?>
-            </div>
-
-            <div class="9u skel-cell-important">
+            <!-- *******************************  side bar  ******************************* -->
+            <div class="3u text-bg">
                 <section>
+                    <br/>
                     <header>
-                        <h2><?php if ($status == 1) {
+                        <h2>
+                        <?php if ($status == 1) {
                                 echo "Result";
                             } else {
                                 echo "Error";
-                            } ?></h2>
+                            } 
+                        ?>
+                        </h2>
                     </header>
                     <p><?php echo $message; ?></p>
                 </section>
+                <!-- *********************  param table  ************************ -->
+                <section class="sidebar">
+                    <header>
+                        <h2>Parameters</h2><hr/>
+                    </header>
+                    <p><strong>Methods: </strong><?php echo util::parseMethod($method); ?></p>
+                    <p><strong><?php echo util::parseParam($method); ?></strong><?php echo $param; ?></p>
+                    <p>
+                        <strong>
+                        <?php 
+                        if (util::parseParam_2($method) != null) {
+                            echo util::parseParam_2($method);
+                        } 
+                        ?>
+                        </strong>
+                        <?php 
+                        if (util::parseParam_2($method) != null) {
+                            echo util::parseParam2_value($method, $param_2);
+                        } 
+                        ?>
+                    </p>
+                </section>
+                <!-- **********  download  ********* -->
+                <section class="sidebar">
+                    <header>
+                        <h2>Download</h2><hr/>
+                    </header>
+                    <p>Download result, and import to offline tools like <strong>Cytoscape</strong> to local visualizaiton.</p>
+                    <a class="button" href="resultDownload.php?jobid=<?php echo $jobid; ?>">Download</a>
+                </section>
+            </div>
+            
+            <!-- **********************************  network  ********************************** -->
+            <div class="9u skel-cell-important">
                 <?php if ($status == 1): ?>
                     <div class="text-bg">
-                        <table class="para-table">
-                            <!-- summary -->
-                            <tr>
-                                <td><strong>Summary</strong></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-                                    <hr/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="40%">
-                                    <p><strong>Methods: </strong><?php echo util::parseMethod($method); ?></p>
-                                </td>
-                                <td width="30%">
-                                    <p><strong><?php echo util::parseParam($method) ?></strong><?php echo $param; ?></p>
-                                </td>
-                                <td width="30%">
-                                    <p><strong><?php if (util::parseParam_2($method) != null) {
-                                                echo util::parseParam_2($method);
-                                            } ?></strong><?php if (util::parseParam_2($method) != null) {
-                                            echo util::parseParam2_value($method, $param_2);
-                                        } ?></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-                                    <p><?php if (isset($hub_genes)) {
-                                            echo "<strong>Hub genes: </strong>" . $hub_genes;
-                                        } ?></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><a class="button"
-                                       href="resultDownload.php?jobid=<?php echo $jobid; ?>">Download</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><br/></td>
-                            </tr>
-
-                            <!-- plot -->
-                            <tr>
-                                <td><strong>Visualization</strong></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-                                    <hr/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-
-                                </td>
-                            </tr>
-                        </table>
-                        <iframe src="resultnetwork.php?jobid=<?php echo $jobid; ?>" width="100%"
-                                height="600px">
-                            Does support iframe.
+                        <iframe src="network/graph.php?jobid=<?php echo $jobid; ?>" width="100%"
+                                height="920px">
                         </iframe>
                     </div>
                 <?php endif; ?>
             </div>
-
         </div>
     </div>
-    <!-- Main -->
 </div>
 <!-- /Main -->
 <?php include "footer.php"; ?>

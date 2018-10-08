@@ -21,7 +21,9 @@ network.GeneNet <- function(expr.data, fdr) {
     test_pcor <- network.test.edges(pcor_est)
     
     est_res <- test_pcor[test_pcor[, 6] >= (1-fdr), ]
-    est_edge <- est_res[, c(2, 3)]
+    est_edge <- est_res[, c(2, 3, 1)]
+    est_edge[,3] <- signif(est_edge[,3], 4)
+    names(est_edge)[3] <- "p.corr"
     est_edge[,1] <- gene.index[est_edge[,1]]
     est_edge[,2] <- gene.index[est_edge[,2]]
     
