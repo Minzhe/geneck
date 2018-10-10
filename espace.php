@@ -131,14 +131,14 @@
                             <tr>
                                 <td class="table-right-align"><p>Alpha:</p></td>
                                 <td>
-                                    <input type="number" min=0 max=1 step=0.001 class="inputbox" name="param" value=0.6 required>
+                                    <input type="number" min=0 max=1 step=0.001 class="inputbox" name="param" value=0.8 required>
                                     <img src="images/icon-question.png" title="0 ~ 1"/>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="table-right-align"><p>Lambda:</p></td>
                                 <td>
-                                    <input type="number" min=0.001 step=0.001 class="inputbox" name="param_2" value=0.4 required>
+                                    <input type="number" min=0.001 step=0.001 class="inputbox" name="param_2" value=0.6 required>
                                     <img src="images/icon-question.png" title="> 0"/>
                                 </td>
                             </tr>

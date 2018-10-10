@@ -34,32 +34,6 @@ if (!empty($jobid)) {
         $stmt->fetch();
         $stmt->close();
     }
-
-    if ($method != "") {
-        if ($status == 1 || $status == 9) {
-            echo "<script>location.href='result.php?jobid=$jobid'</script>";
-        } else {
-            if ($stmt2 = $db_conn->prepare("SELECT Param, Param_2, HubGenes FROM GeneckParameters WHERE JobID = ?;")) {
-                $stmt2->bind_param("s", $jobid);
-                $stmt2->execute();
-                $stmt2->store_result();
-                $stmt2->bind_result($param, $param_2, $hub_genes);
-                $stmt2->fetch();
-                $stmt2->close();
-            }
-
-            if ($method == 10) {
-                if ($param_2 == 0) {
-                    $param_2 = 'No';
-                } elseif ($param_2 == 1) {
-                    $param_2 = 'Yes';
-                }
-            }
-            echo "<body onload='timedRefresh(5000)'>";
-        }
-    } else {
-        echo "<script>location.href='error.php'</script>";
-    }
 } else {
     echo "<script>location.href='error.php'</script>";
 }
@@ -70,12 +44,12 @@ if (!empty($jobid)) {
 <head>
     <title>GeNeck</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet'
-          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'>
     <!--[if lte IE 8]>
     <script src="js/html5shiv.js"></script><![endif]-->
     <script src="js/jquery_3.2.1.min.js"></script>
@@ -96,25 +70,47 @@ if (!empty($jobid)) {
         function timedRefresh(timeoutPeriod) {
             setTimeout("location.reload(true);", timeoutPeriod)
         }
-    </script>
-
-    <script>
         $(document).ready(function() {
             // header & banner
             $("#homebanner").hide();
             $("#analysis").addClass("active");
-            <?php echo "$(\"#genemethod$method\").addClass(\"method-active\");"; ?>
+            <?php echo "$(\"#genemethod${method}\").addClass(\"method-active\");"; ?>
         });
     </script>
 </head>
-<body class="left-sidebar">
+<body>
 <!-- Header -->
 <!-- Banner -->
 <?php include "header.php"; ?>
+<?php
+if ($method != "") {
+    if ($status == 1 || $status == 9) {
+        echo "<script>location.href='result.php?jobid=$jobid'</script>";
+    } else {
+        if ($stmt2 = $db_conn->prepare("SELECT Param, Param_2, HubGenes FROM GeneckParameters WHERE JobID = ?;")) {
+            $stmt2->bind_param("s", $jobid);
+            $stmt2->execute();
+            $stmt2->store_result();
+            $stmt2->bind_result($param, $param_2, $hub_genes);
+            $stmt2->fetch();
+            $stmt2->close();
+        }
 
+        if ($method == 10) {
+            if ($param_2 == 0) {
+                $param_2 = 'No';
+            } elseif ($param_2 == 1) {
+                $param_2 = 'Yes';
+            }
+        }
+        echo "<body onload='timedRefresh(5000)'>";
+    }
+} else {
+    echo "<script>location.href='error.php'</script>";
+}
+?>
 <!-- Main -->
 <div id="page">
-    <!-- Main -->
     <div id="main" class="container" style="margin-top:0">
         <div class="9u" style="margin-left: 300px;">
             <div class="alert alert-danger" id="alert" hidden></div>

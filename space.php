@@ -144,7 +144,7 @@
                             <tr>
                                 <td class="table-right-align"><p>Alpha:</p></td>
                                 <td>
-                                    <input type="number" min=0.01 step=0.01 class="inputbox" name="param" value=0.4 required>
+                                    <input type="number" min=0.01 step=0.01 class="inputbox" name="param" value=0.6 required>
                                     <img src="images/icon-question.png" title="> 0"/>
                                 </td>
                             </tr>

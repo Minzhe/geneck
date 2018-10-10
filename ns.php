@@ -159,7 +159,7 @@
                                 <td class="table-right-align"><p>Alpha:</p></td>
                                 <td>
                                     <input type="number" min=0.001 step=0.001 class="inputbox" name="param" value=1 required>
-                                    <img src="images/icon-question.png" title="0.001 ~ 0.999"/>
+                                    <img src="images/icon-question.png" title="> 0"/>
                                 </td>
                             </tr>
                             <?php include "form-verifycode.php"; ?>

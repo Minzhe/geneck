@@ -80,7 +80,7 @@ if (!empty($jobid)) {
         } elseif ($status == 2 || $status == 0) {
             echo "<script>location.href='waiting.php?jobid=$jobid'</script>";
         } elseif ($status == 1) {
-            $message = "Network construction is completed, see the constructed network below and download the network file.";
+            $message = "Network construction is completed, see the constructed network and download the network file.";
 
             if ($stmt2 = $db_conn->prepare("SELECT Param, Param_2, HubGenes FROM GeneckParameters WHERE JobID = ?;")) {
                 $stmt2->bind_param("s", $jobid);
@@ -105,7 +105,7 @@ $db_conn->close();
     <div id="main" class="container">
         <div class="row">
             <!-- *******************************  side bar  ******************************* -->
-            <div class="3u text-bg">
+            <div class="3u">
                 <section>
                     <br/>
                     <header>
@@ -154,13 +154,12 @@ $db_conn->close();
             
             <!-- **********************************  network  ********************************** -->
             <div class="9u skel-cell-important">
-                <?php if ($status == 1): ?>
-                    <div class="text-bg">
-                        <iframe src="network/graph.php?jobid=<?php echo $jobid; ?>" width="100%"
-                                height="920px">
-                        </iframe>
-                    </div>
-                <?php endif; ?>
+                <div class="text-bg">
+                    <?php if ($status == 1): ?>
+                        <a href="network/graph.php?jobid=<?php echo $jobid; ?>" class="btn btn-sm btn-primary" target="_blank" role="button">View Big Figure</a><br><br>
+                        <iframe src="network/graph.php?jobid=<?php echo $jobid; ?>" width="100%" height="920px"></iframe>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

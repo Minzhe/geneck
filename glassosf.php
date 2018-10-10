@@ -146,7 +146,7 @@
                             <tr>
                                 <td class="table-right-align"><p>Lambda:</p></td>
                                 <td>
-                                    <input type="number" min=0.001 step=0.001 class="inputbox" name="param" value=0.12 required>
+                                    <input type="number" min=0.001 step=0.001 class="inputbox" name="param" value=0.2 required>
                                     <img src="images/icon-question.png" title="> 0"/>
                                 </td>
                             </tr>

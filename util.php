@@ -4,16 +4,14 @@
  * this class contains the common funcions in the whole website development
  */
 
-class util
-{
+class util {
     /*
      * Remove whitespace and other predefined characters from both sides of a string
      * Remove the backslash
      * Converts some predefined characters to HTML entities
      * The htmlentities() function converts characters to HTML entities
      */
-    public static function clean($data)
-    {
+    public static function clean($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data,ENT_QUOTES);
